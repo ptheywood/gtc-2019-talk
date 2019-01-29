@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  {{{style}}}
+  <script src="remark.js"></script>
+  <script src="custom.js"></script>  
+  <script>
+    function create() {
+      return remark.create({
+        {{{source}}},
+        ratio: '16:9',
+        highlightLines: true,
+        countIncrementalSlides: false,
+        highlightStyle: 'github',
+        slideNumberFormat: function (current, total) {
+          return '' + current;
+        }
+      });
+    }
+  </script>
+</head>
+<body onload="slideshow = create()">
+</body>
+</html>

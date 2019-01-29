@@ -1,0 +1,5 @@
+.tmp/
+dist/
+pdf/
+_convert/
+*.log
