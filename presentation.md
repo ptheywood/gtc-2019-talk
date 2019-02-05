@@ -10,6 +10,7 @@ layout: true
   {{shorttitle}}
 ]
 
+
 ---
 
 class: impact
@@ -24,29 +25,20 @@ class: impact
 
 ---
 
-# Outline
-
-+ [3] Smart City Simulation - Why
-+ [3] CPU microsim - not good enough
-+ [3] GPUs are the solution - but not easy
-+ [2] What we did - FLAME GPU sim + summary of sections
-+ [5] Reference simulator - Model, network + benchmarks results
-+ [2] FLAME GPU implementation diagram.
-+ [5] FLAME GPU results
-+ [20?] FLAME GPU implementation details / optimisations made which enable the perf. 
-+ [1] Conclusion
-+ [1] Contact/Thanks.
+class: impact
+# Smart City Simulation
 
 ---
-
-
-# Transport Network Simulations
+# Transport Network Demand
 .col-6[
++ Designing and Managing transport networks is becoming mode difficult
 + Global transport demand is increasing <!-- @todo - cite -->
-+ Many constraints on transport networks
-+ Simulations can improve the use of limited resources
-    + Planning
-    + Management
+    + Across all modes of transport
+    + **@todo - Road statistic**
+    + **@todo - Rail statistic**
+    + **@todo - Air statistic**
++ New Modes of transport appearing
+    + I.e Connected Autonomous Vehicles (CAVs)
 ]
 .col-6.img-col[
 ![Smart Motorway Congestion](img/highways-england-smart-motorway.jpg)
@@ -60,27 +52,431 @@ Highways England
 
 ---
 
-# Transport Network Simulations
+# Smart Cities
 .col-6[
-+ Simulations are becoming more computationally expensive
-    + **Larger** 
-        - City-scale, National-scale
-    + **More Complex** 
-        - CAVs, Smarter Infrastructure
-        - Multi-Mode
-    + **More Permutations** 
-        - Weather, Demand, etc.
++ Cities present additional challenges
++ High population density
++ Co-located modes of transport
++ Limited space
 
 
-+ Performance is limiting the use of simulation <!-- [cite] --> <!-- @todo -->
-+ **Faster simulators are required** 
-    + Better-than-real-time
++ Cannot build new roads to increase capacity
++ Need to increase utilisation
+    + **Improve planning**
+    + **Active management**
+
+
++ Achieved through **Simulation**
+
 ]
 .col-6.img-col[
 .w-90[
 ![Transport Network](img/sheffield-map-smaller.png)
 ]
 ]
+
+
+---
+
+# Transport Network Simulations
+.col-6[
++ Can be simulated at different **resolutions**
++ **Macroscopic**
+    + Simulate aggregate flows across links
+    + Top-down
+    + *Low level of detail*
+    + *Lowest computational cost*
++ **Mesoscopic**
+    + Simulate platoons consisting of multiple vehicles
+    + Mid-level
++ **Microscopic**
+    + Simulate individual vehicles or people
+    + Bottom-up
+    + *High level of detail*
+    + *Very high computational cost*
+]
+.col-6.img-col[
+.w-90[
+![Transport Network](img/sheffield-map-smaller.png)
+]
+]
+
+???
+@todo new picture
+
+---
+
+# Transport Network Simulations
+.col-6[
++ Smart City Simulations are massively computationally expensive
+    + **Large** 
+        - City-scale, National-scale
+    + **Complex** 
+        - Smarter Infrastructure
+        - Multiple Modes
+    + **Many Permutations** 
+        - Weather, Demand, etc.
+
+
++ Performance is limiting the use of simulation in industry <!-- [cite] --> <!-- @todo -->
++ **Faster simulators are required** 
+]
+.col-6.img-col[
+.w-90[
+![Transport Network](img/sheffield-map-smaller.png)
+]
+]
+
+???
+@todo new picture
+
+---
+
+class: impact
+# Road Network Microsimulation
+
+
+
+---
+
+# Microscopic Simulation
+
+.col-6[
++ Bottom-Up Simulation
++ Individual Vehicles
+    + Own properties and behaviour
+    + Interact with others
+    + Interact with environment
+
++ Can be implemented with Agent Based Modelling (ABM) <!-- @todo cite -->
+    + Intuitive method of describing models
+    + Complex behaviour emerges from simple rules
+
++ **Huge computational cost**
++ Large volumes of data required
++ Highly Stochastic
+    + Many runs required
+]
+.col-6.img-col[
+.w-90[
+
+<!-- ![Label](img/file.png) -->
+*@todo - image*
+]
+]
+
+---
+
+# Commercial Microsimulation tools
+
+.col-6[
++ Many commercial and open source simulators
+    + Aimsun
+    + Vissim
+    + Parasim
+    + SUMO
+    + ... <!-- @todo cite / links -->
++ All CPU-based simulators
+    + Single-threaded or Multi-threaded
++ Poor scaling with processor cores
++ Poor scaling with transport network size
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image of CPU Scaling in Aimsun.*
+]
+]
+
+---
+
+# Our Goals / Aims (@todo rename this slide.)
+
+.col-6[
++ Demonstrate GPUs are suitable for Smart-City Simulations
+    + Suitable for large-scale networks
+    + Offer better-than-real-time performance
+
++ Achieved this by:
+    + Implement subset of models from a commercial tool
+    + Cross-validate GPU implementation
+    + Benchmark using a scalable model
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image of GPUs?*
+]
+]
+
+
+---
+
+# CPU Simulator - Aimsun
+
+.col-6[
++ Aimsun 8.1
++ Multi-core CPU simulator
++ Used Globally within transport industry
++ Capable of modelling almost any transport scenario
+
++ Diminishing returns above 8 CPU cores
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - Aimsun images*
+www.aimsun.com
+]
+]
+
+---
+
+# Benchmark Models
+
+.col-6[
++ Several models implemented
++ Gipps' Car Following Model
++ Aimsun Gap Acceptance Model
++ Turning Probability routing
++ Simulated Detectors
++ Constant Vehicle Arrival
++ Yellow-box junctions
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image*
+]
+]
+
+---
+
+# Procedurally Generated Network
+
+.col-6[
++ Manhattan-style grid network
++ Single lane, one-way roads
++ Stop-signs at junctions
++ Entrances and exits at the edges of the simulation
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - Grid network images*
+]
+]
+
+---
+
+# Aimsun Benchmarking
+
+.col-6[
++ Benchmarked Aimsun 8.1 at multiple scales
++ Intel i7-4770k
++ Simulations contained up to 0.5 million vehicles
++ Longest simulation took **@todo**
+    + **Slower than real time**
+    + Not suitable for active management
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - CPU Performance*
+]
+]
+
+---
+
+class: impact
+# GPU Microsimulation
+
+---
+
+# @todo
+
+.col-6[
++ 
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image*
+]
+]
+
+
+---
+
+# FLAME GPU
++ What / Why.
++ Other Uses / Images
++ See OERC
+
+
+---
+
+# FLAME GPU
++ Process. Code snippets?
++ See OERC
+
+---
+
+# FLAME GPU Implementation
+
++ State diagram
+
+
+# Validation
+
++ Descirbe the validations we ran. 
++ Diagrams of the figure / Throw out some numbers.
++ @todo - gipps model validation is seconds not iterations.
+
+---
+
+# FLAME GPU Early Performance
+
++ Gridsize benchmark with Spatial Comm. Two slides / Transition.
++ See OERC
+
+<!-- -- -->
+
+---
+
+# FLAME GPU Communication
+
++ Explain comms.
++ Brute + Spatial
++ Not well suited to dense transport networks
++ See OERC
+
+---
+
+# Graph Based Communication
++ New Comm strategy in FLAME GPU 1.5
++ See OERC 15
+
+---
+
+# Graph Based Communication 2
++ New Comm strategy in FLAME GPU 1.5
++ See OERC 16
+
+
+---
+
+# Graph Based Communication Performance
++ New Comm strategy in FLAME GPU 1.5
++ See OERC 17
+
+
+---
+
+# Grid size performance
+
++ Gridsize CPU plot, followed by Graph comm.
++ Followed by with multiple GPUs
++ Include speedup numbers.
+
+
+---
+
+# Per iteration Runtime
+
++ Figure showing per iteration runtime. 
++ OERC Backup slide.
+
+---
+
+# Input Flow Benchmarks
+
++ 64 CPU 
+
+--
+
++ 64 CPU + GPUs
+
+---
+
+# Input Flow Benchmarks
+
++ 128 CPU 
+
+--
+
++ 128 CPU + GPUs
+
+---
+
+# Input Flow Benchmarks
+
++ 256 CPU 
+
+--
+
++ 256 CPU + GPUs
+
+---
+
+class: impact 
+# Future Work
+
+---
+
+# Expand Functionality / More complete road network simulation.
+
++ Only implemented a subset of functionality
++ Add support for multiple lanes
++ Broader pieces of infrastructure
++ Performance improvements
++ Support real-world model and benchmarks.
+
+
+---
+
+# Multi-Mode GPU Simulation (Ped)
+
++ Model multiple modes of transport concurrently on GPUs
++ I.e Pedestrians - already on GPU
++ Video of peds form northmost?
+
+---
+
+# Multi-Mode GPU Simulation (Ped + Rail)
+
++ Rail - CPU is good enough (S2AM)
++ S2AM Video
++ Namedrop Siemens, Rob and Paul.
+
+---
+
+# Deep Learning
+
++ Train DL to predict simulator output
++ Shout out for James.
++ Compliment real world data with simulated data for un-observed situations
++ @todo - Ask James about his work. 
+
+
+---
+
+# FLAME GPU 2
+
++ New version of FLAME GPU
++ Currently under development
++ Increased Flexibility
++ Improved performance 
++ Parameter explorations, etc.
++ Python bindings
++ ... 
+ 
+---
+
+
+# Conclusion
+
++ @todo - OERC Conclusion
 
 ---
 
@@ -131,20 +527,15 @@ class: impact
 
 ---
 
-
-# @todo
-
+# @todo layout
 .col-6[
-.small[
-#### @todo - backup content?
++ 
+]
+.col-6.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image*
 ]
 ]
 
-
-
-
-
-
-
-
-
+---
