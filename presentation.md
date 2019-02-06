@@ -423,7 +423,7 @@ github.com/flamegpu/
 ]
 .col-8.img-col[
 .w-90[
-![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
+![Aimsun CPU Scaling](img/popsize-gridsize-brute-spatial-linear.png)
 ]
 ]
 
@@ -485,24 +485,23 @@ github.com/flamegpu/
 
 ---
 
-# Grid size performance
+# Grid size performance (@todo rename)
 
 .col-4[
 + Re-ran benchmark using graph-based communication
 + NVidia Titan V
 + Average runtime from 3 repetitions
 + **Significant performance improvement!**
-+ **@todo - popsize-gridsize-brute-spatial-graph-linear.png**
 ]
 .col-8.img-col[
 .w-90[
-![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
+![Grid-scale Performance](img/popsize-gridsize-brute-spatial-graph-linear.png)
 ]
 ]
 
 ---
 
-# Grid size performance
+# Grid size performance (@todo rename)
 
 .col-4[
 + Re-ran benchmark using graph-based communication
@@ -516,11 +515,10 @@ github.com/flamegpu/
     + **44x faster than real-time**
 
 
-+ **@todo - popsize-gridsize-graph-log.png**
 ]
 .col-8.img-col[
 .w-90[
-![Aimsun CPU Scaling](img/popsize-gridsize-cpu.png)
+![Grid-scale Perforamnce](img/popsize-gridsize-graph-log.png)
 ]
 ]
 
