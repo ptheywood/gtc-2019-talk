@@ -1,0 +1,56 @@
+{
+    "title": "Average Execution Time for a 1 Hour Simulation",
+    "x_label": "Total Vehicle Demand",
+    "y_label": "Average Total Simulation Time (s)",
+    "legend_y_offset": -0.15,
+    "x_lim": [0, 600000],
+    "y_lim": [0],
+    "x_scale": "linear",
+    "y_scale": "linear",
+    "x_log_base": 2,
+    "y_log_base": 10,
+    "x_ticks": [],
+    "y_ticks": [],
+    "x_ticks_labels": [],
+    "y_ticks_labels": [],
+    "x_ticks_minor": "False",
+    "y_ticks_minor": "False",
+    "grid_major": "True",
+    "grid_minor": "False",
+    "series": [
+        {
+            "flame": false,
+            "name": "Aimsun 8.1 - i7 4770k",
+            "group": "device_name_i7 4770k",
+            "y_id": 0,
+            "color": [
+                0.011764705882352941,
+                0.2627450980392157,
+                0.8745098039215686,
+                1.0
+            ],
+            "linestyle": "-.",
+            "marker": "o",
+            "data": [
+                [2000.0, 2.927553],
+                [4000.0, 6.618518],
+                [6000.0, 7.993492],
+                [8000.0, 18.741243],
+                [16000.0, 47.995454],
+                [32000.0, 118.384968],
+                [64000.0, 284.680735],
+                [96000.0, 479.043953],
+                [128000.0, 696.220879],
+                [160000.0, 933.165754],
+                [192000.0, 1195.356731],
+                [224000.0, 1486.46082],
+                [256000.0, 1794.423512],
+                [320000, 2555.796602],
+                [384000, 3392.228476],
+                [448000, 4361.143412],
+                [512000, 5447.749211]
+            ],
+            "max_data_value": 5447.749211
+        }
+    ]
+}

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="328.79999"
+   viewBox="0 0 410.99998 410.99998"
+   width="328.79999"
+   version="1.1"
+   id="svg179"
+   sodipodi:docname="communication_diagram.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata183">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1105"
+     inkscape:window-height="978"
+     id="namedview181"
+     showgrid="false"
+     fit-margin-top="4"
+     fit-margin-right="4"
+     fit-margin-bottom="4"
+     fit-margin-left="4"
+     inkscape:zoom="2.36"
+     inkscape:cx="150.74893"
+     inkscape:cy="158.57716"
+     inkscape:window-x="321"
+     inkscape:window-y="354"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg179" />
+  <defs
+     id="defs7">
+    <linearGradient
+       id="grad1">
+      <stop
+         offset="55%"
+         stop-color="green"
+         id="stop2" />
+      <stop
+         offset="55%"
+         stop-color="red"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <rect
+     height="300"
+     stroke="None"
+     width="300"
+     x="5.5"
+     y="5.5"
+     id="rect9"
+     style="fill:#00f6ff;fill-opacity:0.2;stroke-width:0" />
+  <rect
+     height="150"
+     width="16"
+     x="147.5"
+     y="5.5"
+     id="rect11"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="150"
+     transform="rotate(-90)"
+     width="16"
+     x="-163.5"
+     y="5.5"
+     id="rect13"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="200"
+     transform="rotate(-90)"
+     width="16"
+     x="-163.5"
+     y="155.5"
+     id="rect15"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="200"
+     width="16"
+     x="147.5"
+     y="155.5"
+     id="rect17"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="150"
+     transform="scale(-1)"
+     width="16"
+     x="-363.5"
+     y="-155.5"
+     id="rect19"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="50"
+     transform="rotate(-90)"
+     width="16"
+     x="-163.5"
+     y="355.5"
+     id="rect21"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="150"
+     transform="rotate(90)"
+     width="16"
+     x="347.5"
+     y="-155.5"
+     id="rect23"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="50"
+     width="16"
+     x="147.5"
+     y="355.5"
+     id="rect25"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="200"
+     transform="scale(-1)"
+     width="16"
+     x="-363.5"
+     y="-355.5"
+     id="rect27"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="200"
+     transform="rotate(90)"
+     width="16"
+     x="347.5"
+     y="-355.5"
+     id="rect29"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="50"
+     transform="rotate(90)"
+     width="16"
+     x="347.5"
+     y="-405.5"
+     id="rect31"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="50"
+     transform="scale(-1)"
+     width="16"
+     x="-363.5"
+     y="-405.5"
+     id="rect33"
+     style="fill:#dddddd;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="16"
+     width="16"
+     x="147.5"
+     y="147.5"
+     id="rect35"
+     style="fill:#bbbbbb;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="16"
+     width="16"
+     x="347.5"
+     y="147.5"
+     id="rect37"
+     style="fill:#bbbbbb;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="16"
+     width="16"
+     x="147.5"
+     y="347.5"
+     id="rect39"
+     style="fill:#bbbbbb;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <rect
+     height="16"
+     width="16"
+     x="347.5"
+     y="347.5"
+     id="rect41"
+     style="fill:#bbbbbb;fill-opacity:1;stroke:#000000;stroke-width:1" />
+  <line
+     x1="5.5"
+     x2="5.5"
+     y1="5.5"
+     y2="405.5"
+     id="line43"
+     style="stroke:#000000;stroke-width:1" />
+  <line
+     x1="105.5"
+     x2="105.5"
+     y1="5.5"
+     y2="405.5"
+     id="line45"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="205.5"
+     x2="205.5"
+     y1="5.5"
+     y2="405.5"
+     id="line47"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="305.5"
+     x2="305.5"
+     y1="5.5"
+     y2="405.5"
+     id="line49"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="405.5"
+     x2="405.5"
+     y1="5.5"
+     y2="405.5"
+     id="line51"
+     style="stroke:#000000;stroke-width:1" />
+  <line
+     x1="5.5"
+     x2="405.5"
+     y1="5.5"
+     y2="5.5"
+     id="line53"
+     style="stroke:#000000;stroke-width:1" />
+  <line
+     x1="5.5"
+     x2="405.5"
+     y1="105.5"
+     y2="105.5"
+     id="line55"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="5.5"
+     x2="405.5"
+     y1="205.5"
+     y2="205.5"
+     id="line57"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="5.5"
+     x2="405.5"
+     y1="305.5"
+     y2="305.5"
+     id="line59"
+     style="stroke:#000000;stroke-width:1;stroke-dasharray:2, 2" />
+  <line
+     x1="5.5"
+     x2="405.5"
+     y1="405.5"
+     y2="405.5"
+     id="line61"
+     style="stroke:#000000;stroke-width:1" />
+  <text
+     font-size="12"
+     x="9.5"
+     y="101.5"
+     id="text63"
+     style="font-size:12px;font-family:sans;fill:#000000">0</text>
+  <text
+     font-size="12"
+     x="109.5"
+     y="101.5"
+     id="text65"
+     style="font-size:12px;font-family:sans;fill:#000000">1</text>
+  <text
+     font-size="12"
+     x="209.5"
+     y="101.5"
+     id="text67"
+     style="font-size:12px;font-family:sans;fill:#000000">2</text>
+  <text
+     font-size="12"
+     x="309.5"
+     y="101.5"
+     id="text69"
+     style="font-size:12px;font-family:sans;fill:#000000">3</text>
+  <text
+     font-size="12"
+     x="9.5"
+     y="201.5"
+     id="text71"
+     style="font-size:12px;font-family:sans;fill:#000000">4</text>
+  <text
+     font-size="12"
+     x="109.5"
+     y="201.5"
+     id="text73"
+     style="font-size:12px;font-family:sans;fill:#000000">5</text>
+  <text
+     font-size="12"
+     x="209.5"
+     y="201.5"
+     id="text75"
+     style="font-size:12px;font-family:sans;fill:#000000">6</text>
+  <text
+     font-size="12"
+     x="309.5"
+     y="201.5"
+     id="text77"
+     style="font-size:12px;font-family:sans;fill:#000000">7</text>
+  <text
+     font-size="12"
+     x="9.5"
+     y="301.5"
+     id="text79"
+     style="font-size:12px;font-family:sans;fill:#000000">8</text>
+  <text
+     font-size="12"
+     x="109.5"
+     y="301.5"
+     id="text81"
+     style="font-size:12px;font-family:sans;fill:#000000">9</text>
+  <text
+     font-size="12"
+     x="209.5"
+     y="301.5"
+     id="text83"
+     style="font-size:12px;font-family:sans;fill:#000000">10</text>
+  <text
+     font-size="12"
+     x="309.5"
+     y="301.5"
+     id="text85"
+     style="font-size:12px;font-family:sans;fill:#000000">11</text>
+  <text
+     font-size="12"
+     x="9.5"
+     y="401.5"
+     id="text87"
+     style="font-size:12px;font-family:sans;fill:#000000">12</text>
+  <text
+     font-size="12"
+     x="109.5"
+     y="401.5"
+     id="text89"
+     style="font-size:12px;font-family:sans;fill:#000000">13</text>
+  <text
+     font-size="12"
+     x="209.5"
+     y="401.5"
+     id="text91"
+     style="font-size:12px;font-family:sans;fill:#000000">14</text>
+  <text
+     font-size="12"
+     x="309.5"
+     y="401.5"
+     id="text93"
+     style="font-size:12px;font-family:sans;fill:#000000">15</text>
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,25)"
+     id="polygon95"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,70)"
+     id="polygon97"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,103)"
+     id="polygon99"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,127)"
+     id="polygon101"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,145)"
+     id="polygon103"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,160)"
+     id="polygon105"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,25,151)"
+     id="polygon107"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,61,151)"
+     id="polygon109"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,89.5,151)"
+     id="polygon111"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,116.5,151)"
+     id="polygon113"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,145,151)"
+     id="polygon115"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,190,151)"
+     id="polygon117"
+     style="fill:#ffffff;stroke:#ff7d2e;stroke-width:1.5" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,240,151)"
+     id="polygon119"
+     style="fill:#0343df;stroke:#ff7d2e;stroke-width:1.5" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,288,151)"
+     id="polygon121"
+     style="fill:#0343df;stroke:#ff7d2e;stroke-width:1.5" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,320,151)"
+     id="polygon123"
+     style="fill:#222222;stroke:#ff7d2e;stroke-width:1.5" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,344,151)"
+     id="polygon125"
+     style="fill:#222222;stroke:#ff7d2e;stroke-width:1.5" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,190)"
+     id="polygon127"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,228)"
+     id="polygon129"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,284)"
+     id="polygon131"
+     style="fill:#0343df" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,320)"
+     id="polygon133"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,340)"
+     id="polygon135"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,142)"
+     id="polygon137"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,91)"
+     id="polygon139"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,16)"
+     id="polygon141"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,0.9,-0.9,0,390,151)"
+     id="polygon143"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,121,360)"
+     id="polygon145"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,76,360)"
+     id="polygon147"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,16,360)"
+     id="polygon149"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(-0.9,0,0,-0.9,160,390)"
+     id="polygon151"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,331)"
+     id="polygon153"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,271)"
+     id="polygon155"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,219)"
+     id="polygon157"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,191)"
+     id="polygon159"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,331,360)"
+     id="polygon161"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,291,360)"
+     id="polygon163"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,241,360)"
+     id="polygon165"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,207,360)"
+     id="polygon167"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,185,360)"
+     id="polygon169"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,165,360)"
+     id="polygon171"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0,-0.9,0.9,0,391,360)"
+     id="polygon173"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,371)"
+     id="polygon175"
+     style="fill:#222222" />
+  <polygon
+     points="10,10 0,10 5,0 "
+     transform="matrix(0.9,0,0,0.9,351,357)"
+     id="polygon177"
+     style="fill:#222222" />
+</svg>

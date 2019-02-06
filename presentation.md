@@ -1,5 +1,5 @@
 title: Large-Scale Road Network Simulations for Smart Cities
-shorttitle: S9387 GTC 2019
+shorttitle: S9387 - Large-Scale Road Network Simulations for Smart Cities
 authors: Peter Heywood, Paul Richmond
 institute: The University of Sheffield
 class: animation-fade
@@ -79,7 +79,7 @@ Highways England
 ---
 
 # Transport Network Simulations
-.col-6[
+.col-7[
 + Can be simulated at different **resolutions**
 + **Macroscopic**
     + Simulate aggregate flows across links
@@ -95,14 +95,13 @@ Highways England
     + *High level of detail*
     + *Very high computational cost*
 ]
-.col-6.img-col[
-.w-90[
-![Transport Network](img/sheffield-map-smaller.png)
+.col-5.img-col[
+.w-80[
+![Simulation Resolutions](img/macromicro.png)
 ]
 ]
 
-???
-@todo new picture
+
 
 ---
 
@@ -133,9 +132,7 @@ Highways England
 ---
 
 class: impact
-# Road Network Microsimulation
-
-
+# CPU Microsimulation
 
 ---
 
@@ -159,9 +156,8 @@ class: impact
 ]
 .col-6.img-col[
 .w-90[
-
-<!-- ![Label](img/file.png) -->
-*@todo - image*
+![Road Network Microsimulation](img/ttrig-screenshot.png)
+.caption[FLAME GPU Road Network Microscopic Simulation]
 ]
 ]
 
@@ -183,8 +179,7 @@ class: impact
 ]
 .col-6.img-col[
 .w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - image of CPU Scaling in Aimsun.*
+![Aimsun CPU Scaling](img/aimsun-performance-cpu-threads.png)
 ]
 ]
 
@@ -204,8 +199,8 @@ class: impact
 ]
 .col-6.img-col[
 .w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - image of GPUs?*
+![Nvidia Titan Xp and Titan V](img/2-titan-xp-2-titan-v.jpg)
+.caption[Nvidia Titan Xp and Titan V GPUs]
 ]
 ]
 
@@ -224,15 +219,17 @@ class: impact
 ]
 .col-6.img-col[
 .w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - Aimsun images*
+.w-60[
+![Aimsun Logo](img/aimsun-logo.png)
+![Aimsun Logo](img/aimsun-tutorial-network.png)
+]
 www.aimsun.com
 ]
 ]
 
 ---
 
-# Benchmark Models
+# Selected Microsimulation Models
 
 .col-6[
 + Several models implemented
@@ -254,16 +251,15 @@ www.aimsun.com
 
 # Procedurally Generated Network
 
-.col-6[
+.col-5[
 + Manhattan-style grid network
 + Single lane, one-way roads
 + Stop-signs at junctions
 + Entrances and exits at the edges of the simulation
 ]
-.col-6.img-col[
-.w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - Grid network images*
+.col-7.img-col[
+.w-99[
+![Scalable Grid Network](img/grid-with-zoom.png)
 ]
 ]
 
@@ -273,18 +269,22 @@ www.aimsun.com
 
 .col-6[
 + Benchmarked Aimsun 8.1 at multiple scales
-+ Intel i7-4770k
-+ Simulations contained up to 0.5 million vehicles
-+ Longest simulation took **@todo**
-    + **Slower than real time**
-    + Not suitable for active management
++ 1 hour simulation
++ Intel i7 4770k
++ Average runtime from 3 repetitions
+
+
++ Largest Simulation which ran to completion
+    + ~ 0.5 million vehicles
+    + 5447 seconds
+    + **1.5x slower than real time**
 ]
 .col-6.img-col[
-.w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - CPU Performance*
+.w-99[
+![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
 ]
 ]
+<!-- @todo - linear or log -->
 
 ---
 
@@ -293,12 +293,322 @@ class: impact
 
 ---
 
-# @todo
-
+# FLAME GPU
 .col-6[
-+ 
+
++ Flexible Large-Scale Agent Modelling Environment for the GPU
++ Template-based simulation environment for high performance simulation
++ Agents (individuals) represented as X-Machines
+    + with *message lists* for communication
++ Abstracts the CUDA programming model away from the user
+
 ]
 .col-6.img-col[
+.w-90[
+.center.w-40[
+!["FLAME GPU logo"](img/flamegpu-logo.jpg)
+]
+
+flamegpu.com
+
+github.com/flamegpu/
+
+**@todo Generic FLAME GPU images**
+]
+]
+
+
+---
+
+# FLAME GPU
+
++ **@todo - Code Generation Diagram**
+
++ **@todo - Add snippets of XML and C code from github?**
+
+
+---
+
+# FLAME GPU Advantages
+
+.col-6[
++ State-based representation minimises divergence
++ SoA per state list - improves data access pattern
++ Message lists avoid race-conditions
+    + Natural synchronisation barriers
++ Reduce global reads via shared memory
+]
+.col-6.img-col[
+.w-90[
+![FLAME GPU X machine diagram](img/xMachine.jpg)
+]
+]
+
+---
+
+# FLAME GPU State Diagram
+
+.col-12.img-col[
+.w-75[
+![FLAME GPU Road Network Simulation State Diagram](img/ttrig-state-diagram-cars.png)
+]
+]
+
+---
+
+# Validation
+.col-6[
++ Cross Validated against Aimsun 8.1
++ 6 sets of validation networks, targeting different models
+    + Deterministic tests reproduced exactly
+    + Stochastic test reproduced within acceptable range
+]
+.col-6.img-col[
+.w-90[
+![Label](img/aimsun-flame-stopsign.png)
+.caption[Vadliation of Gipps' Car following model Scenario]
+**@todo - Change X Label of this image! Time(s) not Iteration!**
+]
+]
+
+
+---
+
+# FLAME GPU Visualisation
+
+.col-4[
++ High performance, interactive visualisation
+    + CUDA OpenGL Interoperability
+    + OpenGL Instanced Rendering
++ Simulation rate is limited to improve visibility
+]
+.col-8.responsive[
+<video width="1920" height="1080" controls loop muted poster="video/ttrig-1080p30.png">
+    <source src="video/ttrig-1080p30.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+<img src="video/ttrig-1080p30.png" class="video-poster" />
+]
+
+---
+
+# FLAME GPU Communication
+
++ Message lists used to communicate
+    + Avoids issues with concurrent access to agent memory
+    + Enables good use of cache and memory hierarchy
++ Typically the performance-limiting factor in large-scale simulations
++ Specialisation for typical communication patterns <!-- \cite{Richmond2011b} -->
+    + All-to-All
+    + Discrete Partitioned Messaging  (2D Cellular Automata)
+    + Spatially Partitioned Messaging (2D and 3D Continuous Agents)
++ Non-optimal for road network models
+
+---
+
+
+# FLAME GPU Communication Benchmarking
+
+.col-4[
++ Benchmarked multiple scales using alternate communication strategies
++ NVidia Titan V
++ Average runtime from 3 repetitions
++ Poor Performance
++ **Majority of runtime spent iterating messages!**
++ **@todo - popsize-gridsize-brute-spatial-linear.png**
+]
+.col-8.img-col[
+.w-90[
+![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
+]
+]
+
+---
+
+# Graph Based Communication
+
+.col-8[
++ Communication between vehicles is based on the road network
++ I.e. Car following models may only involve the lead vehicle
++ Associates message to the graph data structure of the road network
++ Reduces the number of messages to be iterated by each agent
+    + By only accessing messages from the relevant edge(s) of the network.
+
+| Communication Strategy | # Messages | 
+|------------------------|------------|
+| All-to-all             |         42 |
+| Spatial                |         18 |
+| Graph                  |          5 |
+
+]
+.col-4.img-col[
+.w-99[
+![ttrig-state-diagram-cars.svg](img/communication-diagram.svg)
+]
+]
+
+
+---
+
+# Graph Based Communication
+
++ Compressed Sparse Row (CSR) representation of graph 
++ Messages contain edge or vertex index
++ Sort message list based on edge (or vertex) index
+    + *Counting Sort*
+    + Shared-memory atomics 
+    + Builds data structure to access messages whilst sorting
++ Can access a single edge, or use the CSR to explore the message-list
++ Agents on the same edge are executed on neighbouring threads
++ Available as of FLAME GPU 1.5.0
+
+---
+
+# Graph Based Communication Performance
+
+.col-12[
+    + Measured performance of message list output and iteration for car following model
+    + Higher output cost, but **much, much** cheaper message iteration cost
+]
+.col-6[.w-90[
+![Average Message output Kernel Execution time](img/communication-output-time.png)
+]]
+.col-6.img-col[.w-90[
+![Average Message Iteration Kernel Execution time](img/communication-input-time.png)
+]]
+<!-- @todo - checkl the formatting of the above images. Should be top aligned. -->
+
+
+---
+
+# Grid size performance
+
+.col-4[
++ Re-ran benchmark using graph-based communication
++ NVidia Titan V
++ Average runtime from 3 repetitions
++ **Significant performance improvement!**
++ **@todo - popsize-gridsize-brute-spatial-graph-linear.png**
+]
+.col-8.img-col[
+.w-90[
+![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
+]
+]
+
+---
+
+# Grid size performance
+
+.col-4[
++ Re-ran benchmark using graph-based communication
++ NVidia Titan V
++ 3 repetitions
+
+
++ 0.5 million vehicles
+    + 82.04 seconds
+    + **66x faster than CPU**
+    + **44x faster than real-time**
+
+
++ **@todo - popsize-gridsize-graph-log.png**
+]
+.col-8.img-col[
+.w-90[
+![Aimsun CPU Scaling](img/popsize-gridsize-cpu.png)
+]
+]
+
+<!-- @Todo check all captions / alt textx -->
+
+
+---
+
+# Run-time per Simulation Iteration
+.col-6.img-col[
+.w-90[
+![Per-iteration simulation runtime](img/gridsize-iteration-time-gr256.png)
+]
+]
+
+.col-6[
++ Measured runtime per simulation iteration
++ i7 4770k vs Titan X (Pascal)
++ 256 x 256 grid
++ total demand of 256,000 vehicles
++ Runtime increases per iteration as population grows
++ Periodic detector behaviour causes runtime increases
+]
+
+---
+
+# Input Flow Benchmarks
+
+.col-8.img-col[
+.w-90[
+![@todo](img/flow-gr64.png)
+<!-- @todo - Titan V vs CPU figure? -->
+]
+]
+.col-4[
++ Fixed network size
++ Varied input flow of vehicles per edge
+    + I.e. vehicle density
++ 64 x 64 grid
+]
+---
+
+# Input Flow Benchmarks
+
+.col-8.img-col[
+.w-90[
+![@todo](img/flow-gr128.png)
+<!-- @todo - Titan V vs CPU figure? -->
+]
+]
+.col-4[
++ Fixed network size
++ Varied input flow of vehicles per edge
+    + I.e. vehicle density
++ 128 x 128 grid
+]
+
+---
+
+# Input Flow Benchmarks
+
+.col-8.img-col[
+.w-90[
+![@todo](img/flow-gr256.png)
+<!-- @todo - Titan V vs CPU figure? -->
+]
+]
+.col-4[
++ Fixed network size
++ Varied input flow of vehicles per edge
+    + I.e. vehicle density
++ 256 x 256 grid
+]
+
+---
+
+class: impact 
+# Related and Future Work
+
+---
+
+# Expand Functionality / More complete road network simulation.
+
+.col-8[
++ Only implemented a subset of functionality
++ Implement missing functionality to enable real-world simulations
+    + I.e. Multiple lanes
+    + Dynamic infrastructure
+    + etc.
++ Room for further optimisation
+]
+.col-4.img-col[
 .w-90[
 <!-- ![Label](img/file.png) -->
 *@todo - image*
@@ -308,179 +618,115 @@ class: impact
 
 ---
 
-# FLAME GPU
-+ What / Why.
-+ Other Uses / Images
-+ See OERC
+# GPU Simulation of Pedestrians
 
+.col-4[
++ GPUs suitable for many modes of transport 
++ Including Pedestrian Simulation
++ Existing Pedestrian simulations implemented in FLAME GPU
++ Can simulate 100,000s of pedestrians
++ **Combine with road network simulation for shared environments**
+]
+.col-8.responsive[
+<video width="1920" height="1080" controls loop muted poster="video/ped-london-1080p25.png">
+    <source src="video/ped-london-1080p25.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+<img src="video/ped-london-1080p25.png" class="video-poster" />
 
----
-
-# FLAME GPU
-+ Process. Code snippets?
-+ See OERC
-
----
-
-# FLAME GPU Implementation
-
-+ State diagram
-
-
-# Validation
-
-+ Descirbe the validations we ran. 
-+ Diagrams of the figure / Throw out some numbers.
-+ @todo - gipps model validation is seconds not iterations.
-
----
-
-# FLAME GPU Early Performance
-
-+ Gridsize benchmark with Spatial Comm. Two slides / Transition.
-+ See OERC
-
-<!-- -- -->
-
----
-
-# FLAME GPU Communication
-
-+ Explain comms.
-+ Brute + Spatial
-+ Not well suited to dense transport networks
-+ See OERC
-
----
-
-# Graph Based Communication
-+ New Comm strategy in FLAME GPU 1.5
-+ See OERC 15
-
----
-
-# Graph Based Communication 2
-+ New Comm strategy in FLAME GPU 1.5
-+ See OERC 16
-
-
----
-
-# Graph Based Communication Performance
-+ New Comm strategy in FLAME GPU 1.5
-+ See OERC 17
-
-
----
-
-# Grid size performance
-
-+ Gridsize CPU plot, followed by Graph comm.
-+ Followed by with multiple GPUs
-+ Include speedup numbers.
-
-
----
-
-# Per iteration Runtime
-
-+ Figure showing per iteration runtime. 
-+ OERC Backup slide.
-
----
-
-# Input Flow Benchmarks
-
-+ 64 CPU 
-
---
-
-+ 64 CPU + GPUs
-
----
-
-# Input Flow Benchmarks
-
-+ 128 CPU 
-
---
-
-+ 128 CPU + GPUs
-
----
-
-# Input Flow Benchmarks
-
-+ 256 CPU 
-
---
-
-+ 256 CPU + GPUs
-
----
-
-class: impact 
-# Future Work
-
----
-
-# Expand Functionality / More complete road network simulation.
-
-+ Only implemented a subset of functionality
-+ Add support for multiple lanes
-+ Broader pieces of infrastructure
-+ Performance improvements
-+ Support real-world model and benchmarks.
-
-
----
-
-# Multi-Mode GPU Simulation (Ped)
-
-+ Model multiple modes of transport concurrently on GPUs
-+ I.e Pedestrians - already on GPU
-+ Video of peds form northmost?
-
+]
 ---
 
 # Multi-Mode GPU Simulation (Ped + Rail)
 
-+ Rail - CPU is good enough (S2AM)
-+ S2AM Video
-+ Namedrop Siemens, Rob and Paul.
+<!-- + Rail - CPU is good enough (S2AM) -->
+<!-- + S2AM Video -->
+<!-- + Namedrop Siemens, Rob and Paul. -->
+
+.col-6[
++ Collaboration with Siemens
++ Multi-modal Smart-City Simulation
+    + CPU based rail simulation
+    + GPU accelerated pedestrian simulation
+    + CPU based road network simulation (SUMO)
++ Evaluate rail network performance including pedestrian behaviours in station 
++ More information:<br/>[youtube.com/watch?v=Rz_XzbZIMes](https://www.youtube.com/watch?v=Rz_XzbZIMes)
+]
+.col-6.responsive[
+<video width="1920" height="2160" controls loop muted poster="video/S2AM.png">
+    <source src="video/S2AM.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+<img src="video/S2AM.png" class="video-poster" />
+
+]
 
 ---
 
 # Deep Learning
 
+.col-8[
 + Train DL to predict simulator output
 + Shout out for James.
 + Compliment real world data with simulated data for un-observed situations
-+ @todo - Ask James about his work. 
-
++ @todo - Ask James how to summaries his work in 1 slide.
+]
+.col-4.img-col[
+.w-90[
+<!-- ![Label](img/file.png) -->
+*@todo - image*
+]
+]
 
 ---
 
 # FLAME GPU 2
 
-+ New version of FLAME GPU
-+ Currently under development
-+ Increased Flexibility
-+ Improved performance 
-+ Parameter explorations, etc.
-+ Python bindings
-+ ... 
+.col-8[
++ Redeveloped from the ground-up
++ Under active development, aiming for an initial release this year
++ Increased flexibility
++ Improved performance
++ More maintainable code-base (Modern C++, no more XSLT)
++ New functionality
+    + Automatic parameter exploration / tuning
+    + Run many small simulations concurrently one one device
+    + Multi GPU?
++ Lower barrier to entry
+    + Python bindings (other languages/)
++ github.com/flamegpu2_dev
+]
+.col-4.img-col[
+.w-90[
+!["FLAME GPU logo"](img/flamegpu-logo.jpg)
+*@todo - image*
+]
+]
  
 ---
 
 
 # Conclusion
 
-+ @todo - OERC Conclusion
+.col-6[
++ Used FLAME GPU to implement and cross-validate a road network microsimulation
++ Up to a 66x speedup compared to Aimsun 8.1
++ Real-time-ratio of 39x for a simulation of up to 576000 vehicles
 
+
++ Achieved using a new communication strategy for FLAME GPU 1.5 
+
++ City Scale simulation is achievable on a single GPU, better than real-time.
+]
+.col-6.img-col[
+.w-90[
+![Road Network Microsimulation](img/ttrig-screenshot.png)
+]
+]
 ---
 
 # Thank You
+<!-- @todo - add university logo again -->
 
 .smaller[
 .col-4[
@@ -500,6 +746,8 @@ class: impact
 
 .w-70[
 ![RSE Sheffield](img/rse-sheffield-logo.png)
+![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg) <!-- @todo -->
+
 ]
 ]
 .col-7.offset-1[
@@ -517,25 +765,3 @@ class: impact
 
 ]
 ]
-
-
----
-class: impact
-
-# Additional Slides
-
-
----
-
-# @todo layout
-.col-6[
-+ 
-]
-.col-6.img-col[
-.w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - image*
-]
-]
-
----
