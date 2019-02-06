@@ -320,9 +320,13 @@ github.com/flamegpu/
 
 ---
 
-# FLAME GPU
+# FLAME GPU Code Generation Process
 
-+ **@todo - Code Generation Diagram**
+.col-12.img-col[
+.w-70[
+![FLAME GPU Code Generation](img/flamegpu-process-diagram.png)
+]
+]
 
 + **@todo - Add snippets of XML and C code from github?**
 
