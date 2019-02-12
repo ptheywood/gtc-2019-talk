@@ -45,4 +45,4 @@ To export a PDF version of the slides in the `dist` directory:
     bs p presentation.md
 ```
 
-This may require additional dependencies installing / fixing for headless chrome to run...
+Unfortunately this does not seem to correctly deal with videos. Instead it may be better to open the HTML version in chrome, and save as PDF.
