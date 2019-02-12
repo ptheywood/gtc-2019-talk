@@ -343,6 +343,9 @@ p {
     width: 1% * $i; 
     margin: auto;
   }
+  .w-#{$i}-left {
+    width: 1% * $i;
+  }
 }
 
 // Animations
@@ -475,6 +478,28 @@ img {
 }
 
 
+.vcent-col{
+  display: flex;
+  flex-direction: column;
+  height: 540px;
+  img,
+  p, 
+  ul {
+    margin: auto;
+  }
+  .caption{
+    flex-grow: 0;
+  }
+  .no-grow {
+    flex-grow: 0;
+  }
+  &.two img {
+    max-height: 250px;
+    margin:auto;
+  }
+}
+
+
 table {
   font-size: 0.8em;
   border-collapse: collapse;
@@ -520,4 +545,15 @@ li li {
 
 li li li li {
   font-size: 100%;
+}
+
+.no-top-margin {
+  margin-top:0;
+}
+
+.pull-right {
+  float:right;
+}
+.bottom-bar .pull-right p {
+  margin-right: 80px;
 }

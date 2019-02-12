@@ -1,15 +1,23 @@
 title: Large-Scale Road Network Simulations for Smart Cities
 shorttitle: S9387 - Large-Scale Road Network Simulations for Smart Cities
-authors: Peter Heywood, Paul Richmond
+authors: Peter Heywood, Paul Richmond, Steve Maddock, Rob Chisholm, James Pyle
+shortauthors: Peter Heywood
 institute: The University of Sheffield
 class: animation-fade
 layout: true
 
 
 .bottom-bar[
-  {{shorttitle}}
+.col-8[
+{{shorttitle}}
+]
+.pull-right[
+{{shortauthors}}, {{institute}}
+]
 ]
 
+<!-- @todo - steal stuff from pauls slides http://on-demand.gputechconf.com/gtc/2018/presentation/s8223-simulating-a-city-gpu-simulations-of-traffic-crowds-and-beyond.pdf -->
+<!-- @todo talk ouitline slide. -->
 
 ---
 
@@ -20,7 +28,6 @@ class: impact
 ### {{institute}}
 .uni-logo[
 ![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
-<!-- ![The University of Sheffield Logo](img/tuoslogo_key_cmyk_hi.jpg) -->
 ]
 
 ---
@@ -29,16 +36,49 @@ class: impact
 # Smart City Simulation
 
 ---
-# Transport Network Demand
+
+# Smart Cities
+
 .col-6[
-+ Designing and Managing transport networks is becoming mode difficult
-+ Global transport demand is increasing <!-- @todo - cite -->
++ Data-driven transport management
++ **Improve** utilisation and efficiency etc.
++ **Reduce** congestion and pollution etc.
+    
+
++ Transport demand is increasing <!-- @todo - cite -->
     + Across all modes of transport
     + **@todo - Road statistic**
     + **@todo - Rail statistic**
     + **@todo - Air statistic**
-+ New Modes of transport appearing
++ New modes of transport appearing
     + I.e Connected Autonomous Vehicles (CAVs)
+]
+.col-6.img-col[
+.w-90[
+![Transport Network](img/sheffield-map-smaller.png)
+]
+]
+
+---
+
+# Smart City Transport Simulation
+.col-6[
+
++ Goals can be achieved through **simulation**
+    + Planning
+    + Management
+
+
++ Cities are challenging
+    + High population density
+    + Co-located modes
+
+
++ Limitations on possible interventions
+    + Space
+    + Air Quality
+    + Money
+
 ]
 .col-6.img-col[
 ![Smart Motorway Congestion](img/highways-england-smart-motorway.jpg)
@@ -50,50 +90,25 @@ Highways England
 ]
 ]
 
----
-
-# Smart Cities
-.col-6[
-+ Cities present additional challenges
-+ High population density
-+ Co-located modes of transport
-+ Limited space
-
-
-+ Cannot build new roads to increase capacity
-+ Need to increase utilisation
-    + **Improve planning**
-    + **Active management**
-
-
-+ Achieved through **Simulation**
-
-]
-.col-6.img-col[
-.w-90[
-![Transport Network](img/sheffield-map-smaller.png)
-]
-]
-
 
 ---
 
-# Transport Network Simulations
+# Transport Network Simulation Resolution
 .col-7[
-+ Can be simulated at different **resolutions**
-+ **Macroscopic**
++ **Macroscopic** (Top-Down)
     + Simulate aggregate flows across links
-    + Top-down
-    + *Low level of detail*
-    + *Lowest computational cost*
+    + *Low Resolution*
+    + *Lowest Computational Cost*
+
+
 + **Mesoscopic**
     + Simulate platoons consisting of multiple vehicles
-    + Mid-level
-+ **Microscopic**
+
+
++ **Microscopic** (Bottom-up)
     + Simulate individual vehicles or people
-    + Bottom-up
-    + *High level of detail*
-    + *Very high computational cost*
+    + *High Resolution*
+    + *Very High Cost*
 ]
 .col-5.img-col[
 .w-80[
@@ -105,19 +120,21 @@ Highways England
 
 ---
 
-# Transport Network Simulations
+# Computational Challenges
 .col-6[
-+ Smart City Simulations are massively computationally expensive
++ Smart city simulations are **massively** computationally expensive
     + **Large** 
-        - City-scale, National-scale
+        - Potentially *millions* of individuals
     + **Complex** 
         - Smarter Infrastructure
-        - Multiple Modes
+        - Multi-mode
+        - CAVs
     + **Many Permutations** 
         - Weather, Demand, etc.
 
 
 + Performance is limiting the use of simulation in industry <!-- [cite] --> <!-- @todo -->
+    + Even for smaller-scale simulations
 + **Faster simulators are required** 
 ]
 .col-6.img-col[
@@ -134,9 +151,11 @@ Highways England
 class: impact
 # CPU Microsimulation
 
++ @todo - subpoints
+
 ---
 
-# Microscopic Simulation
+# Microsimulation and Agent Based Modelling
 
 .col-6[
 + Bottom-Up Simulation
@@ -145,7 +164,7 @@ class: impact
     + Interact with others
     + Interact with environment
 
-+ Can be implemented with Agent Based Modelling (ABM) <!-- @todo cite -->
++ Can be implemented with Agent Based Modelling (ABM)
     + Intuitive method of describing models
     + Complex behaviour emerges from simple rules
 
@@ -168,10 +187,10 @@ class: impact
 .col-6[
 + Many commercial and open source simulators
     + Aimsun
-    + Vissim
+    + PTV Vissim
     + Parasim
     + SUMO
-    + ... <!-- @todo cite / links -->
+    + etc.
 + All CPU-based simulators
     + Single-threaded or Multi-threaded
 + Poor scaling with processor cores
@@ -207,7 +226,9 @@ class: impact
 
 ---
 
-# CPU Simulator - Aimsun
+# Reference CPU Simulator)
+
+@todo - This slide needs to show that to achieve our goals we need to do something. What are we simulating. A standardised benchmark
 
 .col-6[
 + Aimsun 8.1
@@ -229,7 +250,7 @@ www.aimsun.com
 
 ---
 
-# Selected Microsimulation Models
+# Selected Microsimulation Models (@todo Standardised Benchmark / Control Models)
 
 .col-6[
 + Several models implemented
@@ -249,9 +270,9 @@ www.aimsun.com
 
 ---
 
-# Procedurally Generated Network
+# Benchmark Network
 
-.col-5[
+.col-5.vcent-col[
 + Manhattan-style grid network
 + Single lane, one-way roads
 + Stop-signs at junctions
@@ -278,6 +299,9 @@ www.aimsun.com
     + ~ 0.5 million vehicles
     + 5447 seconds
     + **1.5x slower than real time**
+
+
++ **Too slow for real-time predictive management**
 ]
 .col-6.img-col[
 .w-99[
@@ -290,6 +314,8 @@ www.aimsun.com
 
 class: impact
 # GPU Microsimulation
+
++ @todo Add bullets
 
 ---
 
@@ -333,7 +359,7 @@ github.com/flamegpu/
 
 ---
 
-# FLAME GPU Advantages
+# Why use FLAME GPU?
 
 .col-6[
 + State-based representation minimises divergence
@@ -350,41 +376,40 @@ github.com/flamegpu/
 
 ---
 
-# FLAME GPU State Diagram
+# @todo overviewy slide linking advantages and state diagram - 
 
-.col-12.img-col[
-.w-75[
++ @todo - Repeat the selected models slide? 
+
+---
+
+
+# Implementation State Diagram
+
+.col-9.img-col[
+.w-99[
 ![FLAME GPU Road Network Simulation State Diagram](img/ttrig-state-diagram-cars.png)
+]
+]
+<!-- .col-3.vcent-col[ -->
+.col-3[
+.smaller[
++ Vehicles only
++ 3 States
++ Represents 1 iteration
++ Functions within layer execute concurrently
 ]
 ]
 
 ---
 
-# Validation
-.col-6[
+<!-- Old Vis slide converted to validation -->
+# Validation of GPU Implementation
+
+.col-4[
 + Cross Validated against Aimsun 8.1
 + 6 sets of validation networks, targeting different models
     + Deterministic tests reproduced exactly
     + Stochastic test reproduced within acceptable range
-]
-.col-6.img-col[
-.w-90[
-![Label](img/aimsun-flame-stopsign.png)
-.caption[Vadliation of Gipps' Car following model Scenario]
-**@todo - Change X Label of this image! Time(s) not Iteration!**
-]
-]
-
-
----
-
-# FLAME GPU Visualisation
-
-.col-4[
-+ High performance, interactive visualisation
-    + CUDA OpenGL Interoperability
-    + OpenGL Instanced Rendering
-+ Simulation rate is limited to improve visibility
 ]
 .col-8.responsive[
 <video width="1920" height="1080" controls loop muted poster="video/ttrig-1080p30.png">
@@ -393,6 +418,34 @@ github.com/flamegpu/
 </video>
 <img src="video/ttrig-1080p30.png" class="video-poster" />
 ]
+
+---
+
+# Validation of GPU Implementation
+.col-4[
++ Cross Validated against Aimsun 8.1
++ 6 sets of validation networks, targeting different models
+    + Deterministic tests reproduced exactly
+    + Stochastic test reproduced within acceptable range
+]
+.col-8.img-col[
+.w-90[
+![Label](img/aimsun-flame-stopsign.png)
+.caption[Vadliation of Gipps' Car following model Scenario]
+**@todo - Change X Label of this image! Time(s) not Iteration!**
+]
+]
+
+<!-- @todo - remove FLAME GPU from titles where not needed. -->
+
+---
+class: impact
+
+# Agent Communication
+
++ Existing Communication Strategies
++ Graph Based Communication
++ Benchmark Results
 
 ---
 
@@ -596,11 +649,16 @@ github.com/flamegpu/
 ---
 
 class: impact 
-# Related and Future Work
+# Future Work and Improvements (@todo)
+
++ Functionality
++ Multi-Mode Simulations
++ Machine Learning and Simulation in Combination
++ FLAME GPU 2
 
 ---
 
-# Expand Functionality / More complete road network simulation.
+# Expand Functionality / More complete road network simulation. (@todo)
 
 .col-8[
 + Only implemented a subset of functionality
@@ -620,7 +678,7 @@ class: impact
 
 ---
 
-# GPU Simulation of Pedestrians
+# Multi-Mode Simulation: Pedestrians
 
 .col-4[
 + GPUs suitable for many modes of transport 
@@ -639,7 +697,7 @@ class: impact
 ]
 ---
 
-# Multi-Mode GPU Simulation (Ped + Rail)
+# Multi-Mode Simulation: Pedestrians and Rail
 
 <!-- + Rail - CPU is good enough (S2AM) -->
 <!-- + S2AM Video -->
@@ -653,6 +711,7 @@ class: impact
     + CPU based road network simulation (SUMO)
 + Evaluate rail network performance including pedestrian behaviours in station 
 + More information:<br/>[youtube.com/watch?v=Rz_XzbZIMes](https://www.youtube.com/watch?v=Rz_XzbZIMes)
++ **Robert Chisholm** [r.chisholm@sheffield.ac.uk](mailto:r.chisholm@sheffield.ac.uk)
 ]
 .col-6.responsive[
 <video width="1920" height="2160" controls loop muted poster="video/S2AM.png">
@@ -667,16 +726,56 @@ class: impact
 
 # Deep Learning
 
-.col-8[
+.col-6[
 + Train DL to predict simulator output
 + Shout out for James.
 + Compliment real world data with simulated data for un-observed situations
 + @todo - Ask James how to summaries his work in 1 slide.
++ **James Pyle** [jcbpyle1@sheffield.ac.uk](mailto:jcbpyle1@sheffield.ac.uk)
 ]
-.col-4.img-col[
-.w-90[
-<!-- ![Label](img/file.png) -->
-*@todo - image*
+.col-6.img-col[
+.w-100[
+![Label](img/ppg_populations.png)
+![Label](img/sim_evaluation_of_surrogate_ga_population.png)
+]
+]
+
+---
+
+# Machine Learning and Simulation in Combination
+
+.col-6[
+.smaller[
++ Train **Surrogate Models**
+    + Machine learning models which *predict the output of a complex system simulation*
+    + Useful for calibration, validation, optimisation, etc 
++ I.e. Search parameter space using surrogate model
+    + Simulate interesting parameters sets
+    + Much faster than simulating whole parameter space
+]
+]
+.col-6[
+.smaller[
++ Transport simulation surrogate model 
++ Train with:
+    + Real-world data
+    + Simulated data
+        + **including low-frequency events**
++ *Accurate*, *Robust* predictions
+
+
++ **James Pyle** [jcbpyle1@sheffield.ac.uk](mailto:jcbpyle1@sheffield.ac.uk)
+]
+]
+.col-9[
+![Label](img/sim_evaluation_of_surrogate_ga_population.png)
+]
+.col-3[
+.smaller[
++ Genetic Algorithm driven search
++ Simple Neural Network surrogate
++ 500x faster than simulation
+    + Less accurate
 ]
 ]
 
@@ -707,28 +806,38 @@ class: impact
  
 ---
 
+class: impact
+
+# Conclusions
+
+---
 
 # Conclusion
 
 .col-6[
-+ Used FLAME GPU to implement and cross-validate a road network microsimulation
-+ Up to a 66x speedup compared to Aimsun 8.1
-+ Real-time-ratio of 39x for a simulation of up to 576000 vehicles
+
++ **Faster-than-real-time city-scale microsimulation is achievable**
 
 
-+ Achieved using a new communication strategy for FLAME GPU 1.5 
++ Simulation of 500,000 vehicles
+    + **44x faster than real-time**
+    + **66x faster than reference simulator**
 
-+ City Scale simulation is achievable on a single GPU, better than real-time.
+
++ Achieved using FLAME GPU
+    + New graph-based agent communication strategy
+    + Cross-validated against Aimsun 8.1 
+    + FLAME GPU 2 is under development
 ]
 .col-6.img-col[
 .w-90[
 ![Road Network Microsimulation](img/ttrig-screenshot.png)
+<!-- @todo - increase contrast of picture ? -->
 ]
 ]
 ---
 
 # Thank You
-<!-- @todo - add university logo again -->
 
 .smaller[
 .col-4[
@@ -742,15 +851,15 @@ class: impact
     + p.richmond@sheffield.ac.uk
     + [paulrichmond.shef.ac.uk](http://paulrichmond.shef.ac.uk)
 
-
-+ RSE Sheffield
-    + http://rse.shef.ac.uk/
-
-.w-70[
+.w-60[
 ![RSE Sheffield](img/rse-sheffield-logo.png)
-![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg) <!-- @todo -->
-
 ]
+.w-60[
+![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
+]
+<!-- rse.shef.ac.uk -->
+<!-- shef.ac.uk -->
+
 ]
 .col-7.offset-1[
 #### Supported by
@@ -759,11 +868,11 @@ class: impact
 
 #### More Information
 
-+ "Data-parallel agent-based microscopic road network simulation using graphics processing units" 
+*"Data-parallel agent-based microscopic road network simulation using graphics processing units"* 
     
-    Heywood et al. 2017
+Peter Heywood, Steve Maddock, Jordi Casas, David Garcia, Mark Brackstone & Paul Richmond. 2017 
 
-    [doi.org/10.1016/j.simpat.2017.11.002](https://doi.org/10.1016/j.simpat.2017.11.002)
+[doi.org/10.1016/j.simpat.2017.11.002](https://doi.org/10.1016/j.simpat.2017.11.002)
 
 ]
 ]

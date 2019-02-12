@@ -3,3 +3,4 @@ dist/
 pdf/
 _convert/
 *.log
+node_modules/
