@@ -618,23 +618,6 @@ class: impact
 
 .col-8.img-col[
 .w-90[
-![@todo](img/flow-gr128.png)
-<!-- @todo - Titan V vs CPU figure? -->
-]
-]
-.col-4[
-+ Fixed network size
-+ Varied input flow of vehicles per edge
-    + I.e. vehicle density
-+ 128 x 128 grid
-]
-
----
-
-# Input Flow Benchmarks
-
-.col-8.img-col[
-.w-90[
 ![@todo](img/flow-gr256.png)
 <!-- @todo - Titan V vs CPU figure? -->
 ]
