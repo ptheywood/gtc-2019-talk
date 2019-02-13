@@ -174,7 +174,7 @@ p {
   p { 
     margin: 0;
   }
-  .impact &,
+  // .impact &,
   .full & { 
     display: none; 
   }
@@ -556,4 +556,27 @@ li li li li {
 }
 .bottom-bar .pull-right p {
   margin-right: 80px;
+}
+
+
+@for $i from 1 through 50 {
+  .h-#{$i} {
+    width: 1% * $i; 
+    margin: auto;
+  }
+}
+
+.commtable {
+  height: 180px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 60px;
+}
+
+.impact {
+  background-image: url(img/tuoslogo_cmyk_hi.jpg);
+  background-repeat: no-repeat;
+  background-position: 0px 20px;
+  background-size: 20%
 }

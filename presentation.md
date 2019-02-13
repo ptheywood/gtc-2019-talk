@@ -1,7 +1,7 @@
 title: Large-Scale Road Network Simulations for Smart Cities
 shorttitle: S9387 - Large-Scale Road Network Simulations for Smart Cities
-authors: Peter Heywood, Paul Richmond, Steve Maddock, Rob Chisholm, James Pyle
-shortauthors: Peter Heywood
+mainauthor: Peter Heywood
+otherauthors: Paul Richmond, Steve Maddock, Rob Chisholm, James Pyle
 institute: The University of Sheffield
 class: animation-fade
 layout: true
@@ -12,7 +12,7 @@ layout: true
 {{shorttitle}}
 ]
 .pull-right[
-{{shortauthors}}, {{institute}}
+{{mainauthor}}, {{institute}}
 ]
 ]
 
@@ -24,10 +24,12 @@ layout: true
 class: impact
 
 # {{title}}
-## {{authors}}
+## <span style="text-decoration: underline">{{mainauthor}}</span>, {{otherauthors}}
 ### {{institute}}
-.uni-logo[
-![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
+
+.bottom-bar[
+{{shorttitle}}
+.pull-right[{{mainauthor}}, {{institute}}]
 ]
 
 ---
@@ -123,18 +125,15 @@ Highways England
 # Computational Challenges
 .col-6[
 + Smart city simulations are **massively** computationally expensive
-    + **Large** 
-        - Potentially *millions* of individuals
-    + **Complex** 
-        - Smarter Infrastructure
-        - Multi-mode
-        - CAVs
-    + **Many Permutations** 
+    + *Millions* of individuals
+    + Many modes of transport
+    + Many permutations required
         - Weather, Demand, etc.
 
 
 + Performance is limiting the use of simulation in industry <!-- [cite] --> <!-- @todo -->
-    + Even for smaller-scale simulations
+
+
 + **Faster simulators are required** 
 ]
 .col-6.img-col[
@@ -156,7 +155,7 @@ class: impact
 ---
 
 # Microsimulation and Agent Based Modelling
-
+<!-- @todo - simplify the text. Less bullts. -->
 .col-6[
 + Bottom-Up Simulation
 + Individual Vehicles
@@ -226,7 +225,7 @@ class: impact
 
 ---
 
-# Reference CPU Simulator)
+# Reference CPU Simulator
 
 @todo - This slide needs to show that to achieve our goals we need to do something. What are we simulating. A standardised benchmark
 
@@ -322,7 +321,7 @@ class: impact
 # FLAME GPU
 .col-6[
 
-+ Flexible Large-Scale Agent Modelling Environment for the GPU
++ **F**lexible **L**arge-Scale **A**gent **M**odelling **E**nvironment for the **GPU**
 + Template-based simulation environment for high performance simulation
 + Agents (individuals) represented as X-Machines
     + with *message lists* for communication
@@ -461,6 +460,8 @@ class: impact
     + Spatially Partitioned Messaging (2D and 3D Continuous Agents)
 + Non-optimal for road network models
 
+
+<!-- @todo an image?  -->
 ---
 
 
@@ -482,59 +483,132 @@ class: impact
 
 ---
 
-# Graph Based Communication
+# Communication Between Vehicle Agents
 
-.col-8[
-+ Communication between vehicles is based on the road network
-+ I.e. Car following models may only involve the lead vehicle
-+ Associates message to the graph data structure of the road network
-+ Reduces the number of messages to be iterated by each agent
-    + By only accessing messages from the relevant edge(s) of the network.
+.col-5[
++ Gipps' Car Following Model
++ \> Requires information from ^
+<!-- @todo - include images. -->
 
+
++ I.e. based on the road network
+
+]
+.col-7.img-col[
+<!-- + @todo - Version showing the target vehilce and the important information. -->
+<!-- @todo key. -->
+<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+]
+
+<!-- @todo - format tables to be at the bottom. Fixed and with the right height. -->
+---
+
+# Communication Example: All to All
+
+.col-5[
++ Brute-Force Communication 
+
+
++ Each agent reads every message
++ Agent @todo reads **42** messages <!-- @ todo replace with key/icon -->
+
+
+.commtable[
+| Communication Strategy | # Messages | 
+|------------------------|------------|
+| All-to-all             |         42 |
+]
+]
+.col-7.img-col[
+<!-- @todo version with only the individual shaded -->
+<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+]
+
+---
+
+# Communication Example: Spatial Partitioning
+
+.col-5[
++ Spatially partitioned messaging
+
+
++ Partition the environment into a grid
++ Read from Moore's Neighbourhood
++ Agent @todo reads **18** messages <!-- @ todo replace with key/icon -->
+
+
+.commtable[
+| Communication Strategy | # Messages | 
+|------------------------|------------|
+| All-to-all             |         42 |
+| Spatial                |         18 |
+]
+]
+.col-7.img-col[
+<!-- @todo version with blue shading only. Add a radius-width circle. -->
+<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+]
+
+---
+
+# Communication Example: Graph-based
+
+.col-5[
++ Graph Based Communication
+
+
++ Couple messages to graph data structure
++ Read from relevant part of graph
++ Agent @todo reads **5** messages <!-- @ todo replace with key/icon -->
+
+
+.commtable[
 | Communication Strategy | # Messages | 
 |------------------------|------------|
 | All-to-all             |         42 |
 | Spatial                |         18 |
 | Graph                  |          5 |
-
-]
-.col-4.img-col[
-.w-99[
-![ttrig-state-diagram-cars.svg](img/communication-diagram.svg)
 ]
 ]
-
+.col-7.img-col[
+<!-- @todo only graph comm? colouring? -->
+<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+]
 
 ---
 
-# Graph Based Communication
+# Graph Based Communication Implementation
 
 + Compressed Sparse Row (CSR) representation of graph 
-+ Messages contain edge or vertex index
-+ Sort message list based on edge (or vertex) index
++ Messages contain *edge* or *vertex* index
++ Sort message list based on index
     + *Counting Sort*
     + Shared-memory atomics 
-    + Builds data structure to access messages whilst sorting
-+ Can access a single edge, or use the CSR to explore the message-list
+    + Builds histogram to access messages
++ Can access a single edge, or explore using CSR 
 + Agents on the same edge are executed on neighbouring threads
-+ Available as of FLAME GPU 1.5.0
++ Implemented in FLAME GPU 1.5.0
+
+<!-- @todo - image. -->
 
 ---
 
 # Graph Based Communication Performance
 
-.col-12[
-    + Measured performance of message list output and iteration for car following model
-    + Higher output cost, but **much, much** cheaper message iteration cost
+.col-4[
++ Measured performance of message input/output
+
+
++ Higher output cost 
+    + ~0.5ms vs ~0.2ms
+
+
++ **Much Lower** iteration cost
+    + ~ 1ms vs ~ 120ms
 ]
-.col-6[.w-90[
-![Average Message output Kernel Execution time](img/communication-output-time.png)
-]]
-.col-6.img-col[.w-90[
+.col-8.img-col[.w-90[
 ![Average Message Iteration Kernel Execution time](img/communication-input-time.png)
 ]]
-<!-- @todo - checkl the formatting of the above images. Should be top aligned. -->
-
 
 ---
 
@@ -542,8 +616,10 @@ class: impact
 
 .col-4[
 + Re-ran benchmark using graph-based communication
-+ NVidia Titan V
-+ Average runtime from 3 repetitions
++ Titan V
++ 3 repetitions
+
+
 + **Significant performance improvement!**
 ]
 .col-8.img-col[
@@ -558,7 +634,7 @@ class: impact
 
 .col-4[
 + Re-ran benchmark using graph-based communication
-+ NVidia Titan V
++ Titan V
 + 3 repetitions
 
 
@@ -588,10 +664,10 @@ class: impact
 ]
 
 .col-6[
-+ Measured runtime per simulation iteration
++ Timed each iteration
 + i7 4770k vs Titan X (Pascal)
 + 256 x 256 grid
-+ total demand of 256,000 vehicles
++ Total demand of 256,000 vehicles
 + Runtime increases per iteration as population grows
 + Periodic detector behaviour causes runtime increases
 ]
@@ -603,14 +679,20 @@ class: impact
 .col-8.img-col[
 .w-90[
 ![@todo](img/flow-gr64.png)
-<!-- @todo - Titan V vs CPU figure? -->
+<!-- @todo - remove brute force for clarity. I.e. only show CPU, spacial, graph, graph txv -->
+
 ]
 ]
 .col-4[
-+ Fixed network size
++ 64 x 64 grid
 + Varied input flow of vehicles per edge
     + I.e. vehicle density
-+ 64 x 64 grid
++ @todo - describe the figure
+
+
++ Spatially partitioned messaging slower than CPU
++ Graph partitioned much quicker
++ Titan V and Titan Xp show similar performance
 ]
 ---
 
@@ -623,33 +705,39 @@ class: impact
 ]
 ]
 .col-4[
-+ Fixed network size
++ 256 x 256 grid
 + Varied input flow of vehicles per edge
     + I.e. vehicle density
-+ 256 x 256 grid
++ @todo describe the figure.
+
+
++ Spatial better than smaller grid
++ Graph even better
++ Large enough problem for larger GPU
 ]
 
 ---
 
 class: impact 
-# Future Work and Improvements (@todo)
+# Other Work
 
-+ Functionality
-+ Multi-Mode Simulations
-+ Machine Learning and Simulation in Combination
++ Additional Functionality
++ Multi-Mode GPU Simulations
++ Machine Learning Surrogate Models
 + FLAME GPU 2
 
 ---
 
-# Expand Functionality / More complete road network simulation. (@todo)
-
+# Additional Functionality
+<!-- @todo keep simple -->
 .col-8[
-+ Only implemented a subset of functionality
-+ Implement missing functionality to enable real-world simulations
-    + I.e. Multiple lanes
++ Our simulator is not suitable for real-world models
++ Missing functionality needs implementing for real-world use
+    + Multi-lane roads
     + Dynamic infrastructure
-    + etc.
-+ Room for further optimisation
+    + @todo
+
++ Further performance improvements
 ]
 .col-4.img-col[
 .w-90[
@@ -661,7 +749,8 @@ class: impact
 
 ---
 
-# Multi-Mode Simulation: Pedestrians
+# Multi-Mode Simulation: Cars & Pedestrians
+<!-- @todo simplify? -->
 
 .col-4[
 + GPUs suitable for many modes of transport 
@@ -680,20 +769,23 @@ class: impact
 ]
 ---
 
-# Multi-Mode Simulation: Pedestrians and Rail
+# Multi-Mode Simulation: Cars, Pedestrians & Rail
 
 <!-- + Rail - CPU is good enough (S2AM) -->
-<!-- + S2AM Video -->
 <!-- + Namedrop Siemens, Rob and Paul. -->
-
+<!-- @todo simplify -->
 .col-6[
-+ Collaboration with Siemens
++ Collaboration with Siemens Rail
 + Multi-modal Smart-City Simulation
     + CPU based rail simulation
     + GPU accelerated pedestrian simulation
     + CPU based road network simulation (SUMO)
 + Evaluate rail network performance including pedestrian behaviours in station 
-+ More information:<br/>[youtube.com/watch?v=Rz_XzbZIMes](https://www.youtube.com/watch?v=Rz_XzbZIMes)
+
+
++ More information: [youtu.be/Rz_XzbZIMes](https://youtu.be/Rz_XzbZIMes)
+
+
 + **Robert Chisholm** [r.chisholm@sheffield.ac.uk](mailto:r.chisholm@sheffield.ac.uk)
 ]
 .col-6.responsive[
@@ -707,26 +799,43 @@ class: impact
 
 ---
 
-# Deep Learning
+# Surrogate Models
+
+<!-- + Transport Simulation Surrogate Model -->
+<!-- + Neural Network or Deep Learning Model -->
+<!-- + Train on real world data and simulated data -->
+<!-- + Long training time, very quick inference -->
+<!-- Trival so its just what we’re doing with deep learning. -->
+
 
 .col-6[
-+ Train DL to predict simulator output
-+ Shout out for James.
-+ Compliment real world data with simulated data for un-observed situations
-+ @todo - Ask James how to summaries his work in 1 slide.
+.smaller[
++ Transport Simulation **Surrogate Model**
++ Train (Deep) Neural Networks to predict simulator output
+    + Use Real-world data
+    + Simulated data
+        + **including low-frequency events**
++ *Accurate*, *Robust* predictions
++ Faster than simulations
+
++ Useful for quick response / parameter sweep.
+
+
 + **James Pyle** [jcbpyle1@sheffield.ac.uk](mailto:jcbpyle1@sheffield.ac.uk)
 ]
+]
 .col-6.img-col[
-.w-100[
-![Label](img/ppg_populations.png)
-![Label](img/sim_evaluation_of_surrogate_ga_population.png)
+.w-90[
+<!-- !["FLAME GPU logo"](img/flamegpu-logo.jpg) -->
+**@todo - image of machine learning / deep learning / GPUs / both.**
+<!-- Deep Learning / DGX 1 / Mavericks picture.  -->
 ]
 ]
 
 ---
 
-# Machine Learning and Simulation in Combination
-
+# Surrogate Models
+<!-- @todo remove this slide. -->
 .col-6[
 .smaller[
 + Train **Surrogate Models**
@@ -766,6 +875,8 @@ class: impact
 
 # FLAME GPU 2
 
+<!-- @todo - less words. -->
+
 .col-8[
 + Redeveloped from the ground-up
 + Under active development, aiming for an initial release this year
@@ -799,17 +910,17 @@ class: impact
 
 .col-6[
 
-+ **Faster-than-real-time city-scale microsimulation is achievable**
++ **Faster-than-real-time city-scale microsimulation**
 
 
 + Simulation of 500,000 vehicles
     + **44x faster than real-time**
-    + **66x faster than reference simulator**
+    + **66x faster than Aimsun 8.1 (CPU)**
 
 
 + Achieved using FLAME GPU
     + New graph-based agent communication strategy
-    + Cross-validated against Aimsun 8.1 
+    + Cross-validated implementation
     + FLAME GPU 2 is under development
 ]
 .col-6.img-col[
@@ -824,30 +935,35 @@ class: impact
 
 .smaller[
 .col-4[
-#### Contact
 + Peter Heywood
     + p.heywood@sheffield.ac.uk
     + [ptheywood.uk](http://ptheywood.uk)
+    + [rse.shef.ac.uk](https://rse.shef.ac.uk)
 
 
 + Paul Richmond
     + p.richmond@sheffield.ac.uk
     + [paulrichmond.shef.ac.uk](http://paulrichmond.shef.ac.uk)
 
-.w-60[
-![RSE Sheffield](img/rse-sheffield-logo.png)
-]
+
++ Robert Chisholm
+    + r.chisholm@sheffield.ac.uk
+
+
++ James Pyle
+    + jcbpyle1@sheffield.ac.uk
+
 .w-60[
 ![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
 ]
-<!-- rse.shef.ac.uk -->
-<!-- shef.ac.uk -->
 
 ]
 .col-7.offset-1[
 #### Supported by
 + EPSRC fellowship “Accelerating Scientific Discovery with Accelerated Computing” (EP/N018869/1)
 + DfT Transport Technology Research Innovation Grant (T-TRIG July 2016)
+
+<br />
 
 #### More Information
 
