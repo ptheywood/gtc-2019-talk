@@ -287,27 +287,28 @@ www.aimsun.com
 
 # Aimsun Benchmarking
 
-.col-6[
-+ Benchmarked Aimsun 8.1 at multiple scales
-+ 1 hour simulation
-+ Intel i7 4770k
-+ Average runtime from 3 repetitions
+.col-5[
++ Aimsun 8.1
++ 4 core Intel i7 4770k CPU
 
 
-+ Largest Simulation which ran to completion
-    + ~ 0.5 million vehicles
++ 3 repetitions
++ 1 hour simulation 
++ Varied environment and population sizes
+
+
++ Largest Simulation
+    + ~ 500,000 vehicles
+    + ~ 2,000,000 detectors
     + 5447 seconds
     + **1.5x slower than real time**
 
 
-+ **Too slow for real-time predictive management**
++ **Too slow for real-time management**
 ]
-.col-6.img-col[
-.w-99[
+.col-7.img-col[
 ![Aimsun CPU Scaling](img/popsize-gridsize-cpu-linear.png)
 ]
-]
-<!-- @todo - linear or log -->
 
 ---
 
@@ -319,13 +320,21 @@ class: impact
 ---
 
 # FLAME GPU
+
+**F**lexible **L**arge-Scale **A**gent **M**odelling **E**nvironment for the **GPU**
 .col-6[
 
-+ **F**lexible **L**arge-Scale **A**gent **M**odelling **E**nvironment for the **GPU**
-+ Template-based simulation environment for high performance simulation
-+ Agents (individuals) represented as X-Machines
++ Template-based simulation environment 
++ High performance agent-based simulation
++ Agents modelled using X-Machines
     + with *message lists* for communication
 + Abstracts the CUDA programming model away from the user
+
+.center[
+**flamegpu.com**
+
+github.com/flamegpu/
+]
 
 ]
 .col-6.img-col[
@@ -334,9 +343,7 @@ class: impact
 !["FLAME GPU logo"](img/flamegpu-logo.jpg)
 ]
 
-flamegpu.com
 
-github.com/flamegpu/
 
 **@todo Generic FLAME GPU images**
 ]
@@ -347,28 +354,39 @@ github.com/flamegpu/
 
 # FLAME GPU Code Generation Process
 
-.col-12.img-col[
-.w-70[
+.col-7.img-col[
+.w-100[
 ![FLAME GPU Code Generation](img/flamegpu-process-diagram.png)
 ]
 ]
 
-+ **@todo - Add snippets of XML and C code from github?**
-
+.col-5.img-col[
+.w-95[
+![Boids model XML](img/boids-output-xml.png)
+![Boids model C](img/boids-output-c.png)
+]
+]
 
 ---
 
 # Why use FLAME GPU?
 
-.col-6[
-+ State-based representation minimises divergence
-+ SoA per state list - improves data access pattern
-+ Message lists avoid race-conditions
+.col-8.vcent-col[
+
++ GPU knowledge not required
+
++ Divergence minimised by state-based representation
+
++ Efficient memory access
+    + SoA, neighbouring threads
+    + Shared memory used where appropriate, authomatically
++ Race conditions avoided
+    + Message-lists
     + Natural synchronisation barriers
-+ Reduce global reads via shared memory
+
 ]
-.col-6.img-col[
-.w-90[
+.col-4.img-col[
+.w-100[
 ![FLAME GPU X machine diagram](img/xMachine.jpg)
 ]
 ]
@@ -384,33 +402,23 @@ github.com/flamegpu/
 
 # Implementation State Diagram
 
-.col-9.img-col[
-.w-99[
+.col-12.img-col[
+.w-78[
 ![FLAME GPU Road Network Simulation State Diagram](img/ttrig-state-diagram-cars.png)
-]
-]
-<!-- .col-3.vcent-col[ -->
-.col-3[
-.smaller[
-+ Vehicles only
-+ 3 States
-+ Represents 1 iteration
-+ Functions within layer execute concurrently
 ]
 ]
 
 ---
 
-<!-- Old Vis slide converted to validation -->
 # Validation of GPU Implementation
 
 .col-4[
 + Cross Validated against Aimsun 8.1
-+ 6 sets of validation networks, targeting different models
-    + Deterministic tests reproduced exactly
-    + Stochastic test reproduced within acceptable range
++ 6 sets of validation networks 
++ Target individual behaviours 
++ Target combined effects
 ]
-.col-8.responsive[
+.col-8.img-col.responsive[
 <video width="1920" height="1080" controls loop muted poster="video/ttrig-1080p30.png">
     <source src="video/ttrig-1080p30.webm" type="video/webm">
   Your browser does not support the video tag.
@@ -423,9 +431,13 @@ github.com/flamegpu/
 # Validation of GPU Implementation
 .col-4[
 + Cross Validated against Aimsun 8.1
-+ 6 sets of validation networks, targeting different models
-    + Deterministic tests reproduced exactly
-    + Stochastic test reproduced within acceptable range
++ 6 sets of validation networks 
++ Target individual behaviours 
++ Target combined effects
+
+
++ Deterministic tests reproduced exactly
++ Stochastic test reproduced within acceptable range
 ]
 .col-8.img-col[
 .w-90[
@@ -468,12 +480,18 @@ class: impact
 # FLAME GPU Communication Benchmarking
 
 .col-4[
-+ Benchmarked multiple scales using alternate communication strategies
-+ NVidia Titan V
-+ Average runtime from 3 repetitions
++ Benchmarked existing communication strategies
+
+
++ Titan V
++ 1 hour simulation
++ 3 repetitions
+
+
 + Poor Performance
+
+
 + **Majority of runtime spent iterating messages!**
-+ **@todo - popsize-gridsize-brute-spatial-linear.png**
 ]
 .col-8.img-col[
 .w-90[
@@ -495,7 +513,7 @@ class: impact
 
 
 ]
-.col-7.center[
+.col-7.right[
 <img src="img/communication-diagram-brute.svg" alt="Communication Diagram for Brute-Force communication" class="comm-diagram" />
 ]
 
@@ -506,9 +524,6 @@ class: impact
 # Communication Example
 
 ### All-to-All Communication
-
-+ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
-
 
 + Each agent reads every message
 
@@ -523,7 +538,7 @@ class: impact
 | All-to-all             |         42 |
 ]
 ]
-.col-7.center[
+.col-7.right[
 <img src="img/communication-diagram-brute.svg" alt="Communication Diagram for Brute-Force communication" class="comm-diagram" />
 ]
 
@@ -535,10 +550,7 @@ class: impact
 ### Spatially Partitioned
 
 
-+ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
-
-
-+ Radius-based communication
++ Radius-based
 + Partition the environment
 + Read from Moore's Neighbourhood
 
@@ -554,7 +566,7 @@ class: impact
 | Spatial                |         18 |
 ]
 ]
-.col-7.center[
+.col-7.right[
 <img src="img/communication-diagram-spatial.svg" alt="Communication Diagram for Spatially Partitioned communication" class="comm-diagram" />
 ]
 
@@ -563,9 +575,6 @@ class: impact
 .col-5[
 # Communication Example
 ### Graph Based
-
-+ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
-
 
 + Couple messages to graph data structure
 + Read from relevant part of graph
@@ -582,7 +591,7 @@ class: impact
 | Graph                  |          5 |
 ]
 ]
-.col-7.center[
+.col-7.right[
 <img src="img/communication-diagram-graph.svg" alt="Communication Diagram for Spatially Partitioned communication" class="comm-diagram" />
 ]
 
@@ -674,11 +683,14 @@ class: impact
 ]
 ]
 
-.col-6[
-+ Timed each iteration
-+ i7 4770k vs Titan X (Pascal)
+.col-6.vcent-col[
++ Timed iterations
++ i7 4770k 
++ Titan X (Pascal)
 + 256 x 256 grid
-+ Total demand of 256,000 vehicles
++ Up-to 256,000 vehicles
+
+
 + Runtime increases per iteration as population grows
 + Periodic detector behaviour causes runtime increases
 ]
@@ -763,34 +775,32 @@ class: impact
 # Multi-Mode Simulation: Cars & Pedestrians
 <!-- @todo simplify? -->
 
-.col-4[
-+ GPUs suitable for many modes of transport 
-+ Including Pedestrian Simulation
-+ Existing Pedestrian simulations implemented in FLAME GPU
-+ Can simulate 100,000s of pedestrians
-+ **Combine with road network simulation for shared environments**
+.col-4.vcent-col[
++ Simulate Pedestrians and Vehicles on GPU
++ Urban shared spaces
++ Social Force Pedestrian Simulations icluded in FLAME GPU examples
++ Real-time simulations of 100,000s of pedestrians
 ]
-.col-8.responsive[
+.col-8[
+.img-col.responsive.inner-margin-top[
 <video width="1920" height="1080" controls loop muted poster="video/ped-london-1080p25.png">
     <source src="video/ped-london-1080p25.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 <img src="video/ped-london-1080p25.png" class="video-poster" />
+]
 
 ]
 ---
 
 # Multi-Mode Simulation: Cars, Pedestrians & Rail
 
-<!-- + Rail - CPU is good enough (S2AM) -->
-<!-- + Namedrop Siemens, Rob and Paul. -->
-<!-- @todo simplify -->
-.col-6[
-+ Collaboration with Siemens Rail
+.col-6.vcent-col[
++ SIEMENS Sheffield Advanced Multi-Model Simulator
 + Multi-modal Smart-City Simulation
-    + CPU based rail simulation
-    + GPU accelerated pedestrian simulation
-    + CPU based road network simulation (SUMO)
+    + GPU accelerated pedestrian simulator
+    + CPU rail simulator
+    + CPU road network simulator (SUMO)
 + Evaluate rail network performance including pedestrian behaviours in station 
 
 
@@ -798,6 +808,7 @@ class: impact
 
 
 + **Robert Chisholm** [r.chisholm@sheffield.ac.uk](mailto:r.chisholm@sheffield.ac.uk)
++ **Paul Richmond** [p.richmond@sheffield.ac.uk](mailto:p.richmond@sheffield.ac.uk)
 ]
 .col-6.responsive[
 <video width="1920" height="2160" controls loop muted poster="video/S2AM.png">
@@ -810,75 +821,41 @@ class: impact
 
 ---
 
-# Surrogate Models
+# Surrogate Transport Network Models
 
-<!-- + Transport Simulation Surrogate Model -->
-<!-- + Neural Network or Deep Learning Model -->
-<!-- + Train on real world data and simulated data -->
-<!-- + Long training time, very quick inference -->
-<!-- Trival so its just what we’re doing with deep learning. -->
-
-
-.col-6[
+.col-7[
 .smaller[
-+ Transport Simulation **Surrogate Model**
-+ Train (Deep) Neural Networks to predict simulator output
-    + Use Real-world data
-    + Simulated data
-        + **including low-frequency events**
-+ *Accurate*, *Robust* predictions
-+ Faster than simulations
++ Machine Learning inference faster than simulation
++ But Networks biased towards training data
+    + **Low accuracy for low-frequency events**
 
-+ Useful for quick response / parameter sweep.
+
+1. **Supplement training data with Simulated Data**
+    + Improving accuracy for low-frequency events
+2. **Surrogate Models**
+    + (Deep) Neural Networks to predict simulator output
+    + Accelerates Parameter Search
+        + Calibration & Validation
+        + Optimisation
+
+
++ Generate huge amounts of training data using GPU accelerated simulations
 
 
 + **James Pyle** [jcbpyle1@sheffield.ac.uk](mailto:jcbpyle1@sheffield.ac.uk)
++ **Paul Richmond** [p.richmond@sheffield.ac.uk](mailto:p.richmond@sheffield.ac.uk)
 ]
 ]
-.col-6.img-col[
-.w-90[
-<!-- !["FLAME GPU logo"](img/flamegpu-logo.jpg) -->
-**@todo - image of machine learning / deep learning / GPUs / both.**
-<!-- Deep Learning / DGX 1 / Mavericks picture.  -->
+.col-5.img-col[
+.w-80[
+    ![Nvidia Titan Xp and Titan V](img/2-titan-xp-2-titan-v.jpg)
 ]
+.w-100[
+!["Neural Network"](img/MultiLayerNeuralNetworkBigger_english.png)
+.caption.even-smaller-caption[
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+[https://commons.wikimedia.org/wiki/File:MultiLayerNeuralNetworkBigger_english.png](https://commons.wikimedia.org/wiki/File:MultiLayerNeuralNetworkBigger_english.png)
 ]
-
----
-
-# Surrogate Models
-<!-- @todo remove this slide. -->
-.col-6[
-.smaller[
-+ Train **Surrogate Models**
-    + Machine learning models which *predict the output of a complex system simulation*
-    + Useful for calibration, validation, optimisation, etc 
-+ I.e. Search parameter space using surrogate model
-    + Simulate interesting parameters sets
-    + Much faster than simulating whole parameter space
-]
-]
-.col-6[
-.smaller[
-+ Transport simulation surrogate model 
-+ Train with:
-    + Real-world data
-    + Simulated data
-        + **including low-frequency events**
-+ *Accurate*, *Robust* predictions
-
-
-+ **James Pyle** [jcbpyle1@sheffield.ac.uk](mailto:jcbpyle1@sheffield.ac.uk)
-]
-]
-.col-9[
-![Label](img/sim_evaluation_of_surrogate_ga_population.png)
-]
-.col-3[
-.smaller[
-+ Genetic Algorithm driven search
-+ Simple Neural Network surrogate
-+ 500x faster than simulation
-    + Less accurate
 ]
 ]
 

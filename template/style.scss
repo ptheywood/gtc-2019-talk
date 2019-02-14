@@ -338,7 +338,7 @@ p {
 }
 
 
-@for $i from 1 through 99 {
+@for $i from 1 through 100 {
   .w-#{$i} {
     width: 1% * $i; 
     margin: auto;
@@ -443,8 +443,14 @@ img {
   display: block;
   text-align: center;
   font-size: 0.7em;
+  a{
+    word-break: break-all;
+  }
   &.smaller-caption {
     font-size: 0.6em;
+  }
+  &.even-smaller-caption {
+    font-size: 0.55em;
   }
   p {
     margin: 0;
@@ -483,9 +489,12 @@ img {
   flex-direction: column;
   height: 540px;
   img,
-  p, 
+  p {
+    margin: auto
+  }
   ul {
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .caption{
     flex-grow: 0;
@@ -589,4 +598,7 @@ li li li li {
 
 .comm-diagram {
   width: 620px;
+}
+.inner-margin-top{
+  margin-top: 2em;
 }
