@@ -18,6 +18,8 @@ layout: true
 
 <!-- @todo - steal stuff from pauls slides http://on-demand.gputechconf.com/gtc/2018/presentation/s8223-simulating-a-city-gpu-simulations-of-traffic-crowds-and-beyond.pdf -->
 <!-- @todo talk ouitline slide. -->
+<!-- @todo - Format all figures using consistent colours. Perhaps look at the comm diagram form colours? -->
+<!-- @Todo check all captions / alt textx -->
 
 ---
 
@@ -155,7 +157,6 @@ class: impact
 ---
 
 # Microsimulation and Agent Based Modelling
-<!-- @todo - simplify the text. Less bullts. -->
 .col-6[
 + Bottom-Up Simulation
 + Individual Vehicles
@@ -517,7 +518,6 @@ class: impact
 <img src="img/communication-diagram-brute.svg" alt="Communication Diagram for Brute-Force communication" class="comm-diagram" />
 ]
 
-<!-- @todo - format tables to be at the bottom. Fixed and with the right height. -->
 ---
 
 .col-5[
@@ -632,7 +632,7 @@ class: impact
 
 ---
 
-# Grid size performance (@todo rename)
+# Graph-based Communication Benchmarking
 
 .col-4[
 + Re-ran benchmark using graph-based communication
@@ -650,7 +650,7 @@ class: impact
 
 ---
 
-# Grid size performance (@todo rename)
+# Graph-based Communication Benchmarking
 
 .col-4[
 + Re-ran benchmark using graph-based communication
@@ -670,9 +670,6 @@ class: impact
 ![Grid-scale Perforamnce](img/popsize-gridsize-graph-log.png)
 ]
 ]
-
-<!-- @Todo check all captions / alt textx -->
-
 
 ---
 
@@ -697,11 +694,11 @@ class: impact
 
 ---
 
-# Input Flow Benchmarks
+# Input Flow Benchmarking: 64x64 grid
 
 .col-8.img-col[
 .w-90[
-![@todo](img/flow-gr64.png)
+![Input Flow Benchmark Results for 64x64 Grid](img/flow-gr64.png)
 <!-- @todo - remove brute force for clarity. I.e. only show CPU, spacial, graph, graph txv -->
 
 ]
@@ -710,7 +707,7 @@ class: impact
 + 64 x 64 grid
 + Varied input flow of vehicles per edge
     + I.e. vehicle density
-+ @todo - describe the figure
++ **@todo - describe the figure**
 
 
 + Spatially partitioned messaging slower than CPU
@@ -719,19 +716,18 @@ class: impact
 ]
 ---
 
-# Input Flow Benchmarks
+# Input Flow Benchmarking: 256x256 grid 
 
 .col-8.img-col[
 .w-90[
-![@todo](img/flow-gr256.png)
-<!-- @todo - Titan V vs CPU figure? -->
+[Input Flow Benchmark Results for 256x256 Grid](img/flow-gr256.png)
 ]
 ]
 .col-4[
 + 256 x 256 grid
 + Varied input flow of vehicles per edge
     + I.e. vehicle density
-+ @todo describe the figure.
++ **@todo describe the figure.**
 
 
 + Spatial better than smaller grid
@@ -752,13 +748,12 @@ class: impact
 ---
 
 # Additional Functionality
-<!-- @todo keep simple -->
 .col-8[
 + Our simulator is not suitable for real-world models
 + Missing functionality needs implementing for real-world use
     + Multi-lane roads
     + Dynamic infrastructure
-    + @todo
+    + **@todo**
 
 + Further performance improvements
 ]
@@ -773,7 +768,6 @@ class: impact
 ---
 
 # Multi-Mode Simulation: Cars & Pedestrians
-<!-- @todo simplify? -->
 
 .col-4.vcent-col[
 + Simulate Pedestrians and Vehicles on GPU
@@ -863,27 +857,36 @@ class: impact
 
 # FLAME GPU 2
 
-<!-- @todo - less words. -->
+.col-6[
++ *Under Active Development*
 
-.col-8[
-+ Redeveloped from the ground-up
-+ Under active development, aiming for an initial release this year
-+ Increased flexibility
-+ Improved performance
-+ More maintainable code-base (Modern C++, no more XSLT)
-+ New functionality
-    + Automatic parameter exploration / tuning
-    + Run many small simulations concurrently one one device
-    + Multi GPU?
-+ Lower barrier to entry
-    + Python bindings (other languages/)
-+ github.com/flamegpu2_dev
+
++ Ground-up Rewrite
++ Modern C++/CUDA
++ Improved:
+    + Performance
+    + Usability
+    + Maintainable
+
+
 ]
-.col-4.img-col[
-.w-90[
+.col-6[
++ New Functionality (planned)
+    + Automatic parameter exploration
+    + Concurrent Batch Simulation
+    + Multi-GPU Support & UVM
+    + Higher-level language bindings
+        + I.e. Python
+
+
+**[github.com/flamegpu/flamegpu2_dev](https://github.com/flamegpu/flamegpu2_dev)**
+
+]
+.col-12.center[
+.w-40[
 !["FLAME GPU logo"](img/flamegpu-logo.jpg)
-*@todo - image*
 ]
+
 ]
  
 ---
