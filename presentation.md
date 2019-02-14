@@ -483,34 +483,38 @@ class: impact
 
 ---
 
-# Communication Between Vehicle Agents
-
 .col-5[
-+ Gipps' Car Following Model
-+ \> Requires information from ^
-<!-- @todo - include images. -->
+# Communication Example
+
+### Gipps' Car Following Model
++ Agent only requires information from the lead vehicle to calculate new speed
 
 
-+ I.e. based on the road network
++ I.e. <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
+
+
 
 ]
-.col-7.img-col[
-<!-- + @todo - Version showing the target vehilce and the important information. -->
-<!-- @todo key. -->
-<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+.col-7.center[
+<img src="img/communication-diagram-brute.svg" alt="Communication Diagram for Brute-Force communication" class="comm-diagram" />
 ]
 
 <!-- @todo - format tables to be at the bottom. Fixed and with the right height. -->
 ---
 
-# Communication Example: All to All
-
 .col-5[
-+ Brute-Force Communication 
+# Communication Example
+
+### All-to-All Communication
+
++ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
 
 
 + Each agent reads every message
-+ Agent @todo reads **42** messages <!-- @ todo replace with key/icon -->
+
+
++ Agent <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> reads **42** messages
+    + From <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-generic-vehicle.svg" alt="Generic Vehicle" class="comm-vehicle-icon" />
 
 
 .commtable[
@@ -519,22 +523,28 @@ class: impact
 | All-to-all             |         42 |
 ]
 ]
-.col-7.img-col[
-<!-- @todo version with only the individual shaded -->
-<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+.col-7.center[
+<img src="img/communication-diagram-brute.svg" alt="Communication Diagram for Brute-Force communication" class="comm-diagram" />
 ]
 
 ---
 
-# Communication Example: Spatial Partitioning
-
 .col-5[
-+ Spatially partitioned messaging
+# Communication Example
+
+### Spatially Partitioned
 
 
-+ Partition the environment into a grid
++ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
+
+
++ Radius-based communication
++ Partition the environment
 + Read from Moore's Neighbourhood
-+ Agent @todo reads **18** messages <!-- @ todo replace with key/icon -->
+
+
++ Agent <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> reads **18** messages
+    + From <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-generic-vehicle-spatial.svg" alt="Generic Vehicle" class="comm-vehicle-icon" />
 
 
 .commtable[
@@ -544,23 +554,25 @@ class: impact
 | Spatial                |         18 |
 ]
 ]
-.col-7.img-col[
-<!-- @todo version with blue shading only. Add a radius-width circle. -->
-<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+.col-7.center[
+<img src="img/communication-diagram-spatial.svg" alt="Communication Diagram for Spatially Partitioned communication" class="comm-diagram" />
 ]
 
 ---
 
-# Communication Example: Graph-based
-
 .col-5[
-+ Graph Based Communication
+# Communication Example
+### Graph Based
+
++ <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> requires information from <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" />
 
 
 + Couple messages to graph data structure
 + Read from relevant part of graph
-+ Agent @todo reads **5** messages <!-- @ todo replace with key/icon -->
 
+
++ Agent <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> reads **5** messages
+    + From <img src="img/comm-diag-target-vehicle.svg" alt="Target Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-lead-vehicle.svg" alt="Lead Vehicle" class="comm-vehicle-icon" /> <img src="img/comm-diag-generic-vehicle-graph.svg" alt="Generic Vehicle" class="comm-vehicle-icon" />
 
 .commtable[
 | Communication Strategy | # Messages | 
@@ -570,9 +582,8 @@ class: impact
 | Graph                  |          5 |
 ]
 ]
-.col-7.img-col[
-<!-- @todo only graph comm? colouring? -->
-<img src="img/communication-diagram.svg" alt="Communication diagram" style="width:550px;" />
+.col-7.center[
+<img src="img/communication-diagram-graph.svg" alt="Communication Diagram for Spatially Partitioned communication" class="comm-diagram" />
 ]
 
 ---
