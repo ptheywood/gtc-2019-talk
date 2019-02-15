@@ -23,12 +23,7 @@
             "name": "Aimsun 8.1 - i7 4770k",
             "group": "device_name_i7 4770k",
             "y_id": 0,
-            "color": [
-                0.011764705882352941,
-                0.2627450980392157,
-                0.8745098039215686,
-                1.0
-            ],
+            "color": [0.4588, 0.4392, 0.7020, 1.0],
             "linestyle": "-.",
             "marker": "o",
             "data": [
@@ -57,14 +52,9 @@
             "name": "FLAME GPU -  TITAN Xp, On-Graph Messaging",
             "group": "device_name_TITAN Xp__message_type_On-Graph",
             "y_id": 0,
-            "color": [
-                0.847,
-                0.231,
-                0.175,
-                1.0
-            ],
+            "color": [0.1020, 0.6235, 0.4667, 1.0],
             "linestyle": "-",
-            "marker": "s",
+            "marker": "v",
             "data": [
                 [8000.0, 68.30430403500009],
                 [16000.0, 59.54568819700014],
@@ -89,14 +79,9 @@
             "name": "FLAME GPU -  TITAN V, On-Graph Messaging",
             "group": "device_name_TITAN V__message_type_On-Graph",
             "y_id": 0,
-            "color": [
-                0.18997308727412535,
-                0.36965782391387925,
-                0.08841214917339485,
-                1.0
-            ],
-            "linestyle": ":",
-            "marker": "s",
+            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "linestyle": "-",
+            "marker": "x",
             "data": [
                 [8000.0, 31.2193407776666],
                 [16000.0, 32.809935799],

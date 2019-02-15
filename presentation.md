@@ -183,7 +183,7 @@ Highways England
 ]
 ]
 .col-6.img-col[
-.w-66[
+.w-70[
 ![Gridlock in New York City](img/New_York_City_Gridlock.jpg)
 .caption.even-smaller-caption[
 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)

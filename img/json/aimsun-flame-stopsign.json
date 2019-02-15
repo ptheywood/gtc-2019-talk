@@ -22,9 +22,9 @@
             "name": "Aimsun",
             "group": "threads",
             "y_id": 0,
-            "color": "#530f89",
+            "color": [0.4588, 0.4392, 0.7020, 1],
             "linestyle": "-",
-            "marker": "s",
+            "marker": "o",
             "marker_size": 6,
             "data": [
                 [1, 50],
@@ -62,9 +62,9 @@
             "name": "FLAME GPU",
             "group": "threads",
             "y_id": 0,
-            "color": "#91db56",
+             "color": [0.8902, 0.3725, 0.0078, 0.7],
             "linestyle": "--",
-            "marker": "X",
+            "marker": "x",
             "marker_size": 6,
             "data": [
                 [1, 50.000039],

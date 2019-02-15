@@ -1,0 +1,87 @@
+{
+    "title": "Average Car Following Model Kernel Performance",
+    "x_label": "Grid Size",
+    "y_label": "Average kernel Time (ms)",
+    "legend_y_offset": -0.15,
+    "x_lim": [0, 140],
+    "y_lim": [],
+    "x_scale": "linear",
+    "y_scale": "linear",
+    "x_log_base": 2,
+    "y_log_base": 10,
+    "x_ticks": [],
+    "y_ticks": [],
+    "x_ticks_labels": [],
+    "y_ticks_labels": [],
+    "x_ticks_minor": "False",
+    "y_ticks_minor": "False",
+    "grid_major": "True",
+    "grid_minor": "False",
+    "fontsize_title": 18,
+    "fontsize_label": 18,
+    "fontsize_legend": 14,
+    "labelsize_tick": 16,
+    "fontweight_title": 600,
+    "series": [
+        {
+            "flame": true,
+            "name": "All-to-All",
+            "group": "device_name_TITAN X (Pascal)__file_grid_size_64",
+            "y_id": 0,
+            "y_id": 0,
+            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "linestyle": ":",
+            "marker": "s",
+            "marker_size": 5,
+            "data": [
+                [8.0, 1.663459975],
+                [16.0, 3.197849963],
+                [32.0, 9.702683823],
+                [64.0, 32.27589697],
+                [96.0, 69.32827163],
+                [128.0, 120.4358246]
+            ],
+            "max_data_value": 120.4358246
+        },
+        {
+            "flame": true,
+            "name": "Spatial",
+            "group": "s",
+            "y_id": 0,
+            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "linestyle": "--",
+            "marker": "^",
+            "marker_size": 5,
+            "data": [
+                [8.0, 7.264602724],
+                [16.0, 9.837407138],
+                [32.0, 16.45458818],
+                [64.0, 29.04378727],
+                [96.0, 48.74232848],
+                [128.0, 112.3101089]
+            ],
+            "max_data_value": 112.3101089
+        },
+        {
+            "flame": true,
+            "name": "Graph-Based",
+            "group": "g",
+            "y_id": 0,
+            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "linestyle": "-",
+            "marker": "x",
+            "marker_size": 5,
+            "data": [
+                [8.0, 0.609881259],
+                [16.0, 0.73205046],
+                [32.0, 0.901745707],
+                [64.0, 1.111266404],
+                [96.0, 1.45462523],
+                [128.0, 1.920850916]
+            ],
+            "max_data_value": 1.920850916
+        }
+        
+        
+    ]
+}
