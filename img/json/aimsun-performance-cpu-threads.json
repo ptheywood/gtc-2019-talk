@@ -1,0 +1,84 @@
+{
+    "title": "Average Total Simulation Time Against Number of Threads",
+    "x_label": "Number of Threads",
+    "y_label": "Average Total Simulation Time (s)",
+    "legend_y_offset": -0.15,
+    "x_lim": [0, 10],
+    "y_lim": [0, 700],
+    "x_scale": "linear",
+    "y_scale": "linear",
+    "x_log_base": 2,
+    "y_log_base": 10,
+    "x_ticks": [],
+    "y_ticks": [],
+    "x_ticks_labels": [],
+    "y_ticks_labels": [],
+    "x_ticks_minor": "False",
+    "y_ticks_minor": "False",
+    "grid_major": "True",
+    "grid_minor": "False",
+    "series": [
+        {
+            "name": "Dual Intel Xeon E5-2643 v4",
+            "color": [0.8902, 0.3725, 0.0078, 1.0],
+            "linestyle": ":",
+            "marker": "s",
+            "marker_size": 6,
+            "data": [
+                [
+                    1,
+                    680.9542657
+                ],
+                [
+                    2,
+                    365.327672
+                ],
+                [
+                    3,
+                    276.0073323
+                ],
+                [
+                    4,
+                    219.4697197
+                ],
+                [
+                    6,
+                    179.541365
+                ],
+                [
+                    8,
+                    188.7648143
+                ]
+            ],
+            "max_data_value": 648.7823159999988
+        },
+        {
+            "name": "Intel Core i7 4770k",
+            "color": "#91db56",
+            "linestyle": "-",
+            "marker": "X",
+            "marker_size": 6,
+            "data": [
+                [
+                    1,
+                    428.71898066666694
+                ],
+                [
+                    2,
+                    257.3241160000002
+                ],
+                [
+                    3,
+                    199.543371333333
+                ],
+                [
+                    4,
+                    173.63306266666677
+                ]
+            ],
+            "max_data_value": 430.428239
+        }
+
+
+    ]
+}
