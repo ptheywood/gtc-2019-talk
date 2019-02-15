@@ -1,7 +1,7 @@
 {
-    "title": "Simulator Performance vs Input Flow per Entrance for Grid Size 256",
+    "title": "Simulator Runtime vs Input Flow per Entrance for 256x256",
     "x_label": "Input Flow (Vehicles per Hour)",
-    "y_label": "Average Total Simulation Time (s) - Logarithmic Scale",
+    "y_label": "Average Total Simulation Time (s)",
     "legend_y_offset": -0.15,
     "x_lim": [0, 1000],
     "y_lim": [],

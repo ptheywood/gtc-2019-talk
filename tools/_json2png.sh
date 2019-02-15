@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 IMG_DIR=../img/
 JSON_DIR=../img/json
 

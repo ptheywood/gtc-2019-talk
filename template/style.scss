@@ -489,7 +489,8 @@ img {
   flex-direction: column;
   height: 540px;
   img,
-  p {
+  p,
+  .vcent {
     margin: auto
   }
   ul {
@@ -601,4 +602,24 @@ li li li li {
 }
 .inner-margin-top{
   margin-top: 2em;
+}
+
+.citations {
+  font-size: 0.5em;
+
+  p {
+    margin: 0em 0;
+  }
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.td-right {
+  text-align: right;
+}
+
+ul {
+  padding-left: 30px;
 }

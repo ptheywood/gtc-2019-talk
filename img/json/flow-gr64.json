@@ -1,7 +1,7 @@
 {
-    "title": "Simulator Performance vs Input Flow per Entrance for Grid Size 64",
+    "title": "Simulator Runtime vs Input Flow per Entrance for 64x64",
     "x_label": "Input Flow (Vehicles per Hour)",
-    "y_label": "Average Total Simulation Time (s) - Logarithmic Scale",
+    "y_label": "Average Total Simulation Time (s)",
     "legend_y_offset": -0.15,
     "x_lim": [0, 1000],
     "y_lim": [],
@@ -131,63 +131,6 @@
                 ]
             ],
             "max_data_value": 1116.3739205170032
-        },
-        {
-            "flame": true,
-            "name": "FLAME GPU -  TITAN V, Non Messaging",
-            "group": "device_name_TITAN V__message_type_Non",
-            "y_id": 0,
-            "color": [
-                0.21851595540176855,
-                0.4887504805843906,
-                0.06577470203767782,
-                1.0
-            ],
-            "linestyle": "--",
-            "marker": "P",
-            "data": [
-                [
-                    100.0,
-                    65.5020769163333
-                ],
-                [
-                    200.0,
-                    99.49046825466657
-                ],
-                [
-                    300.0,
-                    133.2556205873334
-                ],
-                [
-                    400.0,
-                    160.62886847200005
-                ],
-                [
-                    500.0,
-                    194.83920494299983
-                ],
-                [
-                    600.0,
-                    233.22851499699973
-                ],
-                [
-                    700.0,
-                    286.96080863966677
-                ],
-                [
-                    800.0,
-                    341.486622261333
-                ],
-                [
-                    900.0,
-                    406.529909701666
-                ],
-                [
-                    1000.0,
-                    477.9356135983332
-                ]
-            ],
-            "max_data_value": 480.57801138799994
         },
         {
             "flame": true,
