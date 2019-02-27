@@ -1097,17 +1097,14 @@ class: impact
 
 + Paul Richmond
     + p.richmond@sheffield.ac.uk
-    + [paulrichmond.shef.ac.uk](http://paulrichmond.shef.ac.uk)
-
-
++ Steve Maddock
+    + s.maddock@sheffield.ac.uk
 + Robert Chisholm
     + r.chisholm@sheffield.ac.uk
-
-
 + James Pyle
     + jcbpyle1@sheffield.ac.uk
 
-.w-60[
+.w-75[
 ![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
 ]
 
@@ -1117,7 +1114,6 @@ class: impact
 + EPSRC fellowship “Accelerating Scientific Discovery with Accelerated Computing” (EP/N018869/1)
 + DfT Transport Technology Research Innovation Grant (T-TRIG July 2016)
 
-<br />
 
 #### More Information
 
