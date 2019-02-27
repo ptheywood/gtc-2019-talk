@@ -550,16 +550,16 @@ class: impact
 .col-6[
 
 + Message lists used to communicate
-    + Avoids Race Conditions
+    + Avoids race conditions
     + Good cache utilisation 
     + Memory hierarchy optimisations
 + Message iteration often limits performance
 + Specialise communication pattern for efficiency
 
-.w-70[
+.w-65[
 ![FLAME GPU Boids Flocking Model](img/flamegpu-boids-screenshot.png)
-.caption[Boids Flocking Model - Spatial Partitioning]
 ]
+.caption[Boids Flocking Model - Spatial Partitioning]
 
 
 
@@ -572,10 +572,10 @@ class: impact
     + Discrete Partitioned Messaging
 + Non-optimal for road network models
 
-.w-52[
+.w-50[
 ![FALME GPU Game of Life](img/flamegpu-gameoflife-screenshot.png)
-.caption[Game of Life - Discrete Partitioning]
 ]
+.caption[Game of Life - Discrete Partitioning]
 
 ]
 ]
