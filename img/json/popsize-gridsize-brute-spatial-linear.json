@@ -52,7 +52,7 @@
             "name": "FLAME GPU -  TITAN V, All-to-All",
             "group": "device_name_TITAN V__message_type_Non",
             "y_id": 0,
-            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "color": [0.2, 0.2, 0.2, 1.0],
             "linestyle": ":",
             "marker": "s",
             "data": [
@@ -76,7 +76,7 @@
             "name": "FLAME GPU -  TITAN V, Spatial",
             "group": "device_name_TITAN V__message_type_Spatially",
             "y_id": 0,
-            "color": [1.0000, 0.1647, 0.5137, 1.0],
+            "color": [0.1020, 0.6235, 0.4667, 1.0],
             "linestyle": "--",
             "marker": "^",
             "data": [

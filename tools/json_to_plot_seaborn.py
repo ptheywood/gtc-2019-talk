@@ -14,6 +14,8 @@ from distutils.util import strtobool
 import seaborn as sns
 
 
+LINE_WIDTH = 2.0
+
 class Series:
     """ Class for convinient storage of data to be plotted.
     """
@@ -200,7 +202,6 @@ class PlotData:
 
 
         if self.FONTSIZE_TITLE_KEY in raw_json:
-            print("new title fontsize");
             self.fontsize_title = raw_json[self.FONTSIZE_TITLE_KEY] #if raw_json[self.FONTSIZE_TITLE_KEY] 
         if self.FONTSIZE_LABEL_KEY in raw_json:
             self.fontsize_label = raw_json[self.FONTSIZE_LABEL_KEY] #if raw_json[self.FONTSIZE_LABEL_KEY] 
@@ -350,7 +351,7 @@ class PlotData:
 
             if plot_series:
                 # line, = ax.plot(series.x, series.y, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=1.25, markersize=4)
-                line, = ax.plot(series.x, series.y, color=series.color, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=1.25, markersize=series.marker_size)
+                line, = ax.plot(series.x, series.y, color=series.color, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=LINE_WIDTH, markersize=series.marker_size)
                 # manually change -- lengths
                 if series.linestyle == "--":
                     line.set_dashes([3, 3])

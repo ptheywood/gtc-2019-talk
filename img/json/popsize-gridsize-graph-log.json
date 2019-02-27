@@ -52,8 +52,8 @@
             "name": "FLAME GPU -  TITAN Xp, On-Graph Messaging",
             "group": "device_name_TITAN Xp__message_type_On-Graph",
             "y_id": 0,
-            "color": [0.1020, 0.6235, 0.4667, 1.0],
-            "linestyle": "-",
+            "color": [0.8902, 0.3725, 0.0078, 1.0],
+            "linestyle": ":",
             "marker": "v",
             "data": [
                 [8000.0, 68.30430403500009],

@@ -10,7 +10,7 @@ dpi=300
 for json in `find $JSON_DIR -name "*.json" `; do
     fname=$(basename $json)
     png="$IMG_DIR${fname/%.json/.png}"
-    if [ ! -f $png ] || [ "$json" -nt "$png" ]; then
+    if [ ! -f $png ] || [ "$json" -nt "$png" ] || [ "$j2p" -nt "$png" ]; then
         echo "Creatiing $png ..."
         python3 $j2p "$json" -f --dpi "$dpi" -o $png
     else

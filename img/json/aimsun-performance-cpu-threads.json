@@ -21,7 +21,7 @@
         {
             "name": "Dual Intel Xeon E5-2643 v4",
             "color": [0.8902, 0.3725, 0.0078, 1.0],
-            "linestyle": ":",
+            "linestyle": "-",
             "marker": "s",
             "marker_size": 6,
             "data": [
@@ -54,9 +54,9 @@
         },
         {
             "name": "Intel Core i7 4770k",
-            "color": "#91db56",
-            "linestyle": "-",
-            "marker": "X",
+            "color": [0.4588, 0.4392, 0.7020, 1.0],
+            "linestyle": "-.",
+            "marker": "o",
             "marker_size": 6,
             "data": [
                 [
