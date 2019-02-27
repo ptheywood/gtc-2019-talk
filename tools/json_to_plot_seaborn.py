@@ -13,16 +13,14 @@ import matplotlib.ticker as ticker
 from distutils.util import strtobool
 import seaborn as sns
 
-
-LINE_WIDTH = 2.0
-
 class Series:
     """ Class for convinient storage of data to be plotted.
     """
 
-    def __init__(self, name, color, linestyle, marker, marker_size, x, y):
+    def __init__(self, name, color, linewidth, linestyle, marker, marker_size, x, y):
         self.name = name
         self.color = color
+        self.linewidth = linewidth
         self.linestyle = linestyle
         self.marker = marker
         self.marker_size = marker_size
@@ -68,6 +66,7 @@ class PlotData:
     SERIES_TAG = "series"
     SERIES_NAME_TAG = "name"
     SERIES_COLOR_TAG = "color"
+    SERIES_LINEWIDTH_TAG = "linewidth"
     SERIES_LINESTYLE_TAG = "linestyle"
     SERIES_MARKER_TAG = "marker"
     SERIES_MARKER_SIZE_TAG = "marker_size"
@@ -85,6 +84,7 @@ class PlotData:
     DEFUALT_LEGEND_Y_OFFSET = -0.15
     DEFUALT_LEGEND_LOC = "best"
     DEFAULT_LOG_BASE = 10
+    SERIES_DEFAULT_LINEWIDTH = 2.0
     SERIES_DEFAULT_MARKER_SIZE = 4
     # DEFAULT_FIGSIZE = (8, 5.5)
 
@@ -219,6 +219,7 @@ class PlotData:
         for series in series_json:
             name = series[self.SERIES_NAME_TAG] if self.SERIES_NAME_TAG in series else None
             color = series[self.SERIES_COLOR_TAG] if self.SERIES_COLOR_TAG in series else None
+            linewidth = series[self.SERIES_LINEWIDTH_TAG] if self.SERIES_LINEWIDTH_TAG in series else self.SERIES_DEFAULT_LINEWIDTH
             linestyle = series[self.SERIES_LINESTYLE_TAG] if self.SERIES_LINESTYLE_TAG in series else None
             marker = series[self.SERIES_MARKER_TAG] if self.SERIES_MARKER_TAG in series else None
             marker_size = series[self.SERIES_MARKER_SIZE_TAG] if self.SERIES_MARKER_SIZE_TAG in series else self.SERIES_DEFAULT_MARKER_SIZE
@@ -236,7 +237,7 @@ class PlotData:
                     elif type(v) == float or type(v) == int:
                         x.append(len(x))
                         y.append(v)
-            obj = Series(name, color, linestyle, marker, marker_size, x, y)
+            obj = Series(name, color, linewidth, linestyle, marker, marker_size, x, y)
             series_data.append(obj)
         return series_data
 
@@ -350,8 +351,7 @@ class PlotData:
                         plot_series = True
 
             if plot_series:
-                # line, = ax.plot(series.x, series.y, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=1.25, markersize=4)
-                line, = ax.plot(series.x, series.y, color=series.color, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=LINE_WIDTH, markersize=series.marker_size)
+                line, = ax.plot(series.x, series.y, color=series.color, linestyle=series.linestyle, marker=series.marker, label=series.name, linewidth=series.linewidth, markersize=series.marker_size)
                 # manually change -- lengths
                 if series.linestyle == "--":
                     line.set_dashes([3, 3])
