@@ -49,8 +49,8 @@
         },
         {
             "flame": true,
-            "name": "FLAME GPU -  TITAN Xp, On-Graph Messaging",
-            "group": "device_name_TITAN Xp__message_type_On-Graph",
+            "name": "FLAME GPU -  Titan Xp, Graph",
+            "group": "device_name_Titan Xp__message_type_Graph",
             "y_id": 0,
             "color": [0.8902, 0.3725, 0.0078, 1.0],
             "linestyle": ":",
@@ -76,8 +76,40 @@
         },
         {
             "flame": true,
-            "name": "FLAME GPU -  TITAN V, On-Graph Messaging",
-            "group": "device_name_TITAN V__message_type_On-Graph",
+            "name": "FLAME GPU -  Tesla P100 (DGX-1), Graph",
+            "group": "device_name_Tesla P100",
+            "y_id": 0,
+            "color": [
+                0.18997308727412535,
+                0.36965782391387925,
+                0.08841214917339485,
+                1.0
+            ],
+            "linestyle": ":",
+            "marker": "s",
+            "data": [
+                [8000.0, 36.47571847050003],
+                [16000.0, 42.62755019299998],
+                [32000.0, 37.617850946000075],
+                [64000.0, 52.242605723666706],
+                [96000.0, 53.3183696936667],
+                [128000.0, 58.311648661999904],
+                [160000.0, 62.83863994000009],
+                [192000.0, 65.16519840499994],
+                [224000.0, 77.79464854033326],
+                [256000.0, 73.20076345299992],
+                [320000.0, 82.07941312450006],
+                [384000.0, 105.57526592600011],
+                [448000.0, 117.384395516],
+                [512000.0, 124.41137583533327],
+                [576000.0, 140.98760286149997]
+            ],
+            "max_data_value": 140.98760286149997
+        },
+        {
+            "flame": true,
+            "name": "FLAME GPU -  Titan V, Graph",
+            "group": "device_name_Titan V__message_type_Graph",
             "y_id": 0,
             "color": [1.0000, 0.1647, 0.5137, 1.0],
             "linestyle": "-",

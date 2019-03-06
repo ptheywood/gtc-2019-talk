@@ -49,8 +49,8 @@
         },
         {
             "flame": true,
-            "name": "FLAME GPU -  TITAN V, All-to-All",
-            "group": "device_name_TITAN V__message_type_Non",
+            "name": "FLAME GPU -  Titan V, All-to-All",
+            "group": "device_name_Titan V__message_type_Non",
             "y_id": 0,
             "color": [0.2, 0.2, 0.2, 1.0],
             "linestyle": ":",
@@ -73,8 +73,8 @@
         },
         {
             "flame": true,
-            "name": "FLAME GPU -  TITAN V, Spatial",
-            "group": "device_name_TITAN V__message_type_Spatially",
+            "name": "FLAME GPU -  Titan V, Spatial",
+            "group": "device_name_Titan V__message_type_Spatially",
             "y_id": 0,
             "color": [0.1020, 0.6235, 0.4667, 1.0],
             "linestyle": "--",
@@ -99,8 +99,8 @@
         },
         {
             "flame": true,
-            "name": "FLAME GPU -  TITAN V, On-Graph Messaging",
-            "group": "device_name_TITAN V__message_type_On-Graph",
+            "name": "FLAME GPU -  Titan V, Graph",
+            "group": "device_name_Titan V__message_type_Graph",
             "y_id": 0,
             "color": [1.0000, 0.1647, 0.5137, 1.0],
             "linestyle": "-",

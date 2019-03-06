@@ -1,7 +1,7 @@
 title: Large-Scale Road Network Simulations for Smart Cities
 shorttitle: S9387 - Large-Scale Road Network Simulations for Smart Cities
 mainauthor: Peter Heywood
-otherauthors: Paul Richmond, Steve Maddock, Rob Chisholm, James Pyle
+otherauthors: Paul Richmond, Steve Maddock, Rob Chisholm & James Pyle
 institute: The University of Sheffield
 class: animation-fade
 layout: true
@@ -24,7 +24,9 @@ layout: true
 class: impact
 
 # {{title}}
-## <span style="text-decoration: underline">{{mainauthor}}</span>, {{otherauthors}}
+## <span style="text-decoration: underline">{{mainauthor}}</span>,
+### {{otherauthors}}
+<br />
 ### {{institute}}
 
 ---
@@ -570,9 +572,12 @@ class: impact
     + All-to-All
     + Spatially Partitioned Messaging 
     + Discrete Partitioned Messaging
-+ Non-optimal for road network models
 
-.w-50[
+
+<br />
+
+
+.w-49[
 ![FALME GPU Game of Life](img/flamegpu-gameoflife-screenshot.png)
 ]
 .caption[Game of Life - Discrete Partitioning]
@@ -580,7 +585,9 @@ class: impact
 ]
 ]
 
-<!-- @future - Boids / GA videos? -->
+???
+
+Not optimal for road network simulations
 
 ---
 
@@ -593,15 +600,12 @@ class: impact
 
 + 1 hour simulation
 + 3 repetitions
-
-
 + Titan V
 
 
-+ Poor Performance
-
-
++ Poor performance
 + **Majority of runtime spent iterating messages!**
++ Improve performance by increasing work-efficiency
 ]
 .col-8.img-col[
 .w-90[
@@ -711,10 +715,10 @@ class: impact
 .row[
 .col-6[
 
-+ Compressed Sparse Row (CSR) representation of graph 
++ Compressed Sparse Row (CSR)
 
 
-+ Messages contain *edge* or *vertex* index
++ Embed *edge* or *vertex* index in message
 
 
 + Sort message list based on index
@@ -1092,7 +1096,6 @@ class: impact
 + Peter Heywood
     + p.heywood@sheffield.ac.uk
     + [ptheywood.uk](http://ptheywood.uk)
-    + [rse.shef.ac.uk](https://rse.shef.ac.uk)
 
 
 + Paul Richmond
@@ -1104,7 +1107,7 @@ class: impact
 + James Pyle
     + jcbpyle1@sheffield.ac.uk
 
-.w-75[
+.w-85[
 ![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
 ]
 
@@ -1114,6 +1117,7 @@ class: impact
 + EPSRC fellowship “Accelerating Scientific Discovery with Accelerated Computing” (EP/N018869/1)
 + DfT Transport Technology Research Innovation Grant (T-TRIG July 2016)
 
+<br />
 
 #### More Information
 

@@ -18,7 +18,7 @@ $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
 $font-size        : 26px;
 $font-size-footer : 16px;
-$font-size-impact : 48px;
+$font-size-impact : 44px;
 $font             : 'Overpass', sans-serif;
 $font-title       : 'Overpass', sans-serif;
 $font-fixed       : 'Overpass Mono', monospace;
@@ -141,7 +141,10 @@ p {
     font-size: 32px;
   }
   h3 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 26px;
   }
 
 
