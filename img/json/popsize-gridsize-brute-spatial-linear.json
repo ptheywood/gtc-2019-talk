@@ -1,5 +1,5 @@
 {
-    "title": "Average Execution Time for a 1 Hour Simulation",
+    "title": "Simulation Runtime for Scalable Environment",
     "x_label": "Total Vehicle Demand",
     "y_label": "Average Total Simulation Time (s)",
     "legend_y_offset": -0.15,

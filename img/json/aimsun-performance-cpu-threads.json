@@ -1,9 +1,9 @@
 {
-    "title": "Average Total Simulation Time Against Number of Threads",
+    "title": "CPU Thread Scaling of Aimsun 8.1",
     "x_label": "Number of Threads",
     "y_label": "Average Total Simulation Time (s)",
     "legend_y_offset": -0.15,
-    "x_lim": [0, 10],
+    "x_lim": [0, 9],
     "y_lim": [0, 700],
     "x_scale": "linear",
     "y_scale": "linear",

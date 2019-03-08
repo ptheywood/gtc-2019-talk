@@ -1,5 +1,5 @@
 {
-    "title": "Average Car Following Model Kernel Performance",
+    "title": "Runtime of Car Following Model Kernel",
     "x_label": "Grid Size",
     "y_label": "Average kernel Time (ms)",
     "legend_y_offset": -0.15,
@@ -17,10 +17,6 @@
     "y_ticks_minor": "False",
     "grid_major": "True",
     "grid_minor": "False",
-    "fontsize_title": 18,
-    "fontsize_label": 18,
-    "fontsize_legend": 14,
-    "labelsize_tick": 16,
     "fontweight_title": 600,
     "series": [
         {

@@ -1,5 +1,5 @@
 {
-    "title": "Velocity vs Simulation Iteration for the first Vehicle",
+    "title": "Car Following Model and Stop Sign Validation",
     "x_label": "Simulation Iteration",
     "y_label": "Vehicle Speed ($km/h$)",
     "legend_y_offset": -0.15,

@@ -16,8 +16,6 @@ layout: true
 ]
 ]
 
-<!-- @todo - Check all figures. Colours. Alt text. Labels / Captions -->
-<!-- @todo - Check / improve titles -->
 
 ---
 
@@ -42,32 +40,26 @@ class: impact
 
 # Smart Cities
 
-.col-6[
-+ Data-driven transport management
+.col-6[    
++ Increasing traffic demand
+    + 31% growth in UK motorway traffic by 2041 <sup>[1]</sup>
+
+
++ High congestion in cities
+    + Travel speed reduced by 58% in London <sup>[2]</sup>
+        + 15.6mph Peak
+        + 36.9mph Free-flow
+
+
 + **Improve** utilisation and efficiency
+
+
 + **Reduce** congestion and pollution
-    
-
-+ 31% growth in UK motorway traffic by 2041 <sup>[1]</sup>
 
 
-+ High Congestion in Cities
-    + Travel Speeds reduced by 58% in London  <sup>[2]</sup>
-
-        <table class="margin-0">
-            <tr>
-                <td>Peak</td>
-                <td class="td-right">15.6 mph</td>
-            </tr>
-            <tr>
-                <td>Free Flow</td>
-                <td class="td-right">36.9 mph</td>
-            </tr>
-        </table>
++ Data-driven transport management
 
 
-+ New modes of transport appearing
-    + I.e Connected Autonomous Vehicles (CAVs)
 
 .citations[
 <sup>[1]</sup> Highways England Strategic Road Network Initial Report December 2017
@@ -82,6 +74,7 @@ class: impact
 ]
 ]
 
+
 ---
 
 # Smart City Transport Simulation
@@ -95,6 +88,8 @@ class: impact
 + Cities are challenging
     + High population density
     + Co-located modes
+    + New modes of transport
+
 
 
 + Limitations on possible interventions
@@ -113,6 +108,10 @@ Highways England
 ]
 ]
 
+
+???
+
+I.e. CAVs
 
 ---
 
@@ -134,7 +133,7 @@ Highways England
     + *Very High Cost*
 ]
 .col-5.img-col[
-.w-80[
+.w-78[
 ![Simulation Resolutions](img/macromicro.png)
 ]
 ]
@@ -146,9 +145,12 @@ Highways England
 .col-6[
 + An approach for Microsimulation
 
-+ Individuals (agents) with properties
-+ Describe simple rule-based behaviours
-+ Interactions with others agents and environment
+
++ Individuals with properties
++ Simple rule-based behaviours
++ Interactions
+    + Agent - Agent
+    + Agent - Environment
 + Complex behaviours emerge
 
 
@@ -168,9 +170,10 @@ Highways England
 # Computational Challenges
 .col-6[
 + Smart city simulations are **massively** computationally expensive
+
     + *Millions* of individuals
-    + Many modes of transport
-    + Many permutations required
+    + Multiple modes
+    + Many permutations
         - Weather, Demand, etc.
 
 
@@ -199,15 +202,17 @@ Highways England
 # Commercial Microsimulation tools
 
 .col-5[
-+ Many commercial and open-source simulators. I.e.
++ Many commercial and open-source simulators.
     + Aimsun
     + PTV Vissim
     + Parasim
     + SUMO
+    + etc.
 
 
-+ All CPU-based simulators
-    + Single-threaded or Multi-threaded
++ CPU-based simulators
+    + Single-threaded
+    + Multi-threaded
 
 
 + Poor scaling 
@@ -236,7 +241,7 @@ class: impact
 .col-7.vcent-col[
 
 .vcent[
-+ Enable GPU Accelerated Smart City Simulations
++ Demonstrate GPU accelerated smart city simulations
     + Suitable for city-scale networks
     + Better-than-real-time performance
 
@@ -260,8 +265,8 @@ class: impact
 # Microsimulation Benchmark
 
 + Reference Simulator
-+ Scalable Network
-+ CPU Benchmarking
++ Scalable Artificial Transport Network
++ Reference Simulator Benchmarking
 
 ---
 
@@ -273,7 +278,7 @@ class: impact
     + Multi-core CPU simulator
     + Used globally 
     + Suitable for a wide range of transport modelling tasks
-    + Diminishing returns over 8 cores
+    + Diminishing returns
 
 .w-60[
 ![Aimsun Logo](img/aimsun-logo.png)
@@ -319,13 +324,13 @@ Aimsun Performance using different numbers of CPU cores
 
 # Benchmark Network
 
-.col-5.vcent-col[
+.col-4.vcent-col[
 + Manhattan-style grid network
 + Single lane, one-way roads
 + Stop-signs at junctions
 + Entrances and exits at the edges of the simulation
 ]
-.col-7.img-col[
+.col-8.img-col[
 .w-99[
 ![Scalable Grid Network](img/grid-with-zoom.png)
 ]
@@ -342,7 +347,7 @@ Aimsun Performance using different numbers of CPU cores
 
 + 3 repetitions
 + 1 hour simulation 
-+ Varied environment and population sizes
++ Scaled environment and population
 
 
 + Largest Simulation
@@ -378,11 +383,12 @@ class: impact
 **F**lexible **L**arge-Scale **A**gent **M**odelling **E**nvironment for the **GPU**
 ]
 
-+ Template-based simulation environment 
 + High performance agent-based simulation
++ Template-based simulation environment
 + Agents modelled using X-Machines
-    + with *message lists* for communication
-+ Abstracts the CUDA programming model away from the user
+    + *message lists* for communication
++ Abstracts CUDA complexities away from modeller
++ Used in many simulation domains
 
 .center[
 .w-37[
@@ -436,21 +442,26 @@ Pedestrian Simulation
 
 # Why use FLAME GPU?
 
-.col-8.vcent-col[
-
+.col-6[
 + GPU knowledge not required
 
-+ Divergence minimised by state-based representation
 
-+ Efficient memory access
++ Divergence minimised 
+    + State-based representation
+
+
++ Efficient memory access patterns
     + SoA, neighbouring threads
-    + Shared memory used where appropriate, authomatically
+    + Appropriate use of memory hierarchy
+        + Shared, Read-only etc.
+
+
 + Race conditions avoided
     + Message-lists
     + Natural synchronisation barriers
 
 ]
-.col-4.img-col[
+.col-6.img-col[
 .w-100[
 ![FLAME GPU X machine diagram](img/xMachine.jpg)
 ]
@@ -503,9 +514,11 @@ Re-iterate what we are implementing
 
 .col-4[
 + Cross validated vs Aimsun 8.1
-+ 6 sets of validation networks 
++ 6 sets of validation networks
+
+
 + Individual behaviours 
-+ Combined Effects
++ Combined effects
 ]
 .col-8.img-col.responsive[
 <video width="1920" height="1080" controls loop muted poster="video/ttrig-1080p30.png">
@@ -521,8 +534,10 @@ Re-iterate what we are implementing
 .col-4[
 + Cross validated vs Aimsun 8.1
 + 6 sets of validation networks 
+
+
 + Individual behaviours 
-+ Combined Effects
++ Combined effects
 
 
 + Deterministic tests reproduced exactly
@@ -542,7 +557,7 @@ class: impact
 
 + Existing Communication Strategies
 + Graph Based Communication
-+ Benchmark Results
++ Application Benchmarking
 
 ---
 
@@ -605,7 +620,9 @@ Not optimal for road network simulations
 
 + Poor performance
 + **Majority of runtime spent iterating messages!**
-+ Improve performance by increasing work-efficiency
+
+
++ Improve work-efficiency
 ]
 .col-8.img-col[
 .w-90[
@@ -756,10 +773,15 @@ Not optimal for road network simulations
     + ~0.5ms vs ~0.2ms
 
 
-+ **Much Lower** iteration cost
++ **Much lower** iteration cost
     + ~ 1ms vs ~ 120ms
+
+
++ Improved work efficiency
++ Huge reduction in global memory accesses
+
 ]
-.col-8.img-col[.w-90[
+.col-8.img-col[.w-88[
 ![Average Message Iteration Kernel Execution time](img/communication-input-time.png)
 ]]
 
@@ -915,7 +937,7 @@ class: impact
 
 + Room for further performance improvements
     + Reduce load on global memory
-    + Improve use of CUDA Streams
+    + Improve use of CUDA streams
     + Will be implemented in future versions of FLAME GPU 
 
 ]
@@ -938,9 +960,9 @@ M24 motorway at night - Bob McCaffrey
 # Multi-Mode Simulation: Cars & Pedestrians
 
 .col-4.vcent-col[
-+ Simulate Pedestrians and Vehicles on GPU
++ Simulate pedestrians and vehicles on GPU
 + Urban shared spaces
-+ Social Force Pedestrian Simulations icluded in FLAME GPU examples
++ Social-force pedestrian simulations included in FLAME GPU examples
 + Real-time simulations of 100,000s of pedestrians
 ]
 .col-8[
@@ -963,7 +985,8 @@ M24 motorway at night - Bob McCaffrey
     + GPU accelerated pedestrian simulator
     + CPU rail simulator
     + CPU road network simulator (SUMO)
-+ Evaluate rail network performance including pedestrian behaviours in station 
++ Evaluate rail network performance 
+    + including pedestrian behaviours in station 
 
 
 + More information: [youtu.be/Rz_XzbZIMes](https://youtu.be/Rz_XzbZIMes)
@@ -992,11 +1015,11 @@ M24 motorway at night - Bob McCaffrey
     + **Low accuracy for low-frequency events**
 
 
-1. **Supplement training data with Simulated Data**
+1. **Supplement training data with simulated data**
     + Improving accuracy for low-frequency events
-2. **Surrogate Models**
+2. **Surrogate models**
     + (Deep) Neural Networks to predict simulator output
-    + Accelerates Parameter Search
+    + Accelerates parameter search
         + Calibration & Validation
         + Optimisation
 
@@ -1029,7 +1052,7 @@ M24 motorway at night - Bob McCaffrey
 + *Under Active Development*
 
 
-+ Ground-up Rewrite
++ Ground-up rewrite
 + Modern C++/CUDA
 + Improved:
     + Performance
@@ -1039,10 +1062,10 @@ M24 motorway at night - Bob McCaffrey
 
 ]
 .col-6[
-+ New Functionality (planned)
++ New functionality (planned)
     + Automatic parameter exploration
-    + Concurrent Batch Simulation
-    + Multi-GPU Support & UVM
+    + Concurrent batch simulation
+    + Multi-GPU support & UVM
     + Higher-level language bindings
         + I.e. Python
 

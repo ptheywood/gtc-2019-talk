@@ -1,7 +1,7 @@
 {
-    "title": "Simulator Performance per Iteration",
+    "title": "Simulation Runtime per Iteration",
     "x_label": "Iteration",
-    "y_label": "Average Simulation Step Time (ms)",
+    "y_label": "Average Simulation Step Runtime (ms)",
     "legend_y_offset": -0.15,
     "x_lim": [0],
     "y_lim": [0],
@@ -23,7 +23,7 @@
             "name": "Aimsun 8.1 - i7 4770k",
             "group": "device_name_i7 4770k",
             "y_id": 0,
-            "color": [0.4588, 0.4392, 0.7020, 0.7],
+            "color": [0.4588, 0.4392, 0.7020, 0.5],
 
             "linestyle": "",
             "marker": "X",
@@ -18036,7 +18036,7 @@
             "name": "FLAME GPU -  Titan X (Pascal)",
             "group": "device_name_Titan X (Pascal)",
             "y_id": 0,
-            "color": [0.8902, 0.3725, 0.0078, 1.0],
+            "color": [0.8902, 0.3725, 0.0078, 0.5],
 
             "linestyle": "",
             "marker": "P",
