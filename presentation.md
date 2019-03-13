@@ -1110,57 +1110,42 @@ class: impact
 ![Road Network Microsimulation](img/ttrig-screenshot-modified.png)
 ]
 ]
----
-
-class: impact
-# Sheffield GPU Hackathon 2019
-
-.col-6[
-+ 19th August to 23rd August
-+ Hallifax Hall, Sheffield, UK
-+ Teams of 3-5 Developers
-+ Intensive 5 day hands on workshop
-+ Call for proposals opening soon.
-
-]
-.col-6[
-.center[
-### [gpuhack.shef.ac.uk](http://gpuhack.shef.ac.uk)
-
-<br />
-
-### gpuhack-organiers@sheffield.ac.uk
-]
-
-
-]
 
 ---
+
+class:thankyou
 
 # Thank You
 
 .smaller[
-.col-4[
+.col-5[
 + Peter Heywood
     + p.heywood@sheffield.ac.uk
-    + [ptheywood.uk](http://ptheywood.uk)
+    + [ptheywood.uk](https://ptheywood.uk)
 
 
-+ Paul Richmond
++ Co-authors:
     + p.richmond@sheffield.ac.uk
-+ Steve Maddock
     + s.maddock@sheffield.ac.uk
-+ Robert Chisholm
     + r.chisholm@sheffield.ac.uk
-+ James Pyle
     + jcbpyle1@sheffield.ac.uk
 
-.w-85[
+.highlightbox[
++ **Sheffield GPU Hackathon 2019**
+    + 19th-23rd August 2019
+    + Sheffield, United Kingdom
+    + **[http://gpuhack.shef.ac.uk](http://gpuhack.shef.ac.uk)**
+
+]
+.tr-uni-logo[
 ![The University of Sheffield Logo](img/tuoslogo_cmyk_hi.jpg)
 ]
 
+
+
 ]
-.col-7.offset-1[
+.col-7[
+.w-90-left[
 #### Supported by
 + EPSRC fellowship “Accelerating Scientific Discovery with Accelerated Computing” (EP/N018869/1)
 + DfT Transport Technology Research Innovation Grant (T-TRIG July 2016)
@@ -1174,6 +1159,6 @@ class: impact
 Peter Heywood, Steve Maddock, Jordi Casas, David Garcia, Mark Brackstone & Paul Richmond. 2017 
 
 [doi.org/10.1016/j.simpat.2017.11.002](https://doi.org/10.1016/j.simpat.2017.11.002)
-
+]
 ]
 ]
