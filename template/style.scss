@@ -130,7 +130,7 @@ p {
   background-color: $primary;
   vertical-align: middle;
   text-align: left;
-  &, h1, h2, h3, h4, h5, h6 {
+  &, h1, h2, h3, h4, h5, h6, a, a:visited {
     color: $text-light; 
   }
   h1 { 

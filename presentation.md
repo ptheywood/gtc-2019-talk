@@ -1112,6 +1112,31 @@ class: impact
 ]
 ---
 
+class: impact
+# Sheffield GPU Hackathon 2019
+
+.col-6[
++ 19th August to 23rd August
++ Hallifax Hall, Sheffield, UK
++ Teams of 3-5 Developers
++ Intensive 5 day hands on workshop
++ Call for proposals opening soon.
+
+]
+.col-6[
+.center[
+### [gpuhack.shef.ac.uk](http://gpuhack.shef.ac.uk)
+
+<br />
+
+### gpuhack-organiers@sheffield.ac.uk
+]
+
+
+]
+
+---
+
 # Thank You
 
 .smaller[
