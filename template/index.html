@@ -19,8 +19,37 @@
         }
       });
     }
+
+    // Modify to autoplay video when that slide is rbrought to the front. Also loops indefinately. 
+    var slideshow;
+    var slideElements;
+    function init(){
+      console.log(init);
+      slideshow = create()
+
+
+      function getElementForSlide(slide) {
+        slideElements = slideElements || document.querySelectorAll('.remark-slide')
+        return slideElements[slide.getSlideIndex()]
+      }
+
+      slideshow.on('showSlide', function (slide) {
+        Array.from(getElementForSlide(slide).querySelectorAll('video')).forEach(function (vid) {
+          vid.loop = true
+          vid.currentTime = 0
+          vid.play()
+        })
+      })
+
+      slideshow.on('hideSlide', function (slide) {
+        Array.from(getElementForSlide(slide).querySelectorAll('video')).forEach(function (vid) {
+          vid.pause()
+        })
+      })
+    };
+
   </script>
 </head>
-<body onload="slideshow = create()">
+<body onload="init()">
 </body>
 </html>
