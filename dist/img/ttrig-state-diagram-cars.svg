@@ -1,0 +1,2145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="56cm"
+   height="34cm"
+   viewBox="919 -1101 1104 670"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ttrig-state-diagram-cars.svg">
+  <metadata
+     id="metadata868">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs866" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview864"
+     showgrid="false"
+     inkscape:zoom="0.41052599"
+     inkscape:cx="1996.0125"
+     inkscape:cy="472.7761"
+     inkscape:window-x="2992"
+     inkscape:window-y="624"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #bfbfbf"
+     x1="920.204"
+     y1="-447.632"
+     x2="2020.2"
+     y2="-447.632"
+     id="line4" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #bfbfbf"
+     x1="920.204"
+     y1="-945.294"
+     x2="2020.2"
+     y2="-945.294"
+     id="line6" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #bfbfbf"
+     x1="920.204"
+     y1="-1084.86"
+     x2="2020.2"
+     y2="-1084.86"
+     id="line8" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #bfbfbf"
+     x1="920.204"
+     y1="-785.006"
+     x2="2020.2"
+     y2="-785.006"
+     id="line10" />
+  <line
+     style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 20; stroke: #bfbfbf"
+     x1="920.204"
+     y1="-624.716"
+     x2="2020.2"
+     y2="-624.716"
+     id="line12" />
+  <g
+     id="g14">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1380"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse16" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1380"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse18" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-1079.55"
+       id="text20">
+      <tspan
+         x="1380"
+         y="-1079.55"
+         id="tspan22">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g24">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1100"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse26" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1100"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse28" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-1079.55"
+       id="text30">
+      <tspan
+         x="1100"
+         y="-1079.55"
+         id="tspan32">Q</tspan>
+    </text>
+  </g>
+  <g
+     id="g34">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1620"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse36" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1620"
+       cy="-1084"
+       rx="15"
+       ry="15"
+       id="ellipse38" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-1079.55"
+       id="text40">
+      <tspan
+         x="1620"
+         y="-1079.55"
+         id="tspan42">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g44">
+    <rect
+       style="fill: #ffffff"
+       x="1560"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect46" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1560"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect48" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-1023.55"
+       id="text50">
+      <tspan
+         x="1620"
+         y="-1023.55"
+         id="tspan52">Output </tspan>
+      <tspan
+         x="1620"
+         y="-1007.55"
+         id="tspan54">Junction Message</tspan>
+    </text>
+  </g>
+  <g
+     id="g56">
+    <rect
+       style="fill: #ffffff"
+       x="1040"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect58" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1040"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect60" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-1023.55"
+       id="text62">
+      <tspan
+         x="1100"
+         y="-1023.55"
+         id="tspan64">Output </tspan>
+      <tspan
+         x="1100"
+         y="-1007.55"
+         id="tspan66">Queued Message</tspan>
+    </text>
+  </g>
+  <g
+     id="g68">
+    <rect
+       style="fill: #ffffff"
+       x="1320"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect70" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1320"
+       y="-1040"
+       width="120"
+       height="40"
+       id="rect72" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-1023.55"
+       id="text74">
+      <tspan
+         x="1380"
+         y="-1023.55"
+         id="tspan76">Output </tspan>
+      <tspan
+         x="1380"
+         y="-1007.55"
+         id="tspan78">Road Message</tspan>
+    </text>
+  </g>
+  <g
+     id="g80">
+    <rect
+       style="fill: #ffffff"
+       x="1560"
+       y="-880"
+       width="120"
+       height="40"
+       id="rect82" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1560"
+       y="-880"
+       width="120"
+       height="40"
+       id="rect84" />
+    <text
+       font-size="12.8"
+       style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:Overpass;text-anchor:middle;fill:#000000"
+       x="1620"
+       y="-863.54999"
+       id="text86">
+      <tspan
+         x="1620"
+         y="-863.54999"
+         id="tspan88">Junction Models</tspan>
+    </text>
+  </g>
+  <g
+     id="g92">
+    <rect
+       style="fill: #ffffff"
+       x="1040"
+       y="-880"
+       width="120"
+       height="40"
+       id="rect94" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1040"
+       y="-880"
+       width="120"
+       height="40"
+       id="rect96" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-863.55"
+       id="text98">
+      <tspan
+         x="1100"
+         y="-863.55"
+         id="tspan100">Check Queue </tspan>
+      <tspan
+         x="1100"
+         y="-847.55"
+         id="tspan102">Right of Way</tspan>
+    </text>
+  </g>
+  <g
+     id="g104">
+    <rect
+       style="fill: #ffffff"
+       x="1318.91"
+       y="-880"
+       width="122.175"
+       height="40"
+       id="rect106" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1318.91"
+       y="-880"
+       width="122.175"
+       height="40"
+       id="rect108" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-863.55"
+       id="text110">
+      <tspan
+         x="1380"
+         y="-863.55"
+         id="tspan112">Check Next</tspan>
+      <tspan
+         x="1380"
+         y="-847.55"
+         id="tspan114">Junction</tspan>
+    </text>
+  </g>
+  <g
+     id="g116">
+    <rect
+       style="fill: #ffffff"
+       x="1120"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect118" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1120"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect120" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1180"
+       y="-695.55"
+       id="text122">
+      <tspan
+         x="1180"
+         y="-695.55"
+         id="tspan124">Check Headway</tspan>
+    </text>
+  </g>
+  <g
+     id="g126">
+    <rect
+       style="fill: #ffffff"
+       x="1320"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect128" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1320"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect130" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-695.55"
+       id="text132">
+      <tspan
+         x="1380"
+         y="-695.55"
+         id="tspan134">Car Following</tspan>
+    </text>
+  </g>
+  <text
+     font-size="12.8"
+     style="fill: #000000;text-anchor:start;font-family:Overpass;font-style:normal;font-weight:normal"
+     x="1180"
+     y="-700"
+     id="text136">
+    <tspan
+       x="1180"
+       y="-700"
+       id="tspan138" />
+  </text>
+  <g
+     id="g140">
+    <rect
+       style="fill: #ffffff"
+       x="1640"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect142" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1640"
+       y="-720"
+       width="120"
+       height="40"
+       id="rect144" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1700"
+       y="-695.55"
+       id="text146">
+      <tspan
+         x="1700"
+         y="-695.55"
+         id="tspan148">Follow Junction</tspan>
+    </text>
+  </g>
+  <g
+     id="g150">
+    <rect
+       style="fill: #ffffff"
+       x="1640"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect152" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1640"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect154" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1700"
+       y="-543.55"
+       id="text156">
+      <tspan
+         x="1700"
+         y="-543.55"
+         id="tspan158">Change To </tspan>
+      <tspan
+         x="1700"
+         y="-527.55"
+         id="tspan160">Road Network</tspan>
+    </text>
+  </g>
+  <g
+     id="g162">
+    <rect
+       style="fill: #ffffff"
+       x="1360"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect164" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1360"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect166" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1420"
+       y="-543.55"
+       id="text168">
+      <tspan
+         x="1420"
+         y="-543.55"
+         id="tspan170">Change To </tspan>
+      <tspan
+         x="1420"
+         y="-527.55"
+         id="tspan172">Junctions</tspan>
+    </text>
+  </g>
+  <g
+     id="g174">
+    <rect
+       style="fill: #ffffff"
+       x="1200"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect176" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1200"
+       y="-560"
+       width="120"
+       height="40"
+       id="rect178" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1260"
+       y="-543.55"
+       id="text180">
+      <tspan
+         x="1260"
+         y="-543.55"
+         id="tspan182">Change to </tspan>
+      <tspan
+         x="1260"
+         y="-527.55"
+         id="tspan184">Road Network</tspan>
+    </text>
+  </g>
+  <g
+     id="g186">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1100"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse188" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1100"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse190" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-940.55"
+       id="text192">
+      <tspan
+         x="1100"
+         y="-940.55"
+         id="tspan194">Q</tspan>
+    </text>
+  </g>
+  <g
+     id="g196">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1100"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse198" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1100"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse200" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-780.55"
+       id="text202">
+      <tspan
+         x="1100"
+         y="-780.55"
+         id="tspan204">Q</tspan>
+    </text>
+  </g>
+  <g
+     id="g206">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1180"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse208" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1180"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse210" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1180"
+       y="-620.55"
+       id="text212">
+      <tspan
+         x="1180"
+         y="-620.55"
+         id="tspan214">Q</tspan>
+    </text>
+  </g>
+  <g
+     id="g216">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1100"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse218" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1100"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse220" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1100"
+       y="-442.33"
+       id="text222">
+      <tspan
+         x="1100"
+         y="-442.33"
+         id="tspan224">Q</tspan>
+    </text>
+  </g>
+  <g
+     id="g226">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1260"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse228" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1260"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse230" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1260"
+       y="-442.33"
+       id="text232">
+      <tspan
+         x="1260"
+         y="-442.33"
+         id="tspan234">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g236">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1380"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse238" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1380"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse240" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-940.55"
+       id="text242">
+      <tspan
+         x="1380"
+         y="-940.55"
+         id="tspan244">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g246">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1380"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse248" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1380"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse250" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-780.55"
+       id="text252">
+      <tspan
+         x="1380"
+         y="-780.55"
+         id="tspan254">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g256">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1380"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse258" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1380"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse260" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1380"
+       y="-620.55"
+       id="text262">
+      <tspan
+         x="1380"
+         y="-620.55"
+         id="tspan264">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g266">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1335"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse268" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1335"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse270" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1335"
+       y="-442.33"
+       id="text272">
+      <tspan
+         x="1335"
+         y="-442.33"
+         id="tspan274">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g276">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1700"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse278" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1700"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse280" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1700"
+       y="-442.33"
+       id="text282">
+      <tspan
+         x="1700"
+         y="-442.33"
+         id="tspan284">R</tspan>
+    </text>
+  </g>
+  <g
+     id="g286">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1620"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse288" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1620"
+       cy="-945"
+       rx="15"
+       ry="15"
+       id="ellipse290" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-940.55"
+       id="text292">
+      <tspan
+         x="1620"
+         y="-940.55"
+         id="tspan294">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g296">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1620"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse298" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1620"
+       cy="-785"
+       rx="15"
+       ry="15"
+       id="ellipse300" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-780.55"
+       id="text302">
+      <tspan
+         x="1620"
+         y="-780.55"
+         id="tspan304">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g306">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1620"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse308" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1620"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse310" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-442.33"
+       id="text312">
+      <tspan
+         x="1620"
+         y="-442.33"
+         id="tspan314">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g316">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1620"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse318" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1620"
+       cy="-625"
+       rx="15"
+       ry="15"
+       id="ellipse320" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1620"
+       y="-620.55"
+       id="text322">
+      <tspan
+         x="1620"
+         y="-620.55"
+         id="tspan324">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g326">
+    <polygon
+       style="fill: #ffffff"
+       points="1674.74,-980 1760.9,-980 1746.16,-939.508 1660,-939.508 "
+       id="polygon328" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1674.74,-980 1760.9,-980 1746.16,-939.508 1660,-939.508 "
+       id="polygon330" />
+    <text
+       font-size="12.8"
+       style="fill: #3d9c0a;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1710.45"
+       y="-963.304"
+       id="text332">
+      <tspan
+         x="1710.45"
+         y="-963.304"
+         id="tspan334">Junction </tspan>
+      <tspan
+         x="1710.45"
+         y="-947.304"
+         id="tspan336">Messages</tspan>
+    </text>
+  </g>
+  <g
+     id="g338">
+    <polygon
+       style="fill: #ffffff"
+       points="1434.56,-980 1520.9,-980 1506.34,-940 1420,-940 "
+       id="polygon340" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1434.56,-980 1520.9,-980 1506.34,-940 1420,-940 "
+       id="polygon342" />
+    <text
+       font-size="12.8"
+       style="fill: #3d9c0a;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1470.45"
+       y="-963.55"
+       id="text344">
+      <tspan
+         x="1470.45"
+         y="-963.55"
+         id="tspan346">Road </tspan>
+      <tspan
+         x="1470.45"
+         y="-947.55"
+         id="tspan348">Messages</tspan>
+    </text>
+  </g>
+  <g
+     id="g350">
+    <polygon
+       style="fill: #ffffff"
+       points="1533.38,-560 1603.63,-560 1589.07,-520 1518.82,-520 "
+       id="polygon352" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1533.38,-560 1603.63,-560 1589.07,-520 1518.82,-520 "
+       id="polygon354" />
+    <text
+       font-size="12.8"
+       style="fill: #3d9c0a;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1561.23"
+       y="-543.55"
+       id="text356">
+      <tspan
+         x="1561.23"
+         y="-543.55"
+         id="tspan358">Exit </tspan>
+      <tspan
+         x="1561.23"
+         y="-527.55"
+         id="tspan360">Messages</tspan>
+    </text>
+  </g>
+  <g
+     id="g362">
+    <polygon
+       style="fill: #ffffff"
+       points="1154.56,-980 1240.9,-980 1226.34,-940 1140,-940 "
+       id="polygon364" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1154.56,-980 1240.9,-980 1226.34,-940 1140,-940 "
+       id="polygon366" />
+    <text
+       font-size="12.8"
+       style="fill: #3d9c0a;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1190.45"
+       y="-963.55"
+       id="text368">
+      <tspan
+         x="1190.45"
+         y="-963.55"
+         id="tspan370">Queue </tspan>
+      <tspan
+         x="1190.45"
+         y="-947.55"
+         id="tspan372">Messages</tspan>
+    </text>
+  </g>
+  <g
+     id="g374">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1100"
+       y1="-1069"
+       x2="1100"
+       y2="-1049.74"
+       id="line376" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-1042.24 1095,-1052.24 1100,-1049.74 1105,-1052.24 "
+       id="polygon378" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-1042.24 1095,-1052.24 1100,-1049.74 1105,-1052.24 "
+       id="polygon380" />
+  </g>
+  <g
+     id="g382">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1100"
+       y1="-999.009"
+       x2="1100"
+       y2="-969.736"
+       id="line384" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-962.236 1095,-972.236 1100,-969.736 1105,-972.236 "
+       id="polygon386" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-962.236 1095,-972.236 1100,-969.736 1105,-972.236 "
+       id="polygon388" />
+  </g>
+  <g
+     id="g390">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1100"
+       y1="-930"
+       x2="1100"
+       y2="-889.736"
+       id="line392" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-882.236 1095,-892.236 1100,-889.736 1105,-892.236 "
+       id="polygon394" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-882.236 1095,-892.236 1100,-889.736 1105,-892.236 "
+       id="polygon396" />
+  </g>
+  <g
+     id="g398">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1100"
+       y1="-840"
+       x2="1100"
+       y2="-809.736"
+       id="line400" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-802.236 1095,-812.236 1100,-809.736 1105,-812.236 "
+       id="polygon402" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-802.236 1095,-812.236 1100,-809.736 1105,-812.236 "
+       id="polygon404" />
+  </g>
+  <g
+     id="g406">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1180"
+       y1="-679.009"
+       x2="1180"
+       y2="-649.736"
+       id="line408" />
+    <polygon
+       style="fill: #000000"
+       points="1180,-642.236 1175,-652.236 1180,-649.736 1185,-652.236 "
+       id="polygon410" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1180,-642.236 1175,-652.236 1180,-649.736 1185,-652.236 "
+       id="polygon412" />
+  </g>
+  <g
+     id="g414">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-770 1100,-740 1180,-740 1180,-729.736 "
+       id="polyline416" />
+    <polygon
+       style="fill: #000000"
+       points="1180,-722.236 1175,-732.236 1180,-729.736 1185,-732.236 "
+       id="polygon418" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1180,-722.236 1175,-732.236 1180,-729.736 1185,-732.236 "
+       id="polygon420" />
+  </g>
+  <g
+     id="g422">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1180,-610 1180,-580 1260,-580 1260,-569.736 "
+       id="polyline424" />
+    <polygon
+       style="fill: #000000"
+       points="1260,-562.236 1255,-572.236 1260,-569.736 1265,-572.236 "
+       id="polygon426" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1260,-562.236 1255,-572.236 1260,-569.736 1265,-572.236 "
+       id="polygon428" />
+  </g>
+  <g
+     id="g430">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1260"
+       y1="-520"
+       x2="1260"
+       y2="-471.516"
+       id="line432" />
+    <polygon
+       style="fill: #000000"
+       points="1260,-464.016 1255,-474.016 1260,-471.516 1265,-474.016 "
+       id="polygon434" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1260,-464.016 1255,-474.016 1260,-471.516 1265,-474.016 "
+       id="polygon436" />
+  </g>
+  <g
+     id="g438">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1180,-610 1180,-535.89 1100,-535.89 1100,-471.516 "
+       id="polyline440" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-464.016 1095,-474.016 1100,-471.516 1105,-474.016 "
+       id="polygon442" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-464.016 1095,-474.016 1100,-471.516 1105,-474.016 "
+       id="polygon444" />
+  </g>
+  <g
+     id="g446">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-1069"
+       x2="1380"
+       y2="-1049.74"
+       id="line448" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-1042.24 1375,-1052.24 1380,-1049.74 1385,-1052.24 "
+       id="polygon450" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-1042.24 1375,-1052.24 1380,-1049.74 1385,-1052.24 "
+       id="polygon452" />
+  </g>
+  <g
+     id="g454">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-999.009"
+       x2="1380"
+       y2="-969.736"
+       id="line456" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-962.236 1375,-972.236 1380,-969.736 1385,-972.236 "
+       id="polygon458" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-962.236 1375,-972.236 1380,-969.736 1385,-972.236 "
+       id="polygon460" />
+  </g>
+  <g
+     id="g462">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-930"
+       x2="1380"
+       y2="-889.736"
+       id="line464" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-882.236 1375,-892.236 1380,-889.736 1385,-892.236 "
+       id="polygon466" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-882.236 1375,-892.236 1380,-889.736 1385,-892.236 "
+       id="polygon468" />
+  </g>
+  <g
+     id="g470">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-840"
+       x2="1380"
+       y2="-809.736"
+       id="line472" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-802.236 1375,-812.236 1380,-809.736 1385,-812.236 "
+       id="polygon474" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-802.236 1375,-812.236 1380,-809.736 1385,-812.236 "
+       id="polygon476" />
+  </g>
+  <g
+     id="g478">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-770"
+       x2="1380"
+       y2="-729.736"
+       id="line480" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-722.236 1375,-732.236 1380,-729.736 1385,-732.236 "
+       id="polygon482" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-722.236 1375,-732.236 1380,-729.736 1385,-732.236 "
+       id="polygon484" />
+  </g>
+  <g
+     id="g486">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1380"
+       y1="-680"
+       x2="1380"
+       y2="-649.736"
+       id="line488" />
+    <polygon
+       style="fill: #000000"
+       points="1380,-642.236 1375,-652.236 1380,-649.736 1385,-652.236 "
+       id="polygon490" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-642.236 1375,-652.236 1380,-649.736 1385,-652.236 "
+       id="polygon492" />
+  </g>
+  <g
+     id="g494">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-610 1380,-580 1420,-580 1420,-569.736 "
+       id="polyline496" />
+    <polygon
+       style="fill: #000000"
+       points="1420,-562.236 1415,-572.236 1420,-569.736 1425,-572.236 "
+       id="polygon498" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1420,-562.236 1415,-572.236 1420,-569.736 1425,-572.236 "
+       id="polygon500" />
+  </g>
+  <g
+     id="g502">
+    <ellipse
+       style="fill: #ffffff"
+       cx="1420"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse504" />
+    <ellipse
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       cx="1420"
+       cy="-446.78"
+       rx="15"
+       ry="15"
+       id="ellipse506" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1420"
+       y="-442.33"
+       id="text508">
+      <tspan
+         x="1420"
+         y="-442.33"
+         id="tspan510">J</tspan>
+    </text>
+  </g>
+  <g
+     id="g512">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1420"
+       y1="-520"
+       x2="1420"
+       y2="-471.516"
+       id="line514" />
+    <polygon
+       style="fill: #000000"
+       points="1420,-464.016 1415,-474.016 1420,-471.516 1425,-474.016 "
+       id="polygon516" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1420,-464.016 1415,-474.016 1420,-471.516 1425,-474.016 "
+       id="polygon518" />
+  </g>
+  <g
+     id="g520">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-1069"
+       x2="1620"
+       y2="-1049.74"
+       id="line522" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-1042.24 1615,-1052.24 1620,-1049.74 1625,-1052.24 "
+       id="polygon524" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-1042.24 1615,-1052.24 1620,-1049.74 1625,-1052.24 "
+       id="polygon526" />
+  </g>
+  <g
+     id="g528">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-1000"
+       x2="1620"
+       y2="-969.736"
+       id="line530" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-962.236 1615,-972.236 1620,-969.736 1625,-972.236 "
+       id="polygon532" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-962.236 1615,-972.236 1620,-969.736 1625,-972.236 "
+       id="polygon534" />
+  </g>
+  <g
+     id="g536">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-930"
+       x2="1620"
+       y2="-889.736"
+       id="line538" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-882.236 1615,-892.236 1620,-889.736 1625,-892.236 "
+       id="polygon540" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-882.236 1615,-892.236 1620,-889.736 1625,-892.236 "
+       id="polygon542" />
+  </g>
+  <g
+     id="g544">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-840"
+       x2="1620"
+       y2="-809.736"
+       id="line546" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-802.236 1615,-812.236 1620,-809.736 1625,-812.236 "
+       id="polygon548" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-802.236 1615,-812.236 1620,-809.736 1625,-812.236 "
+       id="polygon550" />
+  </g>
+  <g
+     id="g552">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-770 1620,-740 1700,-740 1700,-729.736 "
+       id="polyline554" />
+    <polygon
+       style="fill: #000000"
+       points="1700,-722.236 1695,-732.236 1700,-729.736 1705,-732.236 "
+       id="polygon556" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1700,-722.236 1695,-732.236 1700,-729.736 1705,-732.236 "
+       id="polygon558" />
+  </g>
+  <g
+     id="g560">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-770"
+       x2="1620"
+       y2="-649.736"
+       id="line562" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-642.236 1615,-652.236 1620,-649.736 1625,-652.236 "
+       id="polygon564" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-642.236 1615,-652.236 1620,-649.736 1625,-652.236 "
+       id="polygon566" />
+  </g>
+  <g
+     id="g568">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1700,-680 1700,-660 1620,-660 1620,-649.736 "
+       id="polyline570" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-642.236 1615,-652.236 1620,-649.736 1625,-652.236 "
+       id="polygon572" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-642.236 1615,-652.236 1620,-649.736 1625,-652.236 "
+       id="polygon574" />
+  </g>
+  <g
+     id="g576">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-610 1620,-580 1700,-580 1700,-569.736 "
+       id="polyline578" />
+    <polygon
+       style="fill: #000000"
+       points="1700,-562.236 1695,-572.236 1700,-569.736 1705,-572.236 "
+       id="polygon580" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1700,-562.236 1695,-572.236 1700,-569.736 1705,-572.236 "
+       id="polygon582" />
+  </g>
+  <g
+     id="g584">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1620"
+       y1="-610"
+       x2="1620"
+       y2="-471.516"
+       id="line586" />
+    <polygon
+       style="fill: #000000"
+       points="1620,-464.016 1615,-474.016 1620,-471.516 1625,-474.016 "
+       id="polygon588" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1620,-464.016 1615,-474.016 1620,-471.516 1625,-474.016 "
+       id="polygon590" />
+  </g>
+  <g
+     id="g592">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1700"
+       y1="-520"
+       x2="1700"
+       y2="-471.516"
+       id="line594" />
+    <polygon
+       style="fill: #000000"
+       points="1700,-464.016 1695,-474.016 1700,-471.516 1705,-474.016 "
+       id="polygon596" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1700,-464.016 1695,-474.016 1700,-471.516 1705,-474.016 "
+       id="polygon598" />
+  </g>
+  <g
+     id="g600">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       x1="1480"
+       y1="-540"
+       x2="1516.64"
+       y2="-540"
+       id="line602" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1524.14,-540 1514.14,-535 1516.64,-540 1514.14,-545 "
+       id="polygon604" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1524.14,-540 1514.14,-535 1516.64,-540 1514.14,-545 "
+       id="polygon606" />
+  </g>
+  <g
+     id="g608">
+    <path
+       style="fill: #ffffff"
+       d="M 1461.81 -456.21 L 1498.46,-456.21 C 1503.52,-456.21 1507.63,-451.733 1507.63,-446.21 C 1507.63,-440.687 1503.52,-436.21 1498.46,-436.21 L 1461.81,-436.21 C 1456.75,-436.21 1452.65,-440.687 1452.65,-446.21 C 1452.65,-451.733 1456.75,-456.21 1461.81,-456.21z"
+       id="path610" />
+    <path
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000"
+       d="M 1461.81 -456.21 L 1498.46,-456.21 C 1503.52,-456.21 1507.63,-451.733 1507.63,-446.21 C 1507.63,-440.687 1503.52,-436.21 1498.46,-436.21 L 1461.81,-436.21 C 1456.75,-436.21 1452.65,-440.687 1452.65,-446.21 C 1452.65,-451.733 1456.75,-456.21 1461.81,-456.21"
+       id="path612" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1480.14"
+       y="-441.41"
+       id="text614">
+      <tspan
+         x="1480.14"
+         y="-441.41"
+         id="tspan616">Death</tspan>
+    </text>
+  </g>
+  <g
+     id="g618">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 10; stroke: #ff0000"
+       x1="1480"
+       y1="-520"
+       x2="1480.12"
+       y2="-465.946"
+       id="line620" />
+    <polygon
+       style="fill: #ff0000"
+       points="1480.13,-458.446 1475.11,-468.435 1480.12,-465.946 1485.11,-468.457 "
+       id="polygon622" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000"
+       points="1480.13,-458.446 1475.11,-468.435 1480.12,-465.946 1485.11,-468.457 "
+       id="polygon624" />
+  </g>
+  <g
+     id="g626">
+    <line
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x1="1100"
+       y1="-770"
+       x2="1100"
+       y2="-471.516"
+       id="line628" />
+    <polygon
+       style="fill: #000000"
+       points="1100,-464.016 1095,-474.016 1100,-471.516 1105,-474.016 "
+       id="polygon630" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1100,-464.016 1095,-474.016 1100,-471.516 1105,-474.016 "
+       id="polygon632" />
+  </g>
+  <g
+     id="g634">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1440,-1020 1477.73,-1020 1477.73,-989.736 "
+       id="polyline636" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1477.73,-982.236 1472.73,-992.236 1477.73,-989.736 1482.73,-992.236 "
+       id="polygon638" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1477.73,-982.236 1472.73,-992.236 1477.73,-989.736 1482.73,-992.236 "
+       id="polygon640" />
+  </g>
+  <g
+     id="g642">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1680,-1020 1717.82,-1020 1717.82,-989.736 "
+       id="polyline644" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1717.82,-982.236 1712.82,-992.236 1717.82,-989.736 1722.82,-992.236 "
+       id="polygon646" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1717.82,-982.236 1712.82,-992.236 1717.82,-989.736 1722.82,-992.236 "
+       id="polygon648" />
+  </g>
+  <g
+     id="g650">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1463.17,-940 1463.17,-820 1410,-820 1410,-729.736 "
+       id="polyline652" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1410,-722.236 1405,-732.236 1410,-729.736 1415,-732.236 "
+       id="polygon654" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1410,-722.236 1405,-732.236 1410,-729.736 1415,-732.236 "
+       id="polygon656" />
+  </g>
+  <g
+     id="g658">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1484.76,-940 1484.76,-820 1670,-820 1670,-729.736 "
+       id="polyline660" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1670,-722.236 1665,-732.236 1670,-729.736 1675,-732.236 "
+       id="polygon662" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1670,-722.236 1665,-732.236 1670,-729.736 1675,-732.236 "
+       id="polygon664" />
+  </g>
+  <g
+     id="g666">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1703.08,-939.508 1703.08,-900 1410.54,-900 1410.54,-889.736 "
+       id="polyline668" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1410.54,-882.236 1405.54,-892.236 1410.54,-889.736 1415.54,-892.236 "
+       id="polygon670" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1410.54,-882.236 1405.54,-892.236 1410.54,-889.736 1415.54,-892.236 "
+       id="polygon672" />
+  </g>
+  <g
+     id="g674">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1463.17,-940 1463.17,-820 1210,-820 1210,-729.736 "
+       id="polyline676" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1210,-722.236 1205,-732.236 1210,-729.736 1215,-732.236 "
+       id="polygon678" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1210,-722.236 1205,-732.236 1210,-729.736 1215,-732.236 "
+       id="polygon680" />
+  </g>
+  <g
+     id="g682">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1703.08,-939.508 1703.08,-900 1650,-900 1650,-889.736 "
+       id="polyline684" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1650,-882.236 1645,-892.236 1650,-889.736 1655,-892.236 "
+       id="polygon686" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1650,-882.236 1645,-892.236 1650,-889.736 1655,-892.236 "
+       id="polygon688" />
+  </g>
+  <g
+     id="g690">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1160,-1020 1197.73,-1020 1197.73,-989.736 "
+       id="polyline692" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1197.73,-982.236 1192.73,-992.236 1197.73,-989.736 1202.73,-992.236 "
+       id="polygon694" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1197.73,-982.236 1192.73,-992.236 1197.73,-989.736 1202.73,-992.236 "
+       id="polygon696" />
+  </g>
+  <g
+     id="g698">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+       points="1183.17,-940 1183.17,-910 1130,-910 1130,-889.736 "
+       id="polyline700" />
+    <polygon
+       style="fill: #3d9c0a"
+       points="1130,-882.236 1125,-892.236 1130,-889.736 1135,-892.236 "
+       id="polygon702" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+       points="1130,-882.236 1125,-892.236 1130,-889.736 1135,-892.236 "
+       id="polygon704" />
+  </g>
+  <g
+     id="g706">
+    <polyline
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1380,-610 1380,-580 1335,-580 1335,-471.516 "
+       id="polyline708" />
+    <polygon
+       style="fill: #000000"
+       points="1335,-464.016 1330,-474.016 1335,-471.516 1340,-474.016 "
+       id="polygon710" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       points="1335,-464.016 1330,-474.016 1335,-471.516 1340,-474.016 "
+       id="polygon712" />
+  </g>
+  <g
+     id="g714">
+    <rect
+       style="fill: #ffffff"
+       x="1802.18"
+       y="-1087.63"
+       width="220"
+       height="287.632"
+       id="rect716" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1802.18"
+       y="-1087.63"
+       width="220"
+       height="287.632"
+       id="rect718" />
+  </g>
+  <g
+     id="g720">
+    <g
+       id="g722">
+      <rect
+         style="fill: #ffffff"
+         x="1992.18"
+         y="-1087.63"
+         width="30"
+         height="18"
+         id="rect724" />
+      <rect
+         style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+         x="1992.18"
+         y="-1087.63"
+         width="30"
+         height="18"
+         id="rect726" />
+    </g>
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:start;font-family:Overpass;font-style:normal;font-weight:700"
+       x="1995.63"
+       y="-1074.26"
+       id="text728">
+      <tspan
+         x="1995.63"
+         y="-1074.26"
+         id="tspan730">Key</tspan>
+    </text>
+  </g>
+  <g
+     id="g732">
+    <text
+       font-size="12.8"
+       style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+       x="1854.18"
+       y="-809.608"
+       id="text734">
+      <tspan
+         x="1854.18"
+         y="-809.608"
+         id="tspan736">&lt;Function Condition&gt;</tspan>
+    </text>
+    <g
+       id="g738">
+      <g
+         id="g740">
+        <line
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           x1="1806.18"
+           y1="-854.39"
+           x2="1836.44"
+           y2="-854.39"
+           id="line742" />
+        <polygon
+           style="fill: #000000"
+           points="1843.94,-854.39 1833.94,-849.39 1836.44,-854.39 1833.94,-859.39 "
+           id="polygon744" />
+        <polygon
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           points="1843.94,-854.39 1833.94,-849.39 1836.44,-854.39 1833.94,-859.39 "
+           id="polygon746" />
+      </g>
+      <text
+         font-size="12.8"
+         style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+         x="1854.18"
+         y="-849.316"
+         id="text748">
+        <tspan
+           x="1854.18"
+           y="-849.316"
+           id="tspan750">State/Function Transition</tspan>
+      </text>
+    </g>
+    <g
+       id="g752">
+      <g
+         id="g754">
+        <line
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #3d9c0a"
+           x1="1806.18"
+           y1="-834.39"
+           x2="1836.44"
+           y2="-834.39"
+           id="line756" />
+        <polygon
+           style="fill: #3d9c0a"
+           points="1843.94,-834.39 1833.94,-829.39 1836.44,-834.39 1833.94,-839.39 "
+           id="polygon758" />
+        <polygon
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #3d9c0a"
+           points="1843.94,-834.39 1833.94,-829.39 1836.44,-834.39 1833.94,-839.39 "
+           id="polygon760" />
+      </g>
+      <text
+         font-size="12.8"
+         style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+         x="1854.18"
+         y="-829.316"
+         id="text762">
+        <tspan
+           x="1854.18"
+           y="-829.316"
+           id="tspan764">Message Input/Output</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     id="g766">
+    <rect
+       style="fill: #ffffff"
+       x="1806.18"
+       y="-952.796"
+       width="100"
+       height="30"
+       id="rect768" />
+    <rect
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+       x="1806.18"
+       y="-952.796"
+       width="100"
+       height="30"
+       id="rect770" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1856.18"
+       y="-933.346"
+       id="text772">
+      <tspan
+         x="1856.18"
+         y="-933.346"
+         id="tspan774">Function</tspan>
+    </text>
+  </g>
+  <g
+     id="g776">
+    <polygon
+       style="fill: #ffffff"
+       points="1817.1,-906.956 1906.18,-906.956 1895.26,-876.956 1806.18,-876.956 "
+       id="polygon778" />
+    <polygon
+       style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00ff00"
+       points="1817.1,-906.956 1906.18,-906.956 1895.26,-876.956 1806.18,-876.956 "
+       id="polygon780" />
+    <text
+       font-size="12.8"
+       style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+       x="1856.18"
+       y="-887.506"
+       id="text782">
+      <tspan
+         x="1856.18"
+         y="-887.506"
+         id="tspan784">Message List</tspan>
+    </text>
+  </g>
+  <text
+     font-size="12.8"
+     style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1912.18"
+     y="-927.632"
+     id="text786">
+    <tspan
+       x="1912.18"
+       y="-927.632"
+       id="tspan788" />
+  </text>
+  <text
+     font-size="11.2889"
+     style="font-style:normal;font-weight:normal;font-size:11.28890038px;font-family:sans-serif;text-anchor:start;fill:#0000ff"
+     x="1624.1899"
+     y="-744.15997"
+     id="text790">
+    <tspan
+       x="1624.1899"
+       y="-744.15997"
+       id="tspan792">&lt;can traverse junction&gt;</tspan>
+  </text>
+  <text
+     font-size="11.2889"
+     style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1627.08"
+     y="-584.024"
+     id="text794">
+    <tspan
+       x="1627.08"
+       y="-584.024"
+       id="tspan796">&lt;has left junction&gt;</tspan>
+  </text>
+  <text
+     font-size="11.2889"
+     style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1102.63"
+     y="-744.16"
+     id="text798">
+    <tspan
+       x="1102.63"
+       y="-744.16"
+       id="tspan800">&lt;at front of queue&gt;</tspan>
+  </text>
+  <text
+     font-size="11.2889"
+     style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1383.85"
+     y="-584.024"
+     id="text802">
+    <tspan
+       x="1383.85"
+       y="-584.024"
+       id="tspan804">&lt;has left road section&gt;</tspan>
+  </text>
+  <text
+     font-size="11.2889"
+     style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1433.35"
+     y="-480.516"
+     id="text806">
+    <tspan
+       x="1433.35"
+       y="-480.516"
+       id="tspan808">&lt;has left simulation&gt;</tspan>
+  </text>
+  <text
+     font-size="11.2889"
+     style="fill: #0000ff;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal"
+     x="1184.53"
+     y="-584.024"
+     id="text810">
+    <tspan
+       x="1184.53"
+       y="-584.024"
+       id="tspan812">&lt;has sufficient headway&gt;</tspan>
+  </text>
+  <g
+     id="g814">
+    <g
+       id="g816">
+      <g
+         id="g818">
+        <ellipse
+           style="fill: #ffffff"
+           cx="1821.18"
+           cy="-983.635"
+           rx="15"
+           ry="15"
+           id="ellipse820" />
+        <ellipse
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           cx="1821.18"
+           cy="-983.635"
+           rx="15"
+           ry="15"
+           id="ellipse822" />
+        <text
+           font-size="12.8"
+           style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+           x="1821.18"
+           y="-979.185"
+           id="text824">
+          <tspan
+             x="1821.18"
+             y="-979.185"
+             id="tspan826">J</tspan>
+        </text>
+      </g>
+      <text
+         font-size="12.8"
+         style="fill: #000000;text-anchor:start;font-family:Overpass;font-style:normal;font-weight:normal"
+         x="1846.18"
+         y="-978.753"
+         id="text828">
+        <tspan
+           x="1846.18"
+           y="-978.753"
+           id="tspan830">Junction Car</tspan>
+      </text>
+    </g>
+    <g
+       id="g832">
+      <g
+         id="g834">
+        <ellipse
+           style="fill: #ffffff"
+           cx="1821.18"
+           cy="-1026.13"
+           rx="15"
+           ry="15"
+           id="ellipse836" />
+        <ellipse
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           cx="1821.18"
+           cy="-1026.13"
+           rx="15"
+           ry="15"
+           id="ellipse838" />
+        <text
+           font-size="12.8"
+           style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+           x="1821.18"
+           y="-1021.68"
+           id="text840">
+          <tspan
+             x="1821.18"
+             y="-1021.68"
+             id="tspan842">R</tspan>
+        </text>
+      </g>
+      <text
+         font-size="12.8"
+         style="fill: #000000;text-anchor:start;font-family:Overpass;font-style:normal;font-weight:normal"
+         x="1846.18"
+         y="-1021.06"
+         id="text844">
+        <tspan
+           x="1846.18"
+           y="-1021.06"
+           id="tspan846">Road Car</tspan>
+      </text>
+    </g>
+    <g
+       id="g848">
+      <g
+         id="g850">
+        <ellipse
+           style="fill: #ffffff"
+           cx="1821.18"
+           cy="-1068.63"
+           rx="15"
+           ry="15"
+           id="ellipse852" />
+        <ellipse
+           style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000"
+           cx="1821.18"
+           cy="-1068.63"
+           rx="15"
+           ry="15"
+           id="ellipse854" />
+        <text
+           font-size="12.8"
+           style="fill: #000000;text-anchor:middle;font-family:Overpass;font-style:normal;font-weight:normal"
+           x="1821.18"
+           y="-1064.18"
+           id="text856">
+          <tspan
+             x="1821.18"
+             y="-1064.18"
+             id="tspan858">Q</tspan>
+        </text>
+      </g>
+      <text
+         font-size="12.8"
+         style="fill: #000000;text-anchor:start;font-family:Overpass;font-style:normal;font-weight:normal"
+         x="1846.18"
+         y="-1063.63"
+         id="text860">
+        <tspan
+           x="1846.18"
+           y="-1063.63"
+           id="tspan862">Queued Car</tspan>
+      </text>
+    </g>
+  </g>
+</svg>
