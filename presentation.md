@@ -82,19 +82,15 @@ First I'm going to talk a little about Smart Cities, Transport Simulations and t
 
 ???
 
-I'm Sure that all of us here have been delayed by congestion recently. 
+We're all impacted by congestion on our road networks pretty much every day.
 
-For instance on Sunday traveling back from Santa Cruz on Highway 17 I was stuck in a queue which added 45 minutes to the journey, and I almost missed the welcome reception. 
+In part this is due to the increasing demand on our transport networks
 
-Although this was caused by a collision, a lot of delays are due to the increasing number of vehicles on our road networks,
+For instance in the UK motorway demand is projected to increase by 31% by 2041, and the growth in demand doesn't just apply to our highways.
 
-Which is projected to continue to grow, by upto 31% in the UK by 2041. 
+Our cities already struggle with congestion, especially at peak times. 
 
-We also know that our cities are congested. We have statistics for London showing that the travel speeds are reduced by over 50% on average during peak hours. And Peak hours are widening. 
-
-To resolve these issues we need to increase the utilisation and efficiency of our transport networks, 
-
-to reduce congestion and pollution.
+In London, the average travel speed is reduced by 58% during peak times, taking at least twice as long to reach our destinations as it should.
 
 We can achieve this using *data driven management*
 
@@ -135,13 +131,18 @@ Highways England
 
 ???
 
-We can achieve these goals through better use of road network simulations, during both planning of infrastructure and management of infrastructure
+We can meet these aims through better use of simulation, both when we are planning our road networks, and actively managing smart infrastructure.
 
-But Cities are more challenging to accurately simulate than non-urban environments. 
+**But** smart cities are difficult. 
 
-There are more people in less space, many modes of transport in shared spaces, and new modes emerging such as CAVs. 
+Cities are dense, with a huge number of people in a relatively small space, using many modes of transport in shared spaces, including new technologies such as autonomous vehicles.
 
-Cities also restrict the possible solutions. There is no space to increase capacity by widening roads, Air Quality must be improved for public health and real world interventions can be incredibly expensive. 
+Cities also impose restrictions on the changes we can make. 
+
+There isn't room to add new lanes or roads to increase capacity, 
+We are becoming more aware of the negative impacts of pollution on our health, caused in part by our road networks
+And making changes in the real world is incredibly expensive. 
+
 
 ---
 
@@ -170,17 +171,16 @@ Cities also restrict the possible solutions. There is no space to increase capac
 
 ???
 
-When we're simulating our transport networks, we can do so at different resolutions. 
+So when we use simulations to help design and run our road networks, we can do so at several resolutions. 
 
-Traditionally Macroscopic simulations are the most prevalent. These are top down simulations which model transport at a high, quite abstract level. Such as fluids moving along pipes. These Low resolution simulations have a relatively low computational cost. 
+Traditionally, macro-scale simulations were the most prevalent. 
+These are top-down, low-resolution simulations which are quite abstract from reality, treating our road networks as a series of pipes. 
 
-We then have the lower-level mesoscopic simulations where we may consider platoons of vehicles.
+We then have the mid-level mesoscopic simulations where we may consider platoons or groups of vehicles.
 
-And finally the fine-grained microscopic simulations, where each individual in the system is modelled and simulated.
+And finally the fine-grained microscopic simulations. High resolution bottom-up simulations where each individual in the system is modelled and simulated.
 
-Micro scale simulations have huge computational cost, but they capture fine-grained interactions and emergent behaviours which may be overlooked by lower resolution approaches. 
-
-I'm going to focus on Microsimulations. 
+But these simulations have huge computational cost, but they can capture features which are not visible in higher resolution simulations, like the school rush.
 
 ---
 
@@ -210,11 +210,18 @@ I'm going to focus on Microsimulations.
 
 ???
 
-One approach for modelling microscopic models is Agent Based Modelling.
+So I'm going to focus on Microscopic simulations which we are interested in, and one method for implementing Micro-scale simulations is to use Agent Based Modelling.
 
-In Agent based models each individual, or agent has its own properties. The modeller describes relatively simple behaviours for each agent which includes interactions between agents and between agents and the environment. 
+In Agent based models each individual, or agent, has its own properties. 
 
-More complex behaviours then emerge from these simple behaviours.
+The modeller describes relatively simple behaviours, from the agents perspective,
+
+with interactions between the agent and other agents, or the environment. 
+
+These simple rules and interactions then allow more complex behaviours to emerge. You don't define the formation of queues at a stop sign, you simply define that a car generally won't crash into the car in front. 
+
+But just to re-iterate, this is hugely expensive, and you need to run these simulations many many times. 
+
 
 ---
 
@@ -251,7 +258,7 @@ More complex behaviours then emerge from these simple behaviours.
 
 ???
 
-Unfortunately smart city microsimulations have massive computational cost. 
+You might have heard me say this already, but theses simulations are expensive. 
 
 Urban environments can contain millions of individuals, 
 
@@ -259,9 +266,10 @@ across multiple modes of transport
 
 and we need to run these simulations many many times to cover the broad range of conditions which may effect the environment and to take into account the stochastic nature of transport systems. 
 
-But ultimately the performance of microsimulations is limiting its use in the industry, as the simulations can take such a long time. 
+What this means is that the performance of these simulations is limiting its use in the industry. 
 
-There is a need to improve the performance of these simulators. 
+
+So we need to make faster simulators. 
 
 ---
 
@@ -296,11 +304,11 @@ Aimsun 8.1 Microsimulation User Interface
 
 ???
 
-Now I'm not saying that the many commercial and open source tools don't care about performance, but they may not be using the most appropriate hardware for the job. 
+Commercial and open source simulators are all currently CPU based. 
 
-Tools such as Aimsun, Vissim and Parasim are multi-threaded CPU applications, but they see poor performance scaling from additional processor cores and with the scale of problem. 
+Tools such as Aimsun, Vissim and Parasim are multi-threaded CPU applications, but they suffer from poor scaling, 
 
-Some simulators are only sequential in nature, such as the open source SUMO. 
+Adn some simulators are only sequential in nature, such as SUMO which is the most prevalent open-source simulator. 
 
 
 ---
@@ -339,15 +347,15 @@ Now that we're all up to speed with the state of simulators for smart cities, I'
 
 ???
 
-We wanted to show that GPUs are the appropriate tool for smart city simulations. 
+We wanted to show that GPUs are the **most appropriate tool** for smart city simulations. 
 
-Showing that they are suitable for city-scale networks and can do so better than real time, unlike the current state of the art CPU simulators. 
+And that they are suitable for city-scale simulations and can do so better than real time, unlike the current state of the art CPU simulators. 
 
-We did this by implementing a subset of functionality from a commercial tool on the GPU, 
+We chose to do this by implementing a subset of functionality from a commercial tool on the GPU, 
 
 Cross validating the implementation to show it is doing the same thing
 
-and benchmark both implementations using a model we could scale indefinitely. 
+and run a range of benchmarks using a scalable model to evaluate performance. 
 
 ---
 
@@ -391,13 +399,19 @@ Aimsun Performance using different numbers of CPU cores
 
 ???
 
-We chose Aimsun as our reference CPU simulator, as it is widely used in the UK and the developers were keen to find out if they could benefit from GPUs, and how to do so. 
+Chose Aimsun as our reference CPU simulator
 
-Aimsun is a multi-core CPU simulator, which uses coarse-grained data parallelism and task-parallelism to improve performance. 
+widely used in the UK 
 
-It can simulate pretty much any road network you can think of, and is used globally. 
+and the developers were keen to collaborate to learn about GPUs
 
-The figure on the right shows the runtime of a fixed size simulation as we increase the number of processing cores. As you can see there is no improvement from going above 6 processing cores, and this is a common trend across CPU architectures. 
+Aimsun is a multi-threaded simulator, which uses task-parlalelism and coarse-grained data parallelism
+
+It's suitable for pretty much any road network you can think of,
+
+But it suffers from diminishing returns from additional CPU cores. 
+
+So on the right we can see the average runtime of a fixed size simulation using different CPUs and different thread counts, and we see diminishing returns from the additional CPU cores, with no improvement beyond 6 cores in an 8 core system. 
 
 ---
 
@@ -427,10 +441,11 @@ The figure on the right shows the runtime of a fixed size simulation as we incre
 
 ???
 
-It wasn't feasible for us to re-implement the full simulator, to determine if GPUs are valuable or not, so we selected a subset of models and functionality to produce a minimal simulator that will be representative of performance. 
+Not feasible for me to implement a fully featured microsimulator,
 
-This includes a the Gipps car following model, a Gap acceptance model for junctions, probabilistic routing and stop sign based junctions. 
+So we selected a subset of Aimsun's functionality to make a minimal representative simulator. 
 
+We include the car following model, a Gap acceptance model for junctions, probabilistic routing and stop sign based junctions and simulated vehicle detectors.
 
 ---
 
@@ -450,9 +465,11 @@ This includes a the Gipps car following model, a Gap acceptance model for juncti
 
 ???
 
-We chose to use a simple Manhattan style grid network as it is simple to scale.
+We wanted a benchmark road network which we could scale indefinately, 
 
-Using single lane, one-way roads terminated by a stop sign. 
+We chose to use a simple Manhattan style grid.
+
+made up of single lane, one-way roads terminated by a stop sign. 
 
 Vehicles enter and exit at the edge of the simulation
 
@@ -488,11 +505,11 @@ In hindsight this is not ideal, as the environment and population scale at diffe
 
 ???
 
-We then benchmarked Aimsun 8.1 using this network at various scales, until it refused to scale any larger, on the 4 core CPU I had available at the time. 
+We then benchmarked Aimsun 8.1 using this network at various scales, until it refused to scale any larger, on the 4 core i7 CPU under Windows. 
 
 We ran 3 repetitions of a 1 hour simulation
 
-and the largest simulation with a total vehicle demand of half a million vehilcles and close to 2 million detectors completed in five and a half thousand seconds, around one and a half times slower than real time. 
+and the largest simulation with a total vehicle demand of half a million vehicles and close to 2 million detectors completed in five and a half thousand seconds, around one and a half times slower than real time. 
 
 This isn't ideal for managing road networks.
 
@@ -508,9 +525,7 @@ class: impact
 
 ???
 
-Now we have our reference benchmark results, we can move onto our GPU accelerated simulator. 
-
-I'm going to talk a little about the ABM framework we used, provide some details of our implementation and of our cross validation. 
+Now we have some reference results, we can move onto our GPU accelerated simulator. 
 
 ---
 
@@ -561,18 +576,15 @@ Pedestrian Simulation
 
 ???
 
-We used the FLAME GPU framework to implement our ABMs, which at the time was the only GPU accelerated general purpose agent based modelling framework.
+We used the FLAME GPU framework to implement our ABM.
 
-FLAME GPU is a high performance agent based simulator, using XSLT based code generation. 
+FLAME GPU is an open-source, high performance, general-purpose GPU accelerated agent based simulation framework.
 
-Agents are modelled as a state machine, with message lists for communication. 
+Agents are modelled as a state machine, using message lists for agent communication. 
 
-This means that the development of a model doesn't require any explicit GPU knowledge. 
+and we use XSLT-based code generate CUDA code for the modeller - they don't even need to know what a GPU is to use FLAME GPU. 
 
-FLAME GPU has been previously used in a broad range of simulation domains. 
-
-such as cellular simulations of tissue healing at the top, and pedestrian simualtions below.  
-
+We've used it in a broad range of domains, from biological cellular simulations, to pedestrian simulations or more-abstract cellular automata.
 
 
 ---
@@ -598,7 +610,7 @@ When developing a FLAME GPU model, the user writes an XML file describing the st
 
 A set of templates are used to generate CUDA code for the model, which is linked against  simple C functions also written by the modeller, which use the generated API to implement the individual behaviours.
 
-XML files are then used to provide initial state information, and XML files cna be output periodically showing the state of the simualation. 
+XML files are then used to provide initial state information, and XML files can be output periodically showing the state of the simulation. 
 
 
 ---
@@ -632,15 +644,17 @@ XML files are then used to provide initial state information, and XML files cna 
 
 ???
 
-As I mentioned earlier, modellers don't need to know any CUDA to implement a model and access high levels of performance.
+So why should a modeller use FLAME GPU, what are the advantages of doing so?
 
-The XSLT templates produce code which handles many of the complex parts of the CUDA model and data parallel programming for them. 
+As I mentioned earlier, modellers don't need to know any CUDA to implement a model and access high levels of performance, for large scale simulations.
+
+Because XSLT templates produce code which handles many of the complex parts of the CUDA model and data parallel programming for them. 
 
 Divergence is minimised though the state based system used to describe the model. 
 
-We leverage the memory heirarcy of the GPU to ensure high performance and good memory access patterns
+We leverage the GPUs memory hierarchy for locality.
 
-And thanks to the use of message lists and double buffering we completely avoid race conditions.
+And we avoid race conditions, both through double buffering and message lists. 
 
 The state based system with message lists also provides natural synchronisation barriers, enabling the use of cuda streams for concurrency.
 
@@ -676,6 +690,8 @@ The state based system with message lists also provides natural synchronisation 
 
 We then implemented these models using FLAME GPU, by describing the state machine and providing simple C code for each behaviour.
 
+So for instance the car following model is implemented in one of the agent functions.
+
 ---
 
 
@@ -693,7 +709,7 @@ This is the state diagram for our vehicle agents, modelling a single iteration o
 
 I've ommited the detectors to try and keep this simple. 
 
-So we have 3 possible states, represented by the circle:
+So we have 3 possible states, shown by the circles
 
 Queued vehicles are waiting to enter the simulation on an entrance edge, 
 
@@ -725,11 +741,10 @@ For instance (describe the road state)
 
 ???
 
-We cross validated the implementation using a set of 6 validation networks
+Once we had our implementation we cross validated using a set of networks designed to evaluate either individual behaviours, or the combined effects of multiple behaviours
 
-Targetting individual behaviours and combined effects of multiple behaviours.
+And during debugging the real-time interactive visualisations which FLAME GPU provides were invaluable.
 
-The real time visualisation was also incredibly useful during development.
 
 
 ---
@@ -757,11 +772,46 @@ The real time visualisation was also incredibly useful during development.
 
 ???
 
-The tests which were designed to be deterministic reproduced exactly. Ie. the stop sign validation shown on the right. 
+Our deterministic tests showed exactly matching results,
 
-Whilst stochastic tests showed different results per individual run, due to different random number generation, but aggregate results were within acceptable ranges. 
+Whilst our aggregate stochastic tests fell within an acceptable range.
+
+This is mainly due to the use of a different random number generator.
 
 ---
+
+# Initial GPU Benchmarking
+
+.col-4[
++ Benchmarked existing communication strategies
+
+
++ 1 hour simulation
++ 3 repetitions
++ Titan V
+
+
++ **Poor performance**
+
+
++ Agent Communication limits performance
+
+]
+.col-8.img-col[
+.w-90[
+![Initial GPU Benchmarking](img/popsize-gridsize-brute-linear.png)
+]
+]
+
+???
+
+So we ran our environment scale benchmarks, using our initial GPU implementation, and the performance was pretty grim.
+
+
+So we need to improve performance.
+
+---
+
 class: impact
 
 # Agent Communication
@@ -772,7 +822,7 @@ class: impact
 
 ???
 
-At this point we have a working implementation, but with FLAME GPU models the communication between agents can have a massive impact on performance. 
+To improve performance we need to understand agent communication within FLAME GPU models.
 
 ---
 
@@ -817,16 +867,15 @@ At this point we have a working implementation, but with FLAME GPU models the co
 
 ???
 
-As I've mentioned in FLAME GPU message lists are used to communicate. 
-
-Messages are stored separate to agent data, to avoid race conditions and allow memory access patterns to be optimised.
-
+Agents can output messages to these message list, which are then iterated by agents in subsequent functions. 
 
 Iterating these message lists is usually the limit on performance of an agent function. One way to improve this is by reducing the number of messages each agent must read. 
 
-Previously there were 3 methods provided in FLAME GPU. All to all communciation, spatially partitioned messaging to restrict messages to the local neighbourhood, and discrete partitioned messaging for cellular automata. 
+In older versions of FLAME GPU  there were 3 communication strategies provided iby FLAME GPU.
 
-For instance we use spatial partitioning the improve the performance of flocking models in continuous space, while discrete partitioned messaging improves the performance of cellular automata style models such as the game of life. 
+ All to all communication, spatially partitioned messaging for local communication in continuous space, and discrete partitioned messaging for discrete space. 
+
+For instance we use spatial partitioning for flocking models in continuous space, while discrete partitioned messaging improves the performance of cellular automata such as the game of life. 
 
 ---
 
@@ -856,13 +905,15 @@ For instance we use spatial partitioning the improve the performance of flocking
 
 ???
 
-If we benchmark our road network model using the communication strategies, we don't see great results.
+We switched to spatially partitioned messaging with a sufficiently large communication radius and re-ran our benchmarks. 
 
-Using all to all communication our GPU implementation is always slower than a 4 core CPU, while using spatial partitioning we see a minor speedup compared to the CPU in the middle of the scale range. 
+This showed better performance than the default all-to-all communication
 
-Through profiling we know that most of the runtime is spent in the message iteration loops and our kernels are very much memory bound, so we need to improve work efficiency and read fewer messages per agent. 
+**but** the performance was still not great. Roughly comparable to the existing CPU code. 
 
+Profiling showed that the majority of time was still spent iterating messages, and our kernels are memory bound. 
 
+We need to further reduce the number of message lists being iterated, and improve work efficiency for the types of model used in road network simulations.
 
 
 ---
@@ -889,9 +940,7 @@ To illustrate this we're going to look at the car following model.
 
 Gipps' model essentially calculates the acceleration required to drive as close to the desired speed as possible, without crashing to the car in front. 
 
-I.e. the orange vehicle only needs information from the purple vehicle. 
-
-Other models such as any lange changing model or junction models need similar information, from lead / trailing vehicles or those approaching a junction. I.e local proximity within the road network. 
+I.e. the orange vehicle only needs information from the purple vehicle, no one else matters. 
 
 ---
 
@@ -919,9 +968,11 @@ Other models such as any lange changing model or junction models need similar in
 
 ???
 
-So in this example, using all to all messaging
+So using all to all communication,
 
-where each agent reads the entire message list, the orange car will read all 42 messages. 
+where each agent reads the entire message list, 
+
+the orange car will read all 42 messages 
 
 ---
 
@@ -954,15 +1005,15 @@ where each agent reads the entire message list, the orange car will read all 42 
 
 ???
 
-We can reduce the number of messages read using spatial partitioning. 
+We can reduce the number of messages read using spatial partitioning for continuous space. 
 
-In spatial partitioning the environment is divided into a grid of cells. The width of each cell is set to the radius of communication, which means that by reading the messages from the moores neighbourhood of cells all messages within the radius will have been parsed
+The environment is divided into a grid of cells, with the cell width equal to the communication radius. 
 
-along with some extras. 
+By reading the Moore's neighbourhood of cells, we are guaranteed to access all of the required messages, while maintaining a good memory access pattern. 
 
-The message list is sorted by cell index to enable improve the memory access pattern. 
+In this case, the orange agent now only reads 18 messages in the shaded area, 
 
-In this case, the orange agent now only reads 18 messages in the shaded area, in a more realistic example this would be a larger reduction. 
+in a more realistic, larger-scale example this would be a larger reduction. 
 
 
 ---
@@ -992,11 +1043,11 @@ In this case, the orange agent now only reads 18 messages in the shaded area, in
 
 ???
 
-But what if we restrict the messages to be only those from the relevant section of road? 
+But what if we could restrict the messages to be only those from the relevant part of the road network?
 
 In this case, the orange agent would only read the 5 messages from the pink section of road. 
 
-In a larger example with more road sections this would be a significant improvement of work efficiency.
+Again, in a larger example this would account for a significant improvement of work efficiency.
 
 ---
 
@@ -1037,11 +1088,14 @@ In a larger example with more road sections this would be a significant improvem
 
 We implemented this in FLAME GPU 1.5,
 
-We store the graph representing the road network using compresed sparse row, and embed the index of the edge or vertex in the message as appropriate. 
+We have a compressed sparse row representation of the road network for fast accesses.
 
-The message list is sorted by the index, and a data structure produced to enable quick access to relevant messages. 
+and embed the index of the edge or vertex in the message
 
-We do this with a shared-memory atomic counting sort, because the histogram used to access messages is produced as a by-product of the sort.
+We sort the message list by the index, and construct a histogram to enable fast access to the relevant messages.
+
+
+We do this with a counting-sort using shared-memory atomics, as the histogram is produced as a by-product of the sort.
 
 
 ---
@@ -1071,11 +1125,12 @@ We do this with a shared-memory atomic counting sort, because the histogram used
 
 ???
 
-Once this was implemented we looked at the run time of message output, and the car following model kernel. 
+So we timed the car following model kernel at some of the lower benchmark scales, 
 
-Message output was slower than of other communication strategies, 
+and we see a huge reduction in the kernel runtime
 
-**but** message iteration was significantly cheaper. 
+
+Although this does come with increased cost when outputting messages and sorting the message list. 
 
 ---
 
@@ -1102,7 +1157,9 @@ Message output was slower than of other communication strategies,
 
 ???
 
-So when we re-ran our network-scale benchmarks, we saw a huge performance improvement as shown by the new pink line on the figure. 
+So if we re-run our network-scale benchmarks on the Titan V, 
+
+we see a huge performance improvement as shown by the new pink line on the figure. 
 
 ---
 
@@ -1133,17 +1190,18 @@ So when we re-ran our network-scale benchmarks, we saw a huge performance improv
 
 ???
 
-Here we've switched to a log scale so we can see what is going on, 
+Here we have the same CPU and Titan V  graph based communication results
 
 dismissed the all to all and spatially partitioned results 
 
-and included some results from a Tesla P100 and a Titan Xp. 
+and included Pascal with results from P100 and a Titan Xp. 
 
 For the 1 hour simulation of half a million vehicles, a Titan V ran the simulation in 82 seconds.
 
-This is 66 times faster than the 4 core CPU, and more importantly 44 times better than real time. 
+This is 66 times faster than the 4 core CPU, and more importantly 44 times better than real time - which is great and what we wanted to see.
 
-We also see greatly improved scaling, with larger simulations continuing to outperform the CPU. 
+We could also run larger simulations than the CPU, although we didn't push this much further.
+
 
 ---
 
@@ -1170,9 +1228,13 @@ We also see greatly improved scaling, with larger simulations continuing to outp
 
 ???
 
+We can look at other aspects of the performance of our simulator.
+
 Looking at the run time of each iteration for a specific simulation, we can see that our GPU iterations are much quicker than CPU iterations. 
 
-In this case we don't really see significant performance reduction per iteration until the population of vehicles has grown enough to fully saturate the GPU.    
+As the simulation progresses, the number of vehicles within the simulation increases, along with the runtime. 
+
+We do have some outliers, which correspond to periodic behaviour of the vehicle detectors, which occurs every 10 minutes, or 750 iterations.
 
 ---
 
@@ -1207,9 +1269,11 @@ In this case we don't really see significant performance reduction per iteration
 
 We also performed benchmarks where we scaled the population size for fixed size networks by varying input flow. 
 
+Here we have the CPU results, the Titan V with spatially partitioned messaging, and graph based communication for the Titan V and Titan Xp. 
+
 At this relatively small scale simulation we see that graph messaging GPU is always better than the cpu
 
-while the spatially partitioned messaging is only better thna the CPU up to around 400 vehicles per hour per entrance. 
+while the spatially partitioned messaging is only better than the CPU up to around 400 vehicles per hour per entrance - once messages lists grow too large.
 
 
 ---
@@ -1242,10 +1306,9 @@ while the spatially partitioned messaging is only better thna the CPU up to arou
 
 ???
 
-For this larger simulation the graph between the Graph messaging and CPU has increased, 
+The same can be said for this larger scale network, but the point at which the spatially partitioned messaging performs worse than the CPU requires a higher input flow, in vehicles per hour per entrance.
 
-while spatially partitioned messaging is better than the CPU until around 600 vehicles per hour per edge.  
-
+We also see that at this scale the larger core count and memory bandwidth from the Volta GPU offers a performance improvement over the older Pascal GPU. 
 ---
 
 class: impact 
@@ -1261,7 +1324,7 @@ class: impact
 
 So we've shown how we can make our GPU road network simulations fast enough for city scale simulation, but we can't stop there. 
 
-I'm going to very briefly mention some of the other work we are doing in Sheffield. 
+I'm going to very briefly mention some of the future and related work we are doing.
 
 ---
 
@@ -1372,7 +1435,7 @@ Working with Siemens, my colleges Robert Chisholm and Paul Richmond produced a m
 
 This allows the impact of pedestrian behaviour on the rail network schedule to be assessed. 
 
-So in the short clip we have a low pedestrain demand and high pedestrian demand situation. We can see that the high train is delayed in the busier case due to the pedestrian behaviour, which then has a cascade effect on the rail network.
+So in the short clip we have a low pedestrian demand and high pedestrian demand situation. We can see that the high train is delayed in the busier case due to the pedestrian behaviour, which then has a cascade effect on the rail network.
 
 ---
 
